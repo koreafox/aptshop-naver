@@ -3,26 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0; url=https://smartstore.naver.com/aptshop7/">
     
     <!-- SEO Meta Tags -->
-    <title>아파트샵 - 네이버 스마트스토어</title>
-    <meta name="description" content="아파트샵 공식 스마트스토어입니다. 다양한 상품을 만나보세요.">
-    <meta name="keywords" content="아파트샵, aptshop, 스마트스토어, 네이버쇼핑">
+    <title>황소밴드 공식 온라인 판매점 - 아파트샵 | 누수보수 전문</title>
+    <meta name="description" content="황소밴드 공식 온라인 판매점. 파이프 누수보수 전문 제품. 호스밴드, 누수밴드, 클램프, 스텐밴드, 점누수 보수용품 판매. 특허받은 강력한 조임력으로 1인 보수 작업 가능.">
+    <meta name="keywords" content="황소밴드, 호스밴드, 누수밴드, 클램프, 스텐, 서스반도, 서스밴드, 스텐밴드, 스텐볼트, 점누수, 파이프누수, 누수보수, 배관보수, 아파트샵">
     <meta name="author" content="아파트샵">
     <meta name="robots" content="index, follow">
     
-    <!-- Open Graph Meta Tags (소셜 미디어 공유) -->
+    <!-- Open Graph Meta Tags -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="아파트샵 - 네이버 스마트스토어">
-    <meta property="og:description" content="아파트샵 공식 스마트스토어입니다. 다양한 상품을 만나보세요.">
+    <meta property="og:title" content="황소밴드 공식 온라인 판매점 - 아파트샵">
+    <meta property="og:description" content="파이프 누수보수 전문. 특허받은 황소밴드로 저렴하고 편리하게 누수부위를 보수하세요.">
     <meta property="og:url" content="https://aptshop.kr">
-    <meta property="og:site_name" content="아파트샵">
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="아파트샵 - 네이버 스마트스토어">
-    <meta name="twitter:description" content="아파트샵 공식 스마트스토어입니다. 다양한 상품을 만나보세요.">
+    <meta property="og:site_name" content="아파트샵 - 황소밴드 공식 판매점">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://aptshop.kr">
@@ -33,58 +27,235 @@
     <!-- 네이버 사이트 소유 확인 메타태그 -->
     <meta name="naver-site-verification" content="aab4e90a7b6f11cff5bcbd1d4d7fc82eb261770f" />
     
-    <!-- 구글 사이트 소유 확인 메타태그 (나중에 추가) -->
+    <!-- 구글 사이트 소유 확인 메타태그 -->
     <!-- <meta name="google-site-verification" content="여기에_확인코드_입력"> -->
     
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+        * {
             margin: 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .container {
+        
+        body {
+            font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 2rem 1rem;
             text-align: center;
-            padding: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        h1 {
+        
+        .header h1 {
             font-size: 2.5rem;
-            margin-bottom: 1rem;
-            animation: fadeIn 0.5s ease-in;
-        }
-        p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            animation: fadeIn 0.7s ease-in;
-        }
-        .spinner {
-            border: 4px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            border-top: 4px solid white;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        a {
-            color: white;
-            text-decoration: underline;
+            margin-bottom: 0.5rem;
             font-weight: bold;
         }
-        a:hover {
-            opacity: 0.8;
+        
+        .header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            margin-bottom: 1rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        .intro-section {
+            background: white;
+            padding: 3rem 2rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        
+        .intro-section h2 {
+            font-size: 2rem;
+            color: #1e3c72;
+            margin-bottom: 1.5rem;
+        }
+        
+        .intro-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+        }
+        
+        .feature-card .number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #2a5298;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.3rem;
+            color: #1e3c72;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .keywords-section {
+            background: white;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+        
+        .keywords-section h3 {
+            font-size: 1.5rem;
+            color: #1e3c72;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+        
+        .keyword-tag {
+            background: #e8f0fe;
+            color: #1e3c72;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-radius: 10px;
+            margin: 3rem 0;
+        }
+        
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #1e3c72;
+            padding: 1rem 3rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .redirect-notice {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1rem;
+            background: #fff3cd;
+            border-radius: 5px;
+            font-size: 0.95rem;
+            color: #856404;
+        }
+        
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+        
+        .footer p {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .header .subtitle {
+                font-size: 1rem;
+            }
+            
+            .intro-section h2 {
+                font-size: 1.5rem;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* 페이드인 애니메이션 */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .container > * {
+            animation: fadeIn 0.6s ease-out;
         }
     </style>
     
@@ -93,29 +264,90 @@
     {
         "@context": "https://schema.org",
         "@type": "Store",
-        "name": "아파트샵",
+        "name": "아파트샵 - 황소밴드 공식 온라인 판매점",
+        "description": "황소밴드, 호스밴드, 누수밴드 등 파이프 누수보수 전문 제품 판매",
         "url": "https://aptshop.kr",
-        "sameAs": "https://smartstore.naver.com/aptshop7/"
+        "sameAs": "https://smartstore.naver.com/aptshop7/",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "KR"
+        }
     }
     </script>
 </head>
 <body>
+    <header class="header">
+        <h1>🔧 황소밴드 공식 온라인 판매점</h1>
+        <p class="subtitle">파이프 누수보수 전문 | 특허받은 강력한 조임력</p>
+    </header>
+    
     <div class="container">
-        <h1>아파트샵</h1>
-        <p>스마트스토어로 이동 중입니다...</p>
-        <div class="spinner"></div>
-        <p style="margin-top: 2rem; font-size: 0.9rem;">
-            자동으로 이동하지 않으면 
-            <a href="https://smartstore.naver.com/aptshop7/">여기</a>를 클릭하세요.
-        </p>
+        <section class="intro-section">
+            <h2>황소밴드란?</h2>
+            <p><strong>파이프 점부식 및 누수부위 보수 전문 제품</strong>입니다.</p>
+            <p>특허받은 기술력으로 기존 호스밴드 대비 <strong>3배 강력한 조임력</strong>을 자랑하며,<br>
+            저렴한 비용으로 확실하고 편리하게 누수부위를 보수할 수 있습니다.</p>
+            <p>360도 회전이동이 가능한 패킹패드로 <strong>1인 보수 작업</strong>이 가능합니다.</p>
+        </section>
+        
+        <div class="features">
+            <div class="feature-card">
+                <div class="number">01</div>
+                <h3>강력한 조임력</h3>
+                <p>기존 호스밴드 대비 3배 강력한 조임력으로 확실한 누수 방지</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="number">02</div>
+                <h3>1인 작업 가능</h3>
+                <p>360도 회전 패킹패드로 혼자서도 쉽고 빠르게 보수 작업</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="number">03</div>
+                <h3>특허받은 기술</h3>
+                <p>특허 제 10-1424730호 등록으로 검증된 우수한 기술력</p>
+            </div>
+        </div>
+        
+        <section class="keywords-section">
+            <h3>주요 제품 키워드</h3>
+            <div class="keywords">
+                <span class="keyword-tag">황소밴드</span>
+                <span class="keyword-tag">호스밴드</span>
+                <span class="keyword-tag">누수밴드</span>
+                <span class="keyword-tag">클램프</span>
+                <span class="keyword-tag">스텐밴드</span>
+                <span class="keyword-tag">서스밴드</span>
+                <span class="keyword-tag">스텐볼트</span>
+                <span class="keyword-tag">점누수 보수</span>
+                <span class="keyword-tag">파이프 누수</span>
+                <span class="keyword-tag">배관 보수</span>
+            </div>
+        </section>
+        
+        <section class="cta-section">
+            <h2>지금 바로 구매하세요!</h2>
+            <p>네이버 스마트스토어에서 황소밴드를 만나보세요</p>
+            <a href="https://smartstore.naver.com/aptshop7/" class="cta-button">스마트스토어 바로가기 →</a>
+        </section>
+        
+        <div class="redirect-notice">
+            ⏱️ 3초 후 자동으로 스마트스토어로 이동합니다
+        </div>
     </div>
     
-    <!-- JavaScript 리다이렉트 (메타 태그 백업) -->
+    <footer class="footer">
+        <p><strong>아파트샵 - 황소밴드 공식 온라인 판매점</strong></p>
+        <p>문의: 네이버 스마트스토어 1:1 문의</p>
+        <p>© 2025 aptshop.kr All Rights Reserved.</p>
+    </footer>
+    
+    <!-- 3초 후 자동 리다이렉트 -->
     <script>
-        // 메타 태그가 작동하지 않을 경우를 대비한 JavaScript 리다이렉트
         setTimeout(function() {
             window.location.href = "https://smartstore.naver.com/aptshop7/";
-        }, 100);
+        }, 3000);
     </script>
 </body>
 </html>
