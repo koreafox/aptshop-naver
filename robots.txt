@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aptshop.kr/sitemap.xml
+
+# 주요 검색엔진 크롤러 허용
+User-agent: Googlebot
+Allow: /
+
+User-agent: Yeti
+Allow: /
+
+User-agent: Bingbot
+Allow: /
