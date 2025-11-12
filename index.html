@@ -201,14 +201,107 @@
             box-shadow: 0 6px 20px rgba(0,0,0,0.3);
         }
         
-        .redirect-notice {
+        .certification-section {
+            background: white;
+            padding: 3rem 2rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+        
+        .certification-section h3 {
+            font-size: 1.8rem;
+            color: #1e3c72;
+            margin-bottom: 2rem;
             text-align: center;
-            margin-top: 2rem;
-            padding: 1rem;
-            background: #fff3cd;
-            border-radius: 5px;
-            font-size: 0.95rem;
-            color: #856404;
+        }
+        
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .cert-item {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid #e8f0fe;
+            transition: all 0.3s ease;
+        }
+        
+        .cert-item:hover {
+            border-color: #2a5298;
+            transform: translateY(-3px);
+        }
+        
+        .cert-item h4 {
+            font-size: 1.3rem;
+            color: #1e3c72;
+            margin-bottom: 1rem;
+        }
+        
+        .cert-item p {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #2a5298;
+            margin: 0.5rem 0;
+        }
+        
+        .cert-desc {
+            font-size: 0.95rem !important;
+            font-weight: normal !important;
+            color: #666 !important;
+            margin-top: 0.5rem;
+        }
+        
+        .contact-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e8f0fe 100%);
+            padding: 3rem 2rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .contact-section h3 {
+            font-size: 1.8rem;
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-section > p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .contact-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+        
+        .contact-item strong {
+            display: block;
+            font-size: 1.2rem;
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-item p {
+            font-size: 1rem;
+            color: #666;
+            margin: 0;
         }
         
         .footer {
@@ -332,22 +425,52 @@
             <a href="https://smartstore.naver.com/aptshop7/" class="cta-button">스마트스토어 바로가기 →</a>
         </section>
         
-        <div class="redirect-notice">
-            ⏱️ 3초 후 자동으로 스마트스토어로 이동합니다
-        </div>
+        <section class="certification-section">
+            <h3>황소밴드 인증 및 시험성적</h3>
+            <div class="cert-grid">
+                <div class="cert-item">
+                    <h4>🏆 벤처기업 인증</h4>
+                    <p>제 20160103780 호</p>
+                    <p class="cert-desc">오랜 경험과 노하우로 제작한 제품</p>
+                </div>
+                <div class="cert-item">
+                    <h4>📜 특허증</h4>
+                    <p>특허 제 10-1424730 호</p>
+                    <p class="cert-desc">우수한 기술력 입증</p>
+                </div>
+                <div class="cert-item">
+                    <h4>💪 KTC 토크 시험</h4>
+                    <p>204 Kgf·cm</p>
+                    <p class="cert-desc">기존 대비 약 3배 강력한 조임력</p>
+                </div>
+                <div class="cert-item">
+                    <h4>💧 KTC 내압 시험</h4>
+                    <p>30 Kg/cm²</p>
+                    <p class="cert-desc">높은 수압에도 누수 없음</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="contact-section">
+            <h3>제품 상담 문의</h3>
+            <p>친절하게 답변해드립니다</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>📞 고객센터</strong>
+                    <p>네이버 스마트스토어 1:1 문의</p>
+                </div>
+                <div class="contact-item">
+                    <strong>🛒 온라인 구매</strong>
+                    <p>아파트샵 스마트스토어</p>
+                </div>
+            </div>
+        </section>
     </div>
     
     <footer class="footer">
         <p><strong>아파트샵 - 황소밴드 공식 온라인 판매점</strong></p>
-        <p>문의: 네이버 스마트스토어 1:1 문의</p>
+        <p>온라인 판매 문의: 네이버 스마트스토어</p>
         <p>© 2025 aptshop.kr All Rights Reserved.</p>
     </footer>
-    
-    <!-- 3초 후 자동 리다이렉트 -->
-    <script>
-        setTimeout(function() {
-            window.location.href = "https://smartstore.naver.com/aptshop7/";
-        }, 3000);
-    </script>
 </body>
 </html>
