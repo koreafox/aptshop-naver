@@ -1,14 +1,18 @@
+# 모든 검색엔진 크롤러 허용
 User-agent: *
 Allow: /
 
-Sitemap: https://aptshop.kr/sitemap.xml
-
-# 주요 검색엔진 크롤러 허용
-User-agent: Googlebot
-Allow: /
-
+# 네이버 검색로봇 (Yeti) 명시적 허용
 User-agent: Yeti
 Allow: /
 
+# 구글 검색로봇 허용
+User-agent: Googlebot
+Allow: /
+
+# Bing 검색로봇 허용
 User-agent: Bingbot
 Allow: /
+
+# 사이트맵 위치
+Sitemap: https://aptshop.kr/sitemap.xml
