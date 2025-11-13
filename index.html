@@ -30,7 +30,9 @@
     <!-- 구글 사이트 소유 확인 메타태그 -->
     <!-- <meta name="google-site-verification" content="여기에_확인코드_입력"> -->
     
-    <style>
+    <link rel="stylesheet" href="styles.css">
+    
+    <style style="display:none;">
         * {
             margin: 0;
             padding: 0;
@@ -47,19 +49,69 @@
         .header {
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
-            padding: 1.5rem 1rem;
+            padding: 1rem;
             text-align: center;
         }
         
         .header h1 {
-            font-size: 2rem;
-            margin-bottom: 0.3rem;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
         }
         
         .header .subtitle {
-            font-size: 1rem;
+            font-size: 0.95rem;
             opacity: 0.95;
-            margin-bottom: 1rem;
+        }
+        
+        .nav-menu {
+            background: #2a5298;
+            padding: 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-menu ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .nav-menu li {
+            margin: 0;
+        }
+        
+        .nav-menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            font-weight: 500;
+            transition: background 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            background: #1e3c72;
+            border-bottom-color: #fff;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-menu ul {
+                flex-direction: column;
+            }
+            
+            .nav-menu a {
+                text-align: center;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
         }
         
         .container {
@@ -521,45 +573,27 @@
         <p class="subtitle">파이프 누수보수 전문 | 특허받은 강력한 조임력</p>
     </header>
     
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="index.html" class="active">홈</a></li>
+            <li><a href="company.html">회사소개</a></li>
+            <li><a href="products.html">제품소개</a></li>
+            <li><a href="certifications.html">인증 및 시험성적</a></li>
+            <li><a href="contact.html">구매 및 문의</a></li>
+        </ul>
+    </nav>
+    
     <div class="container">
         <section class="intro-section">
-            <h2>황소밴드란?</h2>
-            <p>파이프 점부식 등으로 인한 누수부위를 저렴한 비용으로 확실하고 편리하게 보수하는 특허받은 제품입니다.</p>
-            <p>기존 호스밴드 대비 약 3배 강력한 조임력으로 1인 보수 작업이 가능합니다.</p>
-        </section>
-        
-        <section class="company-section">
-            <h3>🏢 회사 소개</h3>
-            <p style="text-align: center; color: #666; margin-bottom: 1.5rem;">
-                럭키텍 황소밴드는 파이프 누수 보수 전문 기업으로, 오랜 경험과 노하우를 바탕으로<br>
-                저렴하고 편리한 누수 보수 솔루션을 제공합니다.
+            <h2>황소밴드 - 파이프 누수보수 전문</h2>
+            <p style="font-size: 1.2rem; color: #1e3c72; font-weight: 500; margin-bottom: 1rem;">
+                파이프 점부식 등으로 인한 누수부위를 저렴한 비용으로<br>
+                확실하고 편리하게 보수하는 특허받은 제품입니다.
             </p>
-            <div class="company-info">
-                <div class="company-card">
-                    <h4>🏭 상호</h4>
-                    <p>럭키텍 황소밴드</p>
-                </div>
-                <div class="company-card">
-                    <h4>👤 대표자</h4>
-                    <p>김미경</p>
-                </div>
-                <div class="company-card">
-                    <h4>📋 사업자번호</h4>
-                    <p>811-35-01304</p>
-                </div>
-                <div class="company-card">
-                    <h4>📍 주소</h4>
-                    <p>경기도 수원시 장안구 금당로 4번길 17</p>
-                </div>
-                <div class="company-card">
-                    <h4>📞 연락처</h4>
-                    <p>031-241-5907 / 010-9400-2636</p>
-                </div>
-                <div class="company-card">
-                    <h4>✉️ 이메일</h4>
-                    <p>anrud777@naver.com</p>
-                </div>
-            </div>
+            <p style="font-size: 1.1rem;">
+                기존 호스밴드 대비 <strong style="color: #e74c3c;">약 3배 강력한 조임력</strong>으로<br>
+                1인 보수 작업이 가능합니다.
+            </p>
         </section>
         
         <section class="core-strategy">
@@ -586,22 +620,6 @@
             </div>
         </section>
         
-        <section class="keywords-section">
-            <h3>주요 제품 키워드</h3>
-            <div class="keywords">
-                <span class="keyword-tag">황소밴드</span>
-                <span class="keyword-tag">호스밴드</span>
-                <span class="keyword-tag">누수밴드</span>
-                <span class="keyword-tag">클램프</span>
-                <span class="keyword-tag">스텐밴드</span>
-                <span class="keyword-tag">서스밴드</span>
-                <span class="keyword-tag">스텐볼트</span>
-                <span class="keyword-tag">점누수 보수</span>
-                <span class="keyword-tag">파이프 누수</span>
-                <span class="keyword-tag">배관 보수</span>
-            </div>
-        </section>
-        
         <section class="video-section">
             <h3>🎬 황소밴드 시공 영상</h3>
             <p>파이프 누수부위에 황소밴드를 체결하는 과정을 확인하세요</p>
@@ -613,67 +631,6 @@
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                     allowfullscreen>
                 </iframe>
-            </div>
-        </section>
-        
-        <section class="products-section">
-            <h3>🔧 황소밴드 제품 라인업</h3>
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="https://hsband.kr/web/product/medium/201701/64_shop1_550779.jpg" alt="싱글밴드">
-                    <div class="product-info">
-                        <h4>싱글밴드</h4>
-                        <p>기본형 황소밴드로 일반적인 누수 보수에 적합</p>
-                        <p class="product-sizes">사이즈: 10-32A, 15-40A, 50-80A, 100-125A</p>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img src="https://hsband.kr/web/product/medium/201701/67_shop1_917909.jpg" alt="더블밴드">
-                    <div class="product-info">
-                        <h4>더블밴드</h4>
-                        <p>2중 조임으로 더욱 강력한 누수 방지</p>
-                        <p class="product-sizes">사이즈: 10-32A, 15-40A, 50-80A, 100-125A</p>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img src="https://hsband.kr/web/product/medium/201701/73_shop1_293571.jpg" alt="공업용밴드">
-                    <div class="product-info">
-                        <h4>공업용밴드</h4>
-                        <p>산업현장 및 대구경 파이프용 전문 제품</p>
-                        <p class="product-sizes">사이즈: 10-32A, 15-40A, 50-80A, 100-125A, 40, 50, 65, 80, 100, 125, 150, 200A</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="certification-section">
-            <h3>📜 황소밴드 인증 및 시험성적</h3>
-            <div class="cert-grid">
-                <div class="cert-item">
-                    <img src="https://hsband.kr/web/upload/bmain_img_05.jpg" alt="벤처기업 인증">
-                    <h4>벤처기업 인증</h4>
-                    <p>제 20160103780 호</p>
-                </div>
-                <div class="cert-item">
-                    <img src="https://hsband.kr/web/upload/main_img_01.jpg" alt="특허증">
-                    <h4>특허증</h4>
-                    <p>특허 제 10-1424730 호</p>
-                </div>
-                <div class="cert-item">
-                    <img src="https://hsband.kr/web/upload/main_img_04.jpg" alt="조달청 벤처나라 지정증서">
-                    <h4>조달청 벤처나라 지정증서</h4>
-                    <p>제 2017-02-0062호</p>
-                </div>
-                <div class="cert-item">
-                    <img src="https://hsband.kr/web/upload/main_img_02.jpg" alt="KTC 토크 시험성적서">
-                    <h4>KTC 토크 시험성적서</h4>
-                    <p>204 Kgf·cm 강력한 조임력</p>
-                </div>
-                <div class="cert-item">
-                    <img src="https://hsband.kr/web/upload/main_img_03.jpg" alt="KTC 내압 시험성적서">
-                    <h4>KTC 내압 시험성적서</h4>
-                    <p>30 Kg/cm² 높은 수압</p>
-                </div>
             </div>
         </section>
         
