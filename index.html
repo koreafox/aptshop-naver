@@ -47,19 +47,17 @@
         .header {
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
-            padding: 2rem 1rem;
+            padding: 1.5rem 1rem;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         
         .header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
+            font-size: 2rem;
+            margin-bottom: 0.3rem;
         }
         
         .header .subtitle {
-            font-size: 1.2rem;
+            font-size: 1rem;
             opacity: 0.95;
             margin-bottom: 1rem;
         }
@@ -67,16 +65,109 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem 1rem;
+            padding: 1rem;
         }
         
         .intro-section {
             background: white;
-            padding: 3rem 2rem;
-            margin-bottom: 2rem;
+            padding: 2rem 1.5rem;
+            margin-bottom: 1.5rem;
             border-radius: 10px;
             box-shadow: 0 2px 15px rgba(0,0,0,0.08);
             text-align: center;
+        }
+        
+        .company-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e8f0fe 100%);
+            padding: 2rem 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+        
+        .company-section h3 {
+            font-size: 1.8rem;
+            color: #1e3c72;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .company-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .company-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+        
+        .company-card h4 {
+            font-size: 1.2rem;
+            color: #1e3c72;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .company-card p {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .core-strategy {
+            background: white;
+            padding: 2rem 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+        
+        .core-strategy h3 {
+            font-size: 1.8rem;
+            color: #1e3c72;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .strategy-item {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .strategy-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+        
+        .strategy-item h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: white;
+        }
+        
+        .strategy-item p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            opacity: 0.95;
         }
         
         .intro-section h2 {
@@ -134,8 +225,8 @@
         
         .keywords-section {
             background: white;
-            padding: 2rem;
-            margin: 2rem 0;
+            padding: 2rem 1.5rem;
+            margin-bottom: 1.5rem;
             border-radius: 10px;
             box-shadow: 0 2px 15px rgba(0,0,0,0.08);
         }
@@ -166,10 +257,10 @@
         .cta-section {
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
-            padding: 3rem 2rem;
+            padding: 2.5rem 2rem;
             text-align: center;
             border-radius: 10px;
-            margin: 3rem 0;
+            margin-bottom: 1.5rem;
         }
         
         .cta-section h2 {
@@ -203,8 +294,8 @@
         
         .video-section {
             background: white;
-            padding: 3rem 2rem;
-            margin: 2rem 0;
+            padding: 2rem 1.5rem;
+            margin-bottom: 1.5rem;
             border-radius: 10px;
             box-shadow: 0 2px 15px rgba(0,0,0,0.08);
             text-align: center;
@@ -244,8 +335,8 @@
         
         .products-section {
             background: white;
-            padding: 3rem 2rem;
-            margin: 2rem 0;
+            padding: 2rem 1.5rem;
+            margin-bottom: 1.5rem;
             border-radius: 10px;
             box-shadow: 0 2px 15px rgba(0,0,0,0.08);
         }
@@ -307,8 +398,8 @@
         
         .certification-section {
             background: white;
-            padding: 3rem 2rem;
-            margin: 2rem 0;
+            padding: 2rem 1.5rem;
+            margin-bottom: 1.5rem;
             border-radius: 10px;
             box-shadow: 0 2px 15px rgba(0,0,0,0.08);
         }
@@ -433,31 +524,67 @@
     <div class="container">
         <section class="intro-section">
             <h2>황소밴드란?</h2>
-            <p><strong>파이프 점부식 및 누수부위 보수 전문 제품</strong>입니다.</p>
-            <p>특허받은 기술력으로 기존 호스밴드 대비 <strong>3배 강력한 조임력</strong>을 자랑하며,<br>
-            저렴한 비용으로 확실하고 편리하게 누수부위를 보수할 수 있습니다.</p>
-            <p>360도 회전이동이 가능한 패킹패드로 <strong>1인 보수 작업</strong>이 가능합니다.</p>
+            <p>파이프 점부식 등으로 인한 누수부위를 저렴한 비용으로 확실하고 편리하게 보수하는 특허받은 제품입니다.</p>
+            <p>기존 호스밴드 대비 약 3배 강력한 조임력으로 1인 보수 작업이 가능합니다.</p>
         </section>
         
-        <div class="features">
-            <div class="feature-card">
-                <div class="number">01</div>
-                <h3>강력한 조임력</h3>
-                <p>기존 호스밴드 대비 3배 강력한 조임력으로 확실한 누수 방지</p>
+        <section class="company-section">
+            <h3>🏢 회사 소개</h3>
+            <p style="text-align: center; color: #666; margin-bottom: 1.5rem;">
+                럭키텍 황소밴드는 파이프 누수 보수 전문 기업으로, 오랜 경험과 노하우를 바탕으로<br>
+                저렴하고 편리한 누수 보수 솔루션을 제공합니다.
+            </p>
+            <div class="company-info">
+                <div class="company-card">
+                    <h4>🏭 상호</h4>
+                    <p>럭키텍 황소밴드</p>
+                </div>
+                <div class="company-card">
+                    <h4>👤 대표자</h4>
+                    <p>김미경</p>
+                </div>
+                <div class="company-card">
+                    <h4>📋 사업자번호</h4>
+                    <p>811-35-01304</p>
+                </div>
+                <div class="company-card">
+                    <h4>📍 주소</h4>
+                    <p>경기도 수원시 장안구 금당로 4번길 17</p>
+                </div>
+                <div class="company-card">
+                    <h4>📞 연락처</h4>
+                    <p>031-241-5907 / 010-9400-2636</p>
+                </div>
+                <div class="company-card">
+                    <h4>✉️ 이메일</h4>
+                    <p>anrud777@naver.com</p>
+                </div>
             </div>
-            
-            <div class="feature-card">
-                <div class="number">02</div>
-                <h3>1인 작업 가능</h3>
-                <p>360도 회전 패킹패드로 혼자서도 쉽고 빠르게 보수 작업</p>
+        </section>
+        
+        <section class="core-strategy">
+            <h3>💡 황소밴드 핵심 전략</h3>
+            <p style="text-align: center; color: #666; margin-bottom: 1.5rem;">
+                파이프 점부식 등으로 인한 누수부위 보수 용품! 저렴한 비용과 확실하고 편리한 누수부위 보수자재
+            </p>
+            <div class="strategy-grid">
+                <div class="strategy-item">
+                    <div class="strategy-number">01</div>
+                    <h4>기존 호스밴드 대비<br>3배 강력한 조임력!</h4>
+                    <p>204 Kgf·cm의 강력한 조임력으로 기존 제품 대비 약 3배 이상의 성능을 자랑합니다.</p>
+                </div>
+                <div class="strategy-item">
+                    <div class="strategy-number">02</div>
+                    <h4>360도 회전이동이 가능한<br>패킹패드 부착으로<br>1인 보수 작업 가능</h4>
+                    <p>특허받은 360도 회전 패킹패드로 혼자서도 쉽고 빠르게 누수 보수가 가능합니다.</p>
+                </div>
+                <div class="strategy-item">
+                    <div class="strategy-number">03</div>
+                    <h4>용접부위 및 굴곡부위는<br>패킹재 2중 결합으로<br>일부 보수 가능</h4>
+                    <p>패킹재 선택으로 내구성 향상. 다양한 파이프 상황에 대응 가능합니다.</p>
+                </div>
             </div>
-            
-            <div class="feature-card">
-                <div class="number">03</div>
-                <h3>특허받은 기술</h3>
-                <p>특허 제 10-1424730호 등록으로 검증된 우수한 기술력</p>
-            </div>
-        </div>
+        </section>
         
         <section class="keywords-section">
             <h3>주요 제품 키워드</h3>
