@@ -163,6 +163,104 @@
             font-weight: 500;
         }
         
+        .video-section {
+            background: white;
+            padding: 3rem 2rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        
+        .video-section h3 {
+            font-size: 1.8rem;
+            color: #1e3c72;
+            margin-bottom: 1rem;
+        }
+        
+        .video-section p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 비율 */
+            height: 0;
+            overflow: hidden;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        
+        .gallery-section {
+            background: white;
+            padding: 3rem 2rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+        
+        .gallery-section h3 {
+            font-size: 1.8rem;
+            color: #1e3c72;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .gallery-item {
+            background: #f8f9fa;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .gallery-item p {
+            padding: 1rem;
+            text-align: center;
+            font-weight: 500;
+            color: #333;
+            margin: 0;
+        }
+        
+        .gallery-note {
+            text-align: center;
+            color: #999;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+        
         .cta-section {
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
@@ -417,6 +515,43 @@
                 <span class="keyword-tag">파이프 누수</span>
                 <span class="keyword-tag">배관 보수</span>
             </div>
+        </section>
+        
+        <section class="video-section">
+            <h3>황소밴드 시공 영상</h3>
+            <p>파이프 누수부위에 황소밴드를 체결하는 과정을 확인하세요</p>
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/_l-1wXGrRg4" 
+                    title="황소밴드 시공 영상" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+        
+        <section class="gallery-section">
+            <h3>황소밴드 제품 갤러리</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://hsband.kr/web/product/big/202012/2c9c8c7e0c1e0b5e2e7b8c9c8c7e0c1e.jpg" alt="황소밴드 제품" onerror="this.style.display='none'">
+                    <p>황소밴드 기본형</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://hsband.kr/web/product/big/202012/3d0d9d8e1d2e1c6e3e8c9d9d8e1d2e.jpg" alt="호스밴드" onerror="this.style.display='none'">
+                    <p>공업용 호스밴드</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://hsband.kr/web/product/big/202012/4e1e0e9f2e3f2d7f4f9d0e0e9f2e3f.jpg" alt="패킹패드" onerror="this.style.display='none'">
+                    <p>패킹패드</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://hsband.kr/web/product/big/202012/5f2f1f0g3f4g3e8g5g0e1f1f0g3f4g.jpg" alt="누수보수" onerror="this.style.display='none'">
+                    <p>누수 보수 시공</p>
+                </div>
+            </div>
+            <p class="gallery-note">※ 실제 제품은 스마트스토어에서 확인하세요</p>
         </section>
         
         <section class="cta-section">
