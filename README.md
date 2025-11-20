@@ -1,114 +1,87 @@
-# 아파트샵 - GitHub Pages 설정
+# 아파트샵 - 황소밴드 기업형 웹사이트
 
-이 저장소는 `aptshop.kr` 도메인을 위한 GitHub Pages 사이트입니다.
+## 프로젝트 구조
 
-## 🚀 GitHub Pages 설정 방법
-
-### 1. GitHub에 코드 푸시
-```bash
-git init
-git add .
-git commit -m "Initial commit: GitHub Pages setup"
-git branch -M main
-git remote add origin https://github.com/koreafox/aptshop-naver.git
-git push -u origin main
-```
-
-### 2. GitHub Pages 활성화
-1. GitHub 저장소로 이동: https://github.com/koreafox/aptshop-naver
-2. **Settings** 탭 클릭
-3. 왼쪽 메뉴에서 **Pages** 클릭
-4. **Source** 섹션에서:
-   - Branch: `main` 선택
-   - Folder: `/ (root)` 선택
-   - **Save** 클릭
-
-### 3. 커스텀 도메인 설정
-1. 같은 Pages 설정 페이지에서
-2. **Custom domain** 입력란에 `aptshop.kr` 입력
-3. **Save** 클릭
-4. **Enforce HTTPS** 체크박스 활성화 (DNS 전파 후)
-
-### 4. DNS 레코드 업데이트
-
-현재 DNS 설정을 GitHub Pages용으로 변경해야 합니다:
-
-#### 옵션 1: A 레코드 사용 (권장)
-기존 A 레코드를 GitHub Pages IP로 변경:
-```
-A    @    185.199.108.153
-A    @    185.199.109.153
-A    @    185.199.110.153
-A    @    185.199.111.153
-```
-
-#### 옵션 2: CNAME 레코드 사용
-```
-CNAME    www    koreafox.github.io
-```
-
-**중요**: DNS 변경 후 전파까지 최대 48시간 소요될 수 있습니다.
-
-### 5. CNAME 파일 생성 (자동)
-GitHub Pages 설정에서 커스텀 도메인을 입력하면 자동으로 `CNAME` 파일이 생성됩니다.
-수동으로 생성하려면:
-```bash
-echo "aptshop.kr" > CNAME
-git add CNAME
-git commit -m "Add CNAME for custom domain"
-git push
-```
-
-## 📝 네이버/구글 사이트 등록
-
-### 네이버 서치어드바이저
-1. https://searchadvisor.naver.com/ 접속
-2. 사이트 등록 시 HTML 확인 메타태그 받기
-3. `index.html`의 주석 처리된 부분에 메타태그 추가:
-```html
-<meta name="naver-site-verification" content="받은_확인코드">
-```
-
-### 구글 서치 콘솔
-1. https://search.google.com/search-console 접속
-2. 속성 추가 시 HTML 확인 메타태그 받기
-3. `index.html`의 주석 처리된 부분에 메타태그 추가:
-```html
-<meta name="google-site-verification" content="받은_확인코드">
-```
-
-### 사이트맵 제출
-- 네이버: `https://aptshop.kr/sitemap.xml`
-- 구글: `https://aptshop.kr/sitemap.xml`
-
-## 📂 파일 구조
 ```
 aptshop-naver/
-├── index.html      # 메인 페이지 (스마트스토어 리다이렉트)
-├── robots.txt      # 검색엔진 크롤러 설정
-├── sitemap.xml     # 사이트맵
-├── CNAME           # 커스텀 도메인 설정 (GitHub Pages 자동 생성)
-└── README.md       # 이 파일
+├── index.html              # 메인 페이지
+├── components/             # 재사용 가능한 컴포넌트
+│   ├── header.html        # 헤더 (로고, 네비게이션)
+│   └── footer.html        # 푸터
+├── css/                   # 스타일시트
+│   ├── main.css          # 메인 스타일
+│   └── responsive.css    # 반응형 스타일
+├── js/                    # JavaScript 파일
+│   ├── main.js           # 메인 스크립트 (컴포넌트 로딩, 네비게이션)
+│   └── utils.js          # 유틸리티 함수
+└── img/                   # 이미지 파일
+    └── logo.png          # 로고 이미지 (추가 필요)
 ```
 
-## 🔍 작동 방식
-1. 사용자가 `aptshop.kr` 접속
-2. GitHub Pages가 `index.html` 제공
-3. 메타 태그와 JavaScript로 즉시 스마트스토어로 리다이렉트
-4. 검색엔진은 메타데이터를 크롤링하여 SEO 정보 수집
+## 기술 스택
 
-## ✅ 체크리스트
-- [ ] GitHub에 코드 푸시
-- [ ] GitHub Pages 활성화
-- [ ] 커스텀 도메인 설정
-- [ ] DNS 레코드 업데이트
-- [ ] DNS 전파 확인 (https://dnschecker.org)
-- [ ] HTTPS 활성화
-- [ ] 네이버 사이트 등록
-- [ ] 구글 사이트 등록
-- [ ] 사이트맵 제출
+- **HTML5**: 시맨틱 마크업
+- **Tailwind CSS**: 유틸리티 기반 CSS 프레임워크
+- **Vanilla JavaScript**: 순수 자바스크립트 (프레임워크 없음)
+- **반응형 디자인**: 모바일, 태블릿, 데스크톱 지원
 
-## 🌐 링크
-- 스마트스토어: https://smartstore.naver.com/aptshop7/
-- GitHub 저장소: https://github.com/koreafox/aptshop-naver
-- 도메인: https://aptshop.kr
+## 주요 기능
+
+### 1. 모듈화된 구조
+- 헤더와 푸터를 별도 컴포넌트로 분리
+- JavaScript로 동적 로딩
+- 코드 중복 최소화
+
+### 2. 반응형 네비게이션
+- 데스크톱: 드롭다운 메뉴
+- 모바일: 햄버거 메뉴
+- 자동 크기 조절
+
+### 3. 메뉴 구조
+- **회사소개**: 브랜드, 기업정보, 기업연혁, 미션
+- **제품소개**: 황소밴드, 공업용밴드
+- **제품구매**: 소셜마켓
+- **뉴스**: 기사 및 보도자료
+- **파트너스**: 파트너스, 오시는길, 문의 및 상담
+
+## 설치 및 실행
+
+### 로컬 서버 실행
+
+```bash
+# Python 3
+python -m http.server 8000
+
+# Node.js (http-server)
+npx http-server -p 8000
+```
+
+브라우저에서 `http://localhost:8000` 접속
+
+## 파일 규칙
+
+1. **디렉토리 분리**: css, js, img, components 폴더로 명확히 구분
+2. **모듈화**: 재사용 가능한 컴포넌트는 별도 파일로 분리
+3. **코드 중복 금지**: 동일한 코드는 함수나 컴포넌트로 추출
+4. **파일 분리**: HTML, CSS, JS를 한 파일에 작성하지 않음
+5. **파일 길이**: 한 파일당 최대 600줄 이하 유지
+
+## 브라우저 지원
+
+- Chrome (최신)
+- Firefox (최신)
+- Safari (최신)
+- Edge (최신)
+- 모바일 브라우저
+
+## 추가 작업 필요
+
+1. `img/logo.png` 로고 이미지 추가
+2. 각 서브 페이지 생성 (brand.html, company-info.html 등)
+3. 실제 콘텐츠 추가
+4. SEO 최적화
+5. 성능 최적화
+
+## 라이선스
+
+© 2025 아파트샵. All rights reserved.

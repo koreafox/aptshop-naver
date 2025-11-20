@@ -1,0 +1,203 @@
+/* Responsive Styles - 아파트샵 황소밴드 */
+/* Mobile First Approach */
+
+/* ========================================
+   1. Extra Small Devices (phones, < 640px)
+   ======================================== */
+@media (max-width: 639px) {
+    body {
+        font-size: 14px;
+    }
+    
+    .section-padding {
+        padding: 2rem 1rem;
+    }
+    
+    .hero-gradient h1 {
+        font-size: 1.75rem;
+        line-height: 1.2;
+    }
+    
+    .hero-gradient p {
+        font-size: 1rem;
+    }
+    
+    .container-custom {
+        padding: 0 0.75rem;
+    }
+    
+    /* Mobile Navigation Optimization */
+    #mobile-menu {
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+    }
+    
+    /* Touch Target Optimization */
+    button,
+    a {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Footer - Hide links section on mobile */
+    .footer-links {
+        display: none !important;
+    }
+}
+
+/* ========================================
+   2. Small Devices (tablets, >= 640px)
+   ======================================== */
+@media (min-width: 640px) and (max-width: 767px) {
+    .section-padding {
+        padding: 3rem 1.5rem;
+    }
+    
+    .hero-gradient h1 {
+        font-size: 2.5rem;
+    }
+    
+    /* Footer - Hide links section on small tablets too */
+    .footer-links {
+        display: none !important;
+    }
+}
+
+/* ========================================
+   3. Medium Devices (tablets, >= 768px)
+   ======================================== */
+@media (min-width: 768px) {
+    .section-padding {
+        padding: 4rem 2rem;
+    }
+    
+    .hero-gradient h1 {
+        font-size: 3rem;
+    }
+    
+    /* Grid Optimization */
+    .grid-responsive {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* ========================================
+   4. Large Devices (desktops, >= 1024px)
+   ======================================== */
+@media (min-width: 1024px) {
+    .section-padding {
+        padding: 5rem 2rem;
+    }
+    
+    .hero-gradient h1 {
+        font-size: 3.5rem;
+    }
+    
+    /* Grid Optimization */
+    .grid-responsive {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Hover Effects (Desktop Only) */
+    .hover-desktop:hover {
+        transform: scale(1.02);
+        transition: transform 0.3s ease;
+    }
+}
+
+/* ========================================
+   5. Extra Large Devices (>= 1280px)
+   ======================================== */
+@media (min-width: 1280px) {
+    .section-padding {
+        padding: 6rem 2rem;
+    }
+    
+    .hero-gradient h1 {
+        font-size: 4rem;
+    }
+}
+
+/* ========================================
+   6. Landscape Orientation
+   ======================================== */
+@media (orientation: landscape) and (max-height: 500px) {
+    .hero-gradient {
+        padding: 3rem 0;
+    }
+    
+    #mobile-menu {
+        max-height: 300px;
+    }
+}
+
+/* ========================================
+   7. High DPI Displays (Retina)
+   ======================================== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Optimize images for retina displays */
+    img {
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
+
+/* ========================================
+   8. Reduced Motion (Accessibility)
+   ======================================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ========================================
+   9. Dark Mode Support
+   ======================================== */
+@media (prefers-color-scheme: dark) {
+    /* Optional: Add dark mode styles if needed */
+    /* Currently using light mode only for corporate site */
+}
+
+/* ========================================
+   10. Print Styles
+   ======================================== */
+@media print {
+    header,
+    footer,
+    #scroll-to-top,
+    #mobile-menu-button,
+    .no-print {
+        display: none !important;
+    }
+    
+    body {
+        background: white;
+        color: black;
+        font-size: 12pt;
+    }
+    
+    a {
+        text-decoration: underline;
+        color: #000;
+    }
+    
+    a[href^="http"]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+    }
+    
+    .page-break {
+        page-break-before: always;
+    }
+    
+    img {
+        max-width: 100% !important;
+    }
+}
