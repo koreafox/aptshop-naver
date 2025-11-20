@@ -340,7 +340,64 @@ const Performance = {
 };
 
 // ========================================
-// 6. Application Initialization
+// 6. Image Modal Module
+// ========================================
+const ImageModal = {
+    init() {
+        this.modal = document.getElementById('image-modal');
+        this.modalImage = document.getElementById('modal-image');
+        this.modalCaption = document.getElementById('modal-caption');
+        this.closeBtn = document.getElementById('close-modal');
+        
+        if (!this.modal || !this.modalImage || !this.modalCaption) return;
+        
+        this.bindEvents();
+    },
+    
+    bindEvents() {
+        // Bind certificate image clicks
+        document.querySelectorAll('.cert-image').forEach(card => {
+            card.addEventListener('click', (e) => {
+                const src = card.dataset.src;
+                const alt = card.dataset.alt;
+                this.open(src, alt);
+            });
+        });
+        
+        // Close button
+        this.closeBtn?.addEventListener('click', () => this.close());
+        
+        // Close on background click
+        this.modal.addEventListener('click', (e) => {
+            if (e.target === this.modal) {
+                this.close();
+            }
+        });
+        
+        // Close on ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !this.modal.classList.contains('hidden')) {
+                this.close();
+            }
+        });
+    },
+    
+    open(src, caption) {
+        this.modalImage.src = src;
+        this.modalImage.alt = caption;
+        this.modalCaption.textContent = caption;
+        this.modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    },
+    
+    close() {
+        this.modal.classList.add('hidden');
+        document.body.style.overflow = '';
+    }
+};
+
+// ========================================
+// 7. Application Initialization
 // ========================================
 const App = {
     async init() {
@@ -359,6 +416,7 @@ const App = {
             ScrollManager.init();
             AnimationManager.init();
             Performance.init();
+            ImageModal.init();
             
             // Mark app as ready
             document.body.classList.add('app-ready');
@@ -370,7 +428,7 @@ const App = {
 };
 
 // ========================================
-// 7. Start Application
+// 8. Start Application
 // ========================================
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => App.init());

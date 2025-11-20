@@ -13,4 +13,14 @@ function switchTab(tabName) {
     
     // Add active class to selected button
     document.getElementById('tab-' + tabName).classList.add('active');
+    
+    // Change background image based on tab
+    const heroImage = document.getElementById('hero-bg-image');
+    if (heroImage) {
+        if (tabName === 'leak') {
+            heroImage.src = '../img/hero11-bgg_double.jpg';
+        } else if (tabName === 'industrial') {
+            heroImage.src = '../img/hero11-bgg_normal.jpg';
+        }
+    }
 }
