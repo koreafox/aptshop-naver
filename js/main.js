@@ -397,7 +397,108 @@ const ImageModal = {
 };
 
 // ========================================
-// 7. Application Initialization
+// 7. Product Slider Module
+// ========================================
+const ProductSlider = {
+    currentSlide: 0,
+    totalSlides: 5,
+    slider: null,
+    dots: null,
+    isTransitioning: false,
+    
+    init() {
+        this.slider = document.getElementById('productSlider');
+        this.dots = document.querySelectorAll('.slider-dot');
+        
+        if (!this.slider) return;
+        
+        // Remove transition class initially
+        this.slider.style.transition = 'transform 0.5s ease-in-out';
+        
+        // Navigation buttons
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        
+        if (prevBtn) prevBtn.addEventListener('click', () => this.prev());
+        if (nextBtn) nextBtn.addEventListener('click', () => this.next());
+        
+        // Dot navigation
+        this.dots.forEach(dot => {
+            dot.addEventListener('click', (e) => {
+                const slideIndex = parseInt(e.target.dataset.slide);
+                this.goToSlide(slideIndex);
+            });
+        });
+        
+        // Touch/Swipe support
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        this.slider.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+        
+        this.slider.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            this.handleSwipe(touchStartX, touchEndX);
+        });
+    },
+    
+    handleSwipe(startX, endX) {
+        if (endX < startX - 50) this.next();
+        if (endX > startX + 50) this.prev();
+    },
+    
+    goToSlide(index, noTransition = false) {
+        if (this.isTransitioning) return;
+        
+        this.isTransitioning = true;
+        this.currentSlide = index;
+        
+        if (noTransition) {
+            this.slider.style.transition = 'none';
+        } else {
+            this.slider.style.transition = 'transform 0.5s ease-in-out';
+        }
+        
+        const offset = -100 * index;
+        this.slider.style.transform = `translateX(${offset}%)`;
+        this.updateDots();
+        
+        setTimeout(() => {
+            this.isTransitioning = false;
+        }, noTransition ? 0 : 500);
+    },
+    
+    next() {
+        if (this.isTransitioning) return;
+        
+        const nextSlide = (this.currentSlide + 1) % this.totalSlides;
+        this.goToSlide(nextSlide);
+    },
+    
+    prev() {
+        if (this.isTransitioning) return;
+        
+        const prevSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+        this.goToSlide(prevSlide);
+    },
+    
+    updateDots() {
+        this.dots.forEach((dot, index) => {
+            if (index === this.currentSlide) {
+                dot.classList.remove('bg-gray-300', 'text-gray-700');
+                dot.classList.add('bg-blue-600', 'text-white');
+            } else {
+                dot.classList.remove('bg-blue-600', 'text-white');
+                dot.classList.add('bg-gray-300', 'text-gray-700');
+            }
+        });
+    }
+};
+
+// ========================================
+// 8. Application Initialization
 // ========================================
 const App = {
     async init() {
@@ -417,6 +518,7 @@ const App = {
             AnimationManager.init();
             Performance.init();
             ImageModal.init();
+            ProductSlider.init();
             
             // Mark app as ready
             document.body.classList.add('app-ready');

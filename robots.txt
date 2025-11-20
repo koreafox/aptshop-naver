@@ -1,6 +1,8 @@
 # 모든 검색엔진 크롤러 허용
 User-agent: *
 Allow: /
+Allow: /sitemap.xml
+Allow: /robots.txt
 
 # 네이버 검색로봇 (Yeti) 명시적 허용
 User-agent: Yeti
@@ -9,6 +11,7 @@ Allow: /
 # 구글 검색로봇 허용
 User-agent: Googlebot
 Allow: /
+Allow: /sitemap.xml
 
 # Bing 검색로봇 허용
 User-agent: Bingbot
