@@ -22,6 +22,97 @@
     <!-- 네이버 사이트 소유 확인 메타태그 -->
     <meta name="naver-site-verification" content="aab4e90a7b6f11cff5bcbd1d4d7fc82eb261770f" />
     
+    <!-- Structured Data (JSON-LD) - Organization with Certifications -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "아파트샵",
+        "description": "황소밴드 공식 온라인 판매점",
+        "url": "https://aptshop.kr",
+        "logo": "https://aptshop.kr/img/logo_aptshop.png",
+        "image": [
+            "https://aptshop.kr/img/cert_1.jpg",
+            "https://aptshop.kr/img/cert_2.jpg",
+            "https://aptshop.kr/img/cert_3.jpg",
+            "https://aptshop.kr/img/cert_4.jpg",
+            "https://aptshop.kr/img/cert_5.jpg"
+        ],
+        "hasCredential": [
+            {
+                "@type": "EducationalOccupationalCredential",
+                "name": "특허 제 10-1424730호",
+                "description": "파이프 누수 보수용 밴드",
+                "credentialCategory": "특허",
+                "recognizedBy": {
+                    "@type": "Organization",
+                    "name": "특허청"
+                },
+                "image": "https://aptshop.kr/img/cert_1.jpg"
+            },
+            {
+                "@type": "EducationalOccupationalCredential",
+                "name": "벤처기업 확인서",
+                "description": "제 20160103780호",
+                "credentialCategory": "벤처기업인증",
+                "recognizedBy": {
+                    "@type": "Organization",
+                    "name": "중소벤처기업부"
+                },
+                "image": "https://aptshop.kr/img/cert_2.jpg"
+            }
+        ]
+    }
+    </script>
+    
+    <!-- Structured Data (JSON-LD) - Image Gallery -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ImageGallery",
+        "name": "황소밴드 인증서 및 시험성적서",
+        "description": "황소밴드의 특허 인증 및 벤처기업 인증서",
+        "url": "https://aptshop.kr/menu/certifications.html",
+        "image": [
+            {
+                "@type": "ImageObject",
+                "contentUrl": "https://aptshop.kr/img/cert_1.jpg",
+                "name": "벤처기업 인증서",
+                "description": "벤처기업 확인서 제 20160103780호",
+                "caption": "벤처기업 인증"
+            },
+            {
+                "@type": "ImageObject",
+                "contentUrl": "https://aptshop.kr/img/cert_2.jpg",
+                "name": "특허증",
+                "description": "특허 제 10-1424730호 - 파이프 누수 보수용 밴드",
+                "caption": "특허 등록"
+            },
+            {
+                "@type": "ImageObject",
+                "contentUrl": "https://aptshop.kr/img/cert_3.jpg",
+                "name": "조달청 벤처나라 지정증서",
+                "description": "조달청 벤처나라 지정증서",
+                "caption": "조달청 벤처나라 지정"
+            },
+            {
+                "@type": "ImageObject",
+                "contentUrl": "https://aptshop.kr/img/cert_4.jpg",
+                "name": "KTC 토크 시험성적서",
+                "description": "KTC 토크 시험성적서 - 황소밴드 품질 검증",
+                "caption": "KTC 토크 시험"
+            },
+            {
+                "@type": "ImageObject",
+                "contentUrl": "https://aptshop.kr/img/cert_5.jpg",
+                "name": "KTC 내압 시험성적서",
+                "description": "KTC 내압 시험성적서 - 황소밴드 품질 검증",
+                "caption": "KTC 내압 시험"
+            }
+        ]
+    }
+    </script>
+    
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://cdn.tailwindcss.com">
     
