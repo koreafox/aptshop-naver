@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" 
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>황소밴드 공식 판매점 - 아파트샵</title>
+    <link>https://aptshop.kr/</link>
+    <description>황소밴드 온라인 공식 판매점 아파트샵. 특허받은 강력한 조임력으로 1인 보수 작업 완료! 100% SUS304 스테인리스 품질보증.</description>
+    <language>ko</language>
+    <lastBuildDate>Sun, 24 Nov 2024 10:30:00 +0900</lastBuildDate>
+    <atom:link href="https://aptshop.kr/rss.xml" rel="self" type="application/rss+xml" />
+    <copyright>Copyright 2024 아파트샵. All rights reserved.</copyright>
+    <managingEditor>aptshop7@naver.com (아파트샵)</managingEditor>
+    <webMaster>aptshop7@naver.com (아파트샵)</webMaster>
+    <category>제조/유통</category>
+    <ttl>1440</ttl>
+    <image>
+      <url>https://aptshop.kr/img/logo_aptshop.png</url>
+      <title>황소밴드 공식 판매점 - 아파트샵</title>
+      <link>https://aptshop.kr/</link>
+      <width>144</width>
+      <height>144</height>
+    </image>
+
+    <!-- 메인 페이지 -->
+    <item>
+      <title>황소밴드 온라인 공식 판매점 - 아파트샵</title>
+      <link>https://aptshop.kr/</link>
+      <description>황소밾드 온라인 공식 판매점 아파트샵. 특허받은 강력한 조임력으로 1인 보수 작업 완료! 100% SUS304 스테인리스 품질보증.</description>
+      <pubDate>Sun, 24 Nov 2024 10:00:00 +0900</pubDate>
+      <guid isPermaLink="true">https://aptshop.kr/</guid>
+      <category>제품소개</category>
+      <dc:creator>아파트샵</dc:creator>
+      <content:encoded><![CDATA[
+        <h1>황소밴드 공식 판매점</h1>
+        <p>특허받은 강력한 조임력으로 1인 보수 작업 완료!</p>
+        <p>100% SUS304 스테인리스 품질보증</p>
+        <img src="https://aptshop.kr/img/product_single_type.jpg" alt="황소밴드 싱글" />
+        <img src="https://aptshop.kr/img/product_double_type.png" alt="황소밴드 더블" />
+        <img src="https://aptshop.kr/img/product_all_type.jpg" alt="황소밴드 호스밴드" />
+      ]]></content:encoded>
+    </item>
+
+    <!-- 제품 소개 -->
+    <item>
+      <title>황소밴드 제품 라인업 - 싱글/더블/공업용밴드</title>
+      <link>https://aptshop.kr/menu/products.html</link>
+      <description>황소밴드 전 제품 라인업 소개. 싱글밴드, 더블밴드, 공업용밴드 등 다양한 규격의 파이프 누수보수 전문 제품을 만나보세요.</description>
+      <pubDate>Sun, 24 Nov 2024 09:50:00 +0900</pubDate>
+      <guid isPermaLink="true">https://aptshop.kr/menu/products.html</guid>
+      <category>제품소개</category>
+      <dc:creator>아파트샵</dc:creator>
+      <content:encoded><![CDATA[
+        <h2>황소밴드 제품 라인업</h2>
+        <h3>1. 황소밴드 싱글</h3>
+        <p>가정용 파이프 누수보수에 최적화된 싱글밴드. 15A~100A까지 다양한 규격 제공.</p>
+        <img src="https://aptshop.kr/img/product_single_type.jpg" alt="황소밴드 싱글" />
+        
+        <h3>2. 황소밴드 더블</h3>
+        <p>강력한 조임력이 필요한 곳에 사용하는 더블밴드. 특허받은 이중 조임 구조.</p>
+        <img src="https://aptshop.kr/img/product_double_type.png" alt="황소밴드 더블" />
+        
+        <h3>3. 황소밴드 공업용</h3>
+        <p>산업현장 및 대형 파이프용 공업용밴드. 100A 이상 대구경 파이프 대응.</p>
+        <img src="https://aptshop.kr/img/product_all_type.jpg" alt="황소밴드 공업용" />
+        
+        <p><strong>특징:</strong></p>
+        <ul>
+          <li>100% SUS304 스테인리스 재질</li>
+          <li>특허 제 10-1424730호 등록</li>
+          <li>1인 작업 가능한 간편한 설치</li>
+          <li>반영구적 사용 가능</li>
+        </ul>
+      ]]></content:encoded>
+    </item>
+
+    <!-- 브랜드 소개 -->
+    <item>
+      <title>황소밴드 브랜드 스토리 - 대한민국 1위 파이프 누수보수 브랜드</title>
+      <link>https://aptshop.kr/menu/brand.html</link>
+      <description>황소밴드는 대한민국을 대표하는 파이프 누수보수 전문 브랜드입니다. 특허받은 기술력과 품질로 고객의 신뢰를 받고 있습니다.</description>
+      <pubDate>Sun, 24 Nov 2024 09:40:00 +0900</pubDate>
+      <guid isPermaLink="true">https://aptshop.kr/menu/brand.html</guid>
+      <category>브랜드</category>
+      <dc:creator>아파트샵</dc:creator>
+      <content:encoded><![CDATA[
+        <h2>황소밴드 브랜드 스토리</h2>
+        <p>황소밴드는 대한민국을 대표하는 파이프 누수보수 전문 브랜드입니다.</p>
+        <p>특허받은 기술력과 100% SUS304 스테인리스 품질로 고객의 신뢰를 받고 있습니다.</p>
+        <p><strong>브랜드 가치:</strong></p>
+        <ul>
+          <li>신뢰: 특허받은 기술력</li>
+          <li>품질: 100% SUS304 스테인리스</li>
+          <li>편리: 1인 작업 가능</li>
+          <li>안전: KC 인증 완료</li>
+        </ul>
+      ]]></content:encoded>
+    </item>
+
+    <!-- 기업 정보 -->
+    <item>
+      <title>아파트샵 기업정보 - 황소밴드 전문 제조 및 판매</title>
+      <link>https://aptshop.kr/menu/company.html</link>
+      <description>황소밴드 전문 제조 및 판매 기업 아파트샵. 경기도 수원시 소재, 전국 배송 가능.</description>
+      <pubDate>Sun, 24 Nov 2024 09:30:00 +0900</pubDate>
+      <guid isPermaLink="true">https://aptshop.kr/menu/company.html</guid>
+      <category>회사소개</category>
+      <dc:creator>아파트샵</dc:creator>
+      <content:encoded><![CDATA[
+        <h2>아파트샵 기업정보</h2>
+        <p><strong>회사명:</strong> 아파트샵</p>
+        <p><strong>대표:</strong> 이종현</p>
+        <p><strong>사업자등록번호:</strong> 124-27-91417</p>
+        <p><strong>통신판매업신고:</strong> 제2016-경기수원-0685호</p>
+        <p><strong>주소:</strong> 경기도 수원시 권선구 산업로 156번길 88-39</p>
+        <p><strong>전화:</strong> 031-241-5907</p>
+        <p><strong>이메일:</strong> aptshop7@naver.com</p>
+        <p>황소밴드 전문 제조 및 판매 기업으로, 전국 배송이 가능합니다.</p>
+      ]]></content:encoded>
+    </item>
+
+    <!-- 연혁 -->
+    <item>
+      <title>아파트샵 연혁 - 황소밴드와 함께한 성장의 역사</title>
+      <link>https://aptshop.kr/menu/history.html</link>
+      <description>아파트샵의 성장 과정과 주요 이정표. 황소밴드 개발부터 현재까지의 발자취를 소개합니다.</description>
+      <pubDate>Sun, 24 Nov 2024 09:20:00 +0900</pubDate>
+      <guid isPermaLink="true">https://aptshop.kr/menu/history.html</guid>
+      <category>회사소개</category>
+      <dc:creator>아파트샵</dc:creator>
+      <content:encoded><![CDATA[
+        <h2>아파트샵 연혁</h2>
+        <p>황소밴드와 함께한 아파트샵의 성장 역사를 소개합니다.</p>
+        <ul>
+          <li><strong>2014년:</strong> 황소밴드 특허 등록 (제 10-1424730호)</li>
+          <li><strong>2016년:</strong> 통신판매업 신고</li>
+          <li><strong>2018년:</strong> 네이버 스마트스토어 입점</li>
+          <li><strong>2020년:</strong> 쿠팡 입점</li>
+          <li><strong>2024년:</strong> 공식 홈페이지 오픈</li>
+        </ul>
+      ]]></content:encoded>
+    </item>
+
+    <!-- 미션 & 비전 -->
+    <item>
+      <title>아파트샵 미션 & 비전 - 누수보수의 새로운 기준</title>
+      <link>https://aptshop.kr/menu/mission.html</link>
+      <description>아파트샵의 미션과 비전. 누수보수의 새로운 기준을 제시하고 고객의 불편을 해소합니다.</description>
+      <pubDate>Sun, 24 Nov 2024 09:10:00 +0900</pubDate>
+      <guid isPermaLink="true">https://aptshop.kr/menu/mission.html</guid>
+      <category>회사소개</category>
+      <dc:creator>아파트샵</dc:creator>
+      <content:encoded><![CDATA[
+        <h2>미션 & 비전</h2>
+        <h3>미션</h3>
+        <p>누수보수의 새로운 기준을 제시하고, 고객의 불편을 해소하는 혁신적인 제품을 제공합니다.</p>
+        <h3>비전</h3>
+        <p>대한민국 1위 파이프 누수보수 브랜드로서, 전 세계로 황소밴드를 알리겠습니다.</p>
+        <h3>핵심 가치</h3>
+        <ul>
+          <li><strong>혁신:</strong> 끊임없는 기술 개발</li>
+          <li><strong>품질:</strong> 최고 품질의 제품 제공</li>
+          <li><strong>신뢰:</strong> 고객과의 약속 이행</li>
+          <li><strong>성장:</strong> 지속 가능한 발전</li>
+        </ul>
+      ]]></content:encoded>
+    </item>
+
+    <!-- 파트너스 -->
+    <item>
+      <title>아파트샵 파트너사 - 함께 성장하는 동반자</title>
+      <link>https://aptshop.kr/menu/partners.html</link>
+      <description>아파트샵과 함께하는 파트너사를 소개합니다. 중소벤처기업부, 한국표준협회 등과 협력하고 있습니다.</description>
+      <pubDate>Sun, 24 Nov 2024 09:00:00 +0900</pubDate>
+      <guid isPermaLink="true">https://aptshop.kr/menu/partners.html</guid>
+      <category>파트너</category>
+      <dc:creator>아파트샵</dc:creator>
+      <content:encoded><![CDATA[
+        <h2>파트너사</h2>
+        <p>아파트샵과 함께 성장하는 파트너사를 소개합니다.</p>
+        <ul>
+          <li><strong>중소벤처기업부:</strong> 중소기업 지원 프로그램 참여</li>
+          <li><strong>한국표준협회:</strong> 품질 인증 협력</li>
+          <li><strong>프레디코:</strong> 기술 협력</li>
+        </ul>
+      ]]></content:encoded>
+    </item>
+
+    <!-- 문의 -->
+    <item>
+      <title>아파트샵 문의 및 상담 - 황소밴드 구매 및 A/S</title>
+      <link>https://aptshop.kr/menu/contact.html</link>
+      <description>황소밴드 구매 문의, A/S, 제품 상담은 아파트샵으로 연락주세요. 전화, 이메일, 방문 상담 가능합니다.</description>
+      <pubDate>Sun, 24 Nov 2024 08:50:00 +0900</pubDate>
+      <guid isPermaLink="true">https://aptshop.kr/menu/contact.html</guid>
+      <category>고객지원</category>
+      <dc:creator>아파트샵</dc:creator>
+      <content:encoded><![CDATA[
+        <h2>문의 및 상담</h2>
+        <p>황소밴드 구매 문의, A/S, 제품 상담은 아파트샵으로 연락주세요.</p>
+        <h3>연락처</h3>
+        <ul>
+          <li><strong>전화:</strong> 031-241-5907</li>
+          <li><strong>이메일:</strong> aptshop7@naver.com</li>
+          <li><strong>주소:</strong> 경기도 수원시 권선구 산업로 156번길 88-39</li>
+          <li><strong>운영시간:</strong> 평일 09:00 - 18:00 (주말 및 공휴일 휴무)</li>
+        </ul>
+        <h3>상담 가능 사항</h3>
+        <ul>
+          <li>제품 구매 문의</li>
+          <li>규격 및 사용법 상담</li>
+          <li>대량 구매 및 견적</li>
+          <li>A/S 및 교환/환불</li>
+        </ul>
+      ]]></content:encoded>
+    </item>
+
+    <!-- 뉴스 -->
+    <item>
+      <title>황소밴드 언론 보도 - 특허 기술력 인정받아</title>
+      <link>https://aptshop.kr/menu/news.html</link>
+      <description>황소밴드의 언론 보도 자료. 특허 기술력과 품질을 인정받아 다수의 언론에 소개되었습니다.</description>
+      <pubDate>Sun, 24 Nov 2024 08:40:00 +0900</pubDate>
+      <guid isPermaLink="true">https://aptshop.kr/menu/news.html</guid>
+      <category>뉴스</category>
+      <dc:creator>아파트샵</dc:creator>
+      <content:encoded><![CDATA[
+        <h2>언론 보도</h2>
+        <p>황소밴드의 특허 기술력과 품질을 인정받아 다수의 언론에 소개되었습니다.</p>
+        <h3>주요 보도 내용</h3>
+        <ul>
+          <li>특허받은 파이프 누수보수 기술</li>
+          <li>1인 작업 가능한 혁신적인 구조</li>
+          <li>100% SUS304 스테인리스 품질</li>
+          <li>중소기업 우수 제품 선정</li>
+        </ul>
+      ]]></content:encoded>
+    </item>
+
+    <!-- 소셜마켓 -->
+    <item>
+      <title>황소밴드 구매처 - 네이버 스마트스토어, 쿠팡</title>
+      <link>https://aptshop.kr/menu/social.html</link>
+      <description>황소밴드는 네이버 스마트스토어, 쿠팡에서 구매 가능합니다. 빠른 배송과 안전한 결제를 제공합니다.</description>
+      <pubDate>Sun, 24 Nov 2024 08:30:00 +0900</pubDate>
+      <guid isPermaLink="true">https://aptshop.kr/menu/social.html</guid>
+      <category>구매안내</category>
+      <dc:creator>아파트샵</dc:creator>
+      <content:encoded><![CDATA[
+        <h2>구매처 안내</h2>
+        <p>황소밴드는 다음 온라인 쇼핑몰에서 구매 가능합니다.</p>
+        <h3>네이버 스마트스토어</h3>
+        <p>네이버페이 결제 가능, 네이버 쇼핑 적립금 혜택</p>
+        <p><a href="https://smartstore.naver.com/aptshop7/">아파트샵 스마트스토어 바로가기</a></p>
+        
+        <h3>쿠팡</h3>
+        <p>로켓배송 가능, 빠른 배송</p>
+        
+        <h3>구매 혜택</h3>
+        <ul>
+          <li>전국 무료배송 (일부 지역 제외)</li>
+          <li>대량 구매 시 할인</li>
+          <li>품질 보증</li>
+          <li>A/S 지원</li>
+        </ul>
+      ]]></content:encoded>
+    </item>
+
+    <!-- 인증서 -->
+    <item>
+      <title>황소밴드 인증서 - 특허, KC인증, 품질보증</title>
+      <link>https://aptshop.kr/menu/certifications.html</link>
+      <description>황소밴드의 각종 인증서를 확인하세요. 특허증, KC인증서, 품질보증서 등을 보유하고 있습니다.</description>
+      <pubDate>Sun, 24 Nov 2024 08:20:00 +0900</pubDate>
+      <guid isPermaLink="true">https://aptshop.kr/menu/certifications.html</guid>
+      <category>인증</category>
+      <dc:creator>아파트샵</dc:creator>
+      <content:encoded><![CDATA[
+        <h2>인증서</h2>
+        <p>황소밴드는 다음과 같은 인증을 보유하고 있습니다.</p>
+        <ul>
+          <li><strong>특허증:</strong> 제 10-1424730호 (파이프 누수 보수용 밴드)</li>
+          <li><strong>KC인증:</strong> 안전 인증 완료</li>
+          <li><strong>품질보증:</strong> 100% SUS304 스테인리스</li>
+          <li><strong>중소기업 인증:</strong> 중소벤처기업부 인증</li>
+        </ul>
+        <p>모든 인증서는 공식 홈페이지에서 확인 가능합니다.</p>
+      ]]></content:encoded>
+    </item>
+
+  </channel>
+</rss>
