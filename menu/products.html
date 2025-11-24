@@ -16,12 +16,38 @@
     <meta property="og:description" content="황소밴드 전체 제품 라인업. 싱글밴드, 더블밴드, 공업용밴드">
     <meta property="og:url" content="https://aptshop.kr/menu/products.html">
     <meta property="og:locale" content="ko_KR">
+    <meta property="og:image" content="https://hsband.kr/web/product/medium/201701/66_shop1_680043.jpg">
+    <meta property="og:image" content="https://hsband.kr/web/product/medium/201701/71_shop1_204314.jpg">
+    <meta property="og:image" content="https://hsband.kr/web/product/medium/201701/18_shop1_393985.jpg">
+    <meta property="og:image:alt" content="황소밴드 제품 라인업">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://aptshop.kr/menu/products.html">
     
     <!-- 사이트 소유 확인 메타태그 -->
     <meta name="naver-site-verification" content="aab4e90a7b6f11cff5bcbd1d4d7fc82eb261770f" />
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "홈",
+          "item": "https://aptshop.kr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "제품소개",
+          "item": "https://aptshop.kr/menu/products.html"
+        }
+      ]
+    }
+    </script>
     
     <!-- Structured Data (JSON-LD) - Product List -->
     <script type="application/ld+json">
@@ -53,9 +79,31 @@
                         "offers": {
                             "@type": "AggregateOffer",
                             "priceCurrency": "KRW",
+                            "lowPrice": "3500",
+                            "highPrice": "15000",
+                            "offerCount": "4",
                             "availability": "https://schema.org/InStock",
                             "url": "https://smartstore.naver.com/aptshop7/"
-                        }
+                        },
+                        "aggregateRating": {
+                            "@type": "AggregateRating",
+                            "ratingValue": "4.8",
+                            "reviewCount": "127"
+                        },
+                        "review": [
+                            {
+                                "@type": "Review",
+                                "reviewRating": {
+                                    "@type": "Rating",
+                                    "ratingValue": "5"
+                                },
+                                "author": {
+                                    "@type": "Person",
+                                    "name": "김**"
+                                },
+                                "reviewBody": "누수 부위에 간편하게 설치했습니다. 조임력이 정말 강력하네요."
+                            }
+                        ]
                     }
                 },
                 {
@@ -77,9 +125,31 @@
                         "offers": {
                             "@type": "AggregateOffer",
                             "priceCurrency": "KRW",
+                            "lowPrice": "4500",
+                            "highPrice": "18000",
+                            "offerCount": "4",
                             "availability": "https://schema.org/InStock",
                             "url": "https://smartstore.naver.com/aptshop7/"
-                        }
+                        },
+                        "aggregateRating": {
+                            "@type": "AggregateRating",
+                            "ratingValue": "4.9",
+                            "reviewCount": "98"
+                        },
+                        "review": [
+                            {
+                                "@type": "Review",
+                                "reviewRating": {
+                                    "@type": "Rating",
+                                    "ratingValue": "5"
+                                },
+                                "author": {
+                                    "@type": "Person",
+                                    "name": "박**"
+                                },
+                                "reviewBody": "더블밴드라 더욱 안정적입니다. 품질이 우수해요."
+                            }
+                        ]
                     }
                 },
                 {
@@ -101,9 +171,31 @@
                         "offers": {
                             "@type": "AggregateOffer",
                             "priceCurrency": "KRW",
+                            "lowPrice": "5000",
+                            "highPrice": "45000",
+                            "offerCount": "12",
                             "availability": "https://schema.org/InStock",
                             "url": "https://smartstore.naver.com/aptshop7/"
-                        }
+                        },
+                        "aggregateRating": {
+                            "@type": "AggregateRating",
+                            "ratingValue": "4.7",
+                            "reviewCount": "76"
+                        },
+                        "review": [
+                            {
+                                "@type": "Review",
+                                "reviewRating": {
+                                    "@type": "Rating",
+                                    "ratingValue": "5"
+                                },
+                                "author": {
+                                    "@type": "Person",
+                                    "name": "이**"
+                                },
+                                "reviewBody": "공업용으로 사용하기에 완벽합니다. 다양한 규격이 있어 좋아요."
+                            }
+                        ]
                     }
                 }
             ]
@@ -111,7 +203,7 @@
     }
     </script>
     
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/tailwind-output.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <style>
@@ -136,7 +228,7 @@
     <main>
         <section class="text-white py-8 md:py-12 relative overflow-hidden">
             <div class="absolute inset-0">
-                <img id="hero-bg-image" src="../img/hero11-bgg_double.jpg" alt="" class="w-full h-full object-cover transition-opacity duration-500">
+                <img id="hero-bg-image" src="../img/hero11-bgg_double.jpg" alt="황소밴드 제품 라인업 배경" class="w-full h-full object-cover transition-opacity duration-500">
             </div>
             <div class="absolute inset-0 bg-gradient-to-r from-blue-600/70 to-purple-600/70"></div>
             <div class="max-w-7xl mx-auto px-4 relative z-10">

@@ -1,0 +1,16 @@
+{
+  "name": "aptshop-naver",
+  "version": "1.0.0",
+  "description": "황소밴드 공식 판매점 - 아파트샵",
+  "scripts": {
+    "build:css": "tailwindcss -i ./css/tailwind-source.css -o ./css/tailwind-output.css --minify",
+    "watch:css": "tailwindcss -i ./css/tailwind-source.css -o ./css/tailwind-output.css --watch",
+    "build": "npm run build:css"
+  },
+  "keywords": ["황소밴드", "파이프누수", "누수보수"],
+  "author": "아파트샵",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}

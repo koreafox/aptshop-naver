@@ -15,6 +15,8 @@
     <meta property="og:site_name" content="아파트샵">
     <meta property="og:title" content="문의 및 상담 - 황소밴드">
     <meta property="og:url" content="https://aptshop.kr/menu/contact.html">
+    <meta property="og:description" content="황소밴드 구매 문의, 설치 방법, A/S 상담. 전문 상담원이 친절하게 안내해드립니다.">
+    <meta property="og:description" content="황소밴드 구매 문의, 설치 방법, A/S 상담. 전문 상담원이 친절하게 안내해드립니다.">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://aptshop.kr/menu/contact.html">
@@ -22,11 +24,65 @@
     <!-- 네이버 사이트 소유 확인 메타태그 -->
     <meta name="naver-site-verification" content="aab4e90a7b6f11cff5bcbd1d4d7fc82eb261770f" />
     
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "홈",
+          "item": "https://aptshop.kr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "문의 및 상담",
+          "item": "https://aptshop.kr/menu/contact.html"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "아파트샵",
+      "image": "https://aptshop.kr/img/logo_aptshop.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "경수대로 546, 5층 5029",
+        "addressLocality": "안양시 동안구",
+        "addressRegion": "경기도",
+        "addressCountry": "KR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 37.3947,
+        "longitude": 126.9569
+      },
+      "telephone": "+82-10-7357-8613",
+      "email": "aptshop7@gmail.com",
+      "url": "https://aptshop.kr",
+      "priceRange": "₩₩",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    }
+    </script>
+    
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://cdn.tailwindcss.com">
     
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/tailwind-output.css">
     
     <!-- Custom Styles -->
     <link rel="stylesheet" href="../css/main.css">
@@ -41,7 +97,7 @@
         <!-- Hero Section -->
         <section class="text-white py-8 md:py-12 relative overflow-hidden">
             <div class="absolute inset-0">
-                <img src="../img/hero11-bgg_qa.png" alt="" class="w-full h-full object-cover">
+                <img src="../img/hero11-bgg_qa.png" alt="황소밴드 고객 상담 센터" class="w-full h-full object-cover">
             </div>
             <div class="absolute inset-0 bg-gradient-to-r from-blue-600/70 to-purple-600/70"></div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

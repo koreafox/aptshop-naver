@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 커스텀 컴포넌트 */
+@layer components {
+  .hero-gradient {
+    @apply bg-gradient-to-r from-blue-600 to-purple-600;
+  }
+  
+  .nav-link {
+    @apply px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors;
+  }
+  
+  .animate-on-scroll {
+    @apply opacity-0 translate-y-4 transition-all duration-700;
+  }
+  
+  .animate-on-scroll.visible {
+    @apply opacity-100 translate-y-0;
+  }
+  
+  .footer-links a {
+    @apply text-gray-400 hover:text-white text-sm transition-colors;
+  }
+}
+
+/* 커스텀 유틸리티 */
+@layer utilities {
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .text-shadow-lg {
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  }
+}

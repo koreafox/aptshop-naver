@@ -15,6 +15,10 @@
     <meta property="og:site_name" content="아파트샵">
     <meta property="og:title" content="소식 - 황소밴드">
     <meta property="og:url" content="https://aptshop.kr/menu/news.html">
+    <meta property="og:description" content="황소밴드의 최신 소식과 업데이트를 확인하세요.">
+    <meta property="og:description" content="황소밴드의 최신 소식과 업데이트를 확인하세요.">
+    <meta property="og:image" content="https://aptshop.kr/img/hero11-bgg_fair.jpg">
+    <meta property="og:image:alt" content="황소밴드 소식">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://aptshop.kr/menu/news.html">
@@ -22,11 +26,33 @@
     <!-- 네이버 사이트 소유 확인 메타태그 -->
     <meta name="naver-site-verification" content="aab4e90a7b6f11cff5bcbd1d4d7fc82eb261770f" />
     
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "홈",
+          "item": "https://aptshop.kr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "소식",
+          "item": "https://aptshop.kr/menu/news.html"
+        }
+      ]
+    }
+    </script>
+    
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://cdn.tailwindcss.com">
     
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/tailwind-output.css">
     
     <!-- Custom Styles -->
     <link rel="stylesheet" href="../css/main.css">
@@ -41,7 +67,7 @@
         <!-- Hero Section -->
         <section class="text-white py-8 md:py-12 relative overflow-hidden">
             <div class="absolute inset-0">
-                <img src="../img/hero11-bgg_fair.jpg" alt="" class="w-full h-full object-cover">
+                <img src="../img/hero11-bgg_fair.jpg" alt="황소밴드 전시회 부스" class="w-full h-full object-cover">
             </div>
             <div class="absolute inset-0 bg-gradient-to-r from-blue-600/70 to-purple-600/70"></div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

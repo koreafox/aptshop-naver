@@ -18,7 +18,7 @@ const StructuredData = {
      * 제품 스키마 생성
      */
     createProductSchema(product) {
-        return {
+        const schema = {
             "@context": "https://schema.org",
             "@type": "Product",
             "name": product.name,
@@ -34,7 +34,7 @@ const StructuredData = {
                 "url": "https://aptshop.kr"
             },
             "offers": {
-                "@type": "Offer",
+                "@type": product.offerType || "Offer",
                 "url": product.url,
                 "priceCurrency": "KRW",
                 "availability": "https://schema.org/InStock",
@@ -45,6 +45,43 @@ const StructuredData = {
             },
             "category": product.category || "파이프 누수보수"
         };
+
+        // AggregateOffer인 경우 lowPrice, highPrice, offerCount 추가
+        if (product.offerType === "AggregateOffer") {
+            schema.offers.lowPrice = product.lowPrice;
+            schema.offers.highPrice = product.highPrice;
+            schema.offers.offerCount = product.offerCount;
+        } else if (product.price) {
+            // 단일 Offer인 경우 price 추가
+            schema.offers.price = product.price;
+        }
+
+        // aggregateRating 추가 (있는 경우)
+        if (product.aggregateRating) {
+            schema.aggregateRating = {
+                "@type": "AggregateRating",
+                "ratingValue": product.aggregateRating.ratingValue,
+                "reviewCount": product.aggregateRating.reviewCount
+            };
+        }
+
+        // review 추가 (있는 경우)
+        if (product.reviews && product.reviews.length > 0) {
+            schema.review = product.reviews.map(review => ({
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": review.rating
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": review.author
+                },
+                "reviewBody": review.body
+            }));
+        }
+
+        return schema;
     },
 
     /**

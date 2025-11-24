@@ -16,6 +16,8 @@
     <meta property="og:title" content="기업정보 - 황소밴드">
     <meta property="og:description" content="아파트샵 기업정보">
     <meta property="og:url" content="https://aptshop.kr/menu/company.html">
+    <meta property="og:image" content="https://aptshop.kr/img/hero11-bgg_business2.jpg">
+    <meta property="og:image:alt" content="아파트샵 기업정보">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://aptshop.kr/menu/company.html">
@@ -23,15 +25,66 @@
     <!-- 네이버 사이트 소유 확인 메타태그 -->
     <meta name="naver-site-verification" content="aab4e90a7b6f11cff5bcbd1d4d7fc82eb261770f" />
     
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "홈",
+          "item": "https://aptshop.kr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "회사소개",
+          "item": "https://aptshop.kr/menu/company.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "기업정보",
+          "item": "https://aptshop.kr/menu/company.html"
+        }
+      ]
+    }
+    </script>
+    
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://cdn.tailwindcss.com">
     
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/tailwind-output.css">
     
     <!-- Custom Styles -->
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/responsive.css">
+    
+    <!-- VideoObject Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "name": "황소밴드 소개 영상",
+      "description": "황소밴드 제품 소개 및 특징. 파이프 누수보수 전문 솔루션",
+      "thumbnailUrl": "https://img.youtube.com/vi/_l-1wXGrRg4/maxresdefault.jpg",
+      "uploadDate": "2024-01-01T00:00:00Z",
+      "duration": "PT3M",
+      "contentUrl": "https://www.youtube.com/watch?v=_l-1wXGrRg4",
+      "embedUrl": "https://www.youtube.com/embed/_l-1wXGrRg4",
+      "publisher": {
+        "@type": "Organization",
+        "name": "아파트샵",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://aptshop.kr/img/logo_aptshop.png"
+        }
+      }
+    }
+    </script>
 </head>
 <body class="pt-20">
     <!-- Header Container -->
@@ -42,7 +95,7 @@
         <!-- Hero Section -->
         <section class="text-white py-8 md:py-12 relative overflow-hidden">
             <div class="absolute inset-0">
-                <img src="../img/hero11-bgg_business2.jpg" alt="" class="w-full h-full object-cover">
+                <img src="../img/hero11-bgg_business2.jpg" alt="아파트샵 사무실 전경" class="w-full h-full object-cover">
             </div>
             <div class="absolute inset-0 bg-gradient-to-r from-blue-600/70 to-purple-600/70"></div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
