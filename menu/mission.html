@@ -289,6 +289,36 @@
     <!-- Footer Container -->
     <div id="footer-container"></div>
     
+    <!-- Terms Modal -->
+    <div id="terms-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden">
+            <div class="flex justify-between items-center p-6 border-b">
+                <h2 class="text-2xl font-bold text-gray-900">이용약관</h2>
+                <button onclick="closeTermsModal()" class="text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="terms-content" class="p-6 overflow-y-auto max-h-[calc(90vh-120px)] text-sm text-gray-700 leading-relaxed"></div>
+        </div>
+    </div>
+    
+    <!-- Privacy Modal -->
+    <div id="privacy-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden">
+            <div class="flex justify-between items-center p-6 border-b">
+                <h2 class="text-2xl font-bold text-gray-900">개인정보처리방침</h2>
+                <button onclick="closePrivacyModal()" class="text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="privacy-content" class="p-6 overflow-y-auto max-h-[calc(90vh-120px)] text-sm text-gray-700 leading-relaxed"></div>
+        </div>
+    </div>
+    
     <!-- Scroll to Top Button -->
     <button id="scroll-to-top" class="hidden fixed bottom-8 right-4 bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 z-40">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -298,5 +328,6 @@
     
     <!-- Scripts -->
     <script src="../js/main.js"></script>
+    <script src="../js/terms.js"></script>
 </body>
 </html>
