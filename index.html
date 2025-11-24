@@ -41,15 +41,26 @@
     <meta name="naver-site-verification" content="aab4e90a7b6f11cff5bcbd1d4d7fc82eb261770f" />
     
     <!-- Preconnect for Performance -->
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
-    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Critical CSS Inline -->
+    <style>
+        .hero-gradient{background:linear-gradient(90deg,#2563eb,#9333ea)}
+        .pt-20{padding-top:5rem}
+        body{font-family:system-ui,-apple-system,sans-serif}
+    </style>
     
     <!-- Tailwind CSS -->
     <link rel="stylesheet" href="css/tailwind-output.css">
     
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom Styles (Deferred) -->
+    <link rel="stylesheet" href="css/main.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/responsive.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/responsive.css">
+    </noscript>
     
     <!-- Structured Data (JSON-LD) - Organization -->
     <script type="application/ld+json">
@@ -193,23 +204,23 @@
                         <div id="productSlider" class="flex transition-transform duration-500 ease-in-out">
                             <!-- Slide 1 -->
                             <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-gray-50 p-2">
-                                <img src="img/intro_prod1.png" alt="황소밴드 소개 1" class="w-full h-auto max-h-[300px] md:max-h-[600px] object-contain">
+                                <img src="img/intro_prod1.png" alt="황소밴드 소개 1" class="w-full h-auto max-h-[300px] md:max-h-[600px] object-contain" width="800" height="600" fetchpriority="high">
                             </div>
                             <!-- Slide 2 -->
                             <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-gray-50 p-2">
-                                <img src="img/intro_prod2.png" alt="황소밴드 소개 2" class="w-full h-auto max-h-[300px] md:max-h-[600px] object-contain">
+                                <img src="img/intro_prod2.png" alt="황소밴드 소개 2" class="w-full h-auto max-h-[300px] md:max-h-[600px] object-contain" width="800" height="600" loading="lazy">
                             </div>
                             <!-- Slide 3 -->
                             <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-gray-50 p-2">
-                                <img src="img/intro_prod3.png" alt="황소밴드 소개 3" class="w-full h-auto max-h-[300px] md:max-h-[600px] object-contain">
+                                <img src="img/intro_prod3.png" alt="황소밴드 소개 3" class="w-full h-auto max-h-[300px] md:max-h-[600px] object-contain" width="800" height="600" loading="lazy">
                             </div>
                             <!-- Slide 4 -->
                             <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-gray-50 p-2">
-                                <img src="img/intro_prod4.png" alt="황소밴드 소개 4" class="w-full h-auto max-h-[300px] md:max-h-[600px] object-contain">
+                                <img src="img/intro_prod4.png" alt="황소밴드 소개 4" class="w-full h-auto max-h-[300px] md:max-h-[600px] object-contain" width="800" height="600" loading="lazy">
                             </div>
                             <!-- Slide 5 -->
                             <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-gray-50 p-2">
-                                <img src="img/intro_prod5.png" alt="황소밴드 소개 5" class="w-full h-auto max-h-[300px] md:max-h-[600px] object-contain">
+                                <img src="img/intro_prod5.png" alt="황소밴드 소개 5" class="w-full h-auto max-h-[300px] md:max-h-[600px] object-contain" width="800" height="600" loading="lazy">
                             </div>
                         </div>
                     </div>
