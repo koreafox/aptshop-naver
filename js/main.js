@@ -401,7 +401,7 @@ const ImageModal = {
 // ========================================
 const ProductSlider = {
     currentSlide: 0,
-    totalSlides: 5,
+    totalSlides: 6,
     slider: null,
     dots: null,
     isTransitioning: false,
