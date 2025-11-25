@@ -129,6 +129,7 @@ const Navigation = {
         this.initMobileMenu();
         this.initMobileDropdowns();
         this.closeMenuOnOutsideClick();
+        this.closeMenuOnLinkClick();
     },
     
     initMobileMenu() {
@@ -149,23 +150,88 @@ const Navigation = {
             
             // Prevent body scroll when menu is open
             document.body.style.overflow = isHidden ? 'hidden' : '';
+            
+            // Restore submenu states when opening menu
+            if (isHidden) {
+                // 메뉴가 완전히 표시된 후 상태 복원
+                setTimeout(() => {
+                    this.restoreDropdownStates();
+                }, 50);
+            }
         });
     },
     
     initMobileDropdowns() {
         const dropdownBtns = document.querySelectorAll('.mobile-dropdown-btn');
         
-        dropdownBtns.forEach(btn => {
+        dropdownBtns.forEach((btn) => {
             btn.addEventListener('click', () => {
                 const content = btn.nextElementSibling;
                 const icon = btn.querySelector('svg');
+                const menuKeys = this.getMenuKeys(btn);
                 
                 if (content && icon) {
+                    const isHidden = content.classList.contains('hidden');
                     content.classList.toggle('hidden');
                     icon.classList.toggle('rotate-180');
+                    
+                    this.saveDropdownState(menuKeys, !isHidden);
                 }
             });
         });
+
+        // Ensure stored states are applied on load
+        this.restoreDropdownStates();
+    },
+    
+    saveDropdownState(keys, isOpen) {
+        try {
+            const states = JSON.parse(localStorage.getItem('mobileMenuStates') || '{}');
+            const keyList = Array.isArray(keys) ? keys : [keys];
+            keyList.forEach((key) => {
+                if (key) {
+                    states[key] = isOpen;
+                }
+            });
+            localStorage.setItem('mobileMenuStates', JSON.stringify(states));
+        } catch (e) {
+            console.warn('Failed to save menu state:', e);
+        }
+    },
+    
+    restoreDropdownStates() {
+        try {
+            const states = JSON.parse(localStorage.getItem('mobileMenuStates') || '{}');
+            const dropdownBtns = document.querySelectorAll('.mobile-dropdown-btn');
+            
+            dropdownBtns.forEach((btn) => {
+                const menuKeys = this.getMenuKeys(btn);
+                const shouldOpen = menuKeys.some((key) => states[key]);
+                
+                if (shouldOpen) {
+                    const content = btn.nextElementSibling;
+                    const icon = btn.querySelector('svg');
+                    
+                    if (content && icon) {
+                        content.classList.remove('hidden');
+                        icon.classList.add('rotate-180');
+                    }
+                }
+            });
+        } catch (e) {
+            console.warn('Failed to restore menu states:', e);
+        }
+    },
+
+    getMenuKeys(btn) {
+        const keys = [];
+        const dataKey = btn.dataset.menuKey?.trim();
+        if (dataKey) keys.push(dataKey);
+        const textKey = btn.textContent.replace(/\s+/g, ' ').trim();
+        if (textKey && (!dataKey || dataKey !== textKey)) {
+            keys.push(textKey);
+        }
+        return keys;
     },
     
     closeMenuOnOutsideClick() {
@@ -179,6 +245,25 @@ const Navigation = {
                 document.getElementById('menu-icon')?.classList.remove('hidden');
                 document.getElementById('close-icon')?.classList.add('hidden');
                 document.body.style.overflow = '';
+            }
+        });
+    },
+    
+    closeMenuOnLinkClick() {
+        // 모바일 메뉴 내부의 모든 링크에 클릭 이벤트 추가
+        document.addEventListener('click', (e) => {
+            const menu = document.getElementById('mobile-menu');
+            const link = e.target.closest('a');
+            
+            // 링크를 클릭했고, 모바일 메뉴가 열려있으면 메뉴 닫기
+            if (link && menu && menu.contains(link) && !menu.classList.contains('hidden')) {
+                // 드롭다운 버튼이 아닌 실제 링크인 경우에만
+                if (!link.classList.contains('mobile-dropdown-btn')) {
+                    menu.classList.add('hidden');
+                    document.getElementById('menu-icon')?.classList.remove('hidden');
+                    document.getElementById('close-icon')?.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }
             }
         });
     }

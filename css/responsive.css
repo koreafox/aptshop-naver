@@ -43,6 +43,58 @@
     .footer-links {
         display: none !important;
     }
+    
+    /* History Page - Mobile Timeline */
+    /* 타임라인 컨테이너에 좌측 세로선 추가 */
+    .py-16 .relative {
+        position: relative;
+        padding-left: 1.5rem;
+    }
+    
+    .py-16 .relative::before {
+        content: '';
+        position: absolute;
+        left: 0.5rem;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: linear-gradient(to bottom, #2563eb, #9333ea);
+        border-radius: 2px;
+    }
+    
+    /* 각 카드 옆에 작은 원형 마커 추가 */
+    .py-16 .relative .mb-12::before,
+    .py-16 .relative .animate-on-scroll:last-child::before {
+        content: '';
+        position: absolute;
+        left: -0.875rem;
+        top: 2rem;
+        width: 1rem;
+        height: 1rem;
+        background: white;
+        border: 3px solid #2563eb;
+        border-radius: 50%;
+        z-index: 1;
+    }
+    
+    .py-16 .relative .mb-12:nth-child(even)::before {
+        border-color: #9333ea;
+    }
+    
+    /* History Page - Uniform Card Alignment for Mobile */
+    .mb-12 .bg-gradient-to-br,
+    .animate-on-scroll .bg-gradient-to-br {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        max-width: 100% !important;
+    }
+    
+    /* Product Slider - Mobile */
+    .product-slide {
+        max-height: none !important;
+        min-height: 300px;
+        aspect-ratio: 16 / 9;
+    }
 }
 
 /* ========================================
