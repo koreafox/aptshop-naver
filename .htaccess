@@ -1,0 +1,74 @@
+# 캐싱 설정
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # 이미지 캐싱 (1개월)
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/webp "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresByType image/ico "access plus 1 year"
+    
+    # CSS, JavaScript 캐싱 (1주일)
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType text/javascript "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+    
+    # HTML 캐싱 (2시간)
+    ExpiresByType text/html "access plus 2 hours"
+    ExpiresByType application/xhtml+xml "access plus 2 hours"
+    
+    # 폰트 캐싱 (1개월)
+    ExpiresByType font/ttf "access plus 1 month"
+    ExpiresByType font/otf "access plus 1 month"
+    ExpiresByType font/woff "access plus 1 month"
+    ExpiresByType font/woff2 "access plus 1 month"
+    ExpiresByType application/font-woff "access plus 1 month"
+</IfModule>
+
+# GZIP 압축
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE application/ld+json
+</IfModule>
+
+# 보안 헤더
+<IfModule mod_headers.c>
+    # XSS 보호
+    Header set X-XSS-Protection "1; mode=block"
+    
+    # 콘텐츠 타입 스니핑 방지
+    Header set X-Content-Type-Options "nosniff"
+    
+    # 클릭재킹 방지
+    Header set X-Frame-Options "SAMEORIGIN"
+    
+    # HTTPS 강제
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+</IfModule>
+
+# 리다이렉트 설정
+# www 없는 도메인으로 통일
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.aptshop\.kr$ [NC]
+RewriteRule ^(.*)$ https://aptshop.kr/$1 [R=301,L]
+
+# index.html 제거
+RewriteCond %{THE_REQUEST} /index\.html [NC]
+RewriteRule ^(.*/)?index\.html$ /$1 [R=301,L]
+
+# 에러 페이지
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
