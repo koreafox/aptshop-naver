@@ -153,10 +153,9 @@ const Navigation = {
             
             // Restore submenu states when opening menu
             if (isHidden) {
-                // 메뉴가 완전히 표시된 후 상태 복원
                 setTimeout(() => {
-                    this.restoreDropdownStates();
-                }, 50);
+                    this.restoreMenuStates();
+                }, 100);
             }
         });
     },
@@ -168,47 +167,45 @@ const Navigation = {
             btn.addEventListener('click', () => {
                 const content = btn.nextElementSibling;
                 const icon = btn.querySelector('svg');
-                const menuKeys = this.getMenuKeys(btn);
+                const menuKey = btn.dataset.menuKey;
                 
-                if (content && icon) {
+                if (content && icon && menuKey) {
                     const isHidden = content.classList.contains('hidden');
                     content.classList.toggle('hidden');
                     icon.classList.toggle('rotate-180');
                     
-                    this.saveDropdownState(menuKeys, !isHidden);
+                    // Save state
+                    this.saveMenuState(menuKey, !isHidden);
                 }
             });
         });
-
-        // Ensure stored states are applied on load
-        this.restoreDropdownStates();
     },
     
-    saveDropdownState(keys, isOpen) {
+    saveMenuState(menuKey, isOpen) {
         try {
-            const states = JSON.parse(localStorage.getItem('mobileMenuStates') || '{}');
-            const keyList = Array.isArray(keys) ? keys : [keys];
-            keyList.forEach((key) => {
-                if (key) {
-                    states[key] = isOpen;
+            if (isOpen) {
+                localStorage.setItem('lastOpenedMenu', menuKey);
+            } else {
+                if (localStorage.getItem('lastOpenedMenu') === menuKey) {
+                    localStorage.removeItem('lastOpenedMenu');
                 }
-            });
-            localStorage.setItem('mobileMenuStates', JSON.stringify(states));
+            }
         } catch (e) {
-            console.warn('Failed to save menu state:', e);
+            // Silent fail
         }
     },
     
-    restoreDropdownStates() {
+    restoreMenuStates() {
         try {
-            const states = JSON.parse(localStorage.getItem('mobileMenuStates') || '{}');
+            const lastOpenedMenu = localStorage.getItem('lastOpenedMenu');
+            if (!lastOpenedMenu) return;
+            
             const dropdownBtns = document.querySelectorAll('.mobile-dropdown-btn');
             
             dropdownBtns.forEach((btn) => {
-                const menuKeys = this.getMenuKeys(btn);
-                const shouldOpen = menuKeys.some((key) => states[key]);
+                const menuKey = btn.dataset.menuKey;
                 
-                if (shouldOpen) {
+                if (menuKey === lastOpenedMenu) {
                     const content = btn.nextElementSibling;
                     const icon = btn.querySelector('svg');
                     
@@ -219,19 +216,8 @@ const Navigation = {
                 }
             });
         } catch (e) {
-            console.warn('Failed to restore menu states:', e);
+            // Silent fail
         }
-    },
-
-    getMenuKeys(btn) {
-        const keys = [];
-        const dataKey = btn.dataset.menuKey?.trim();
-        if (dataKey) keys.push(dataKey);
-        const textKey = btn.textContent.replace(/\s+/g, ' ').trim();
-        if (textKey && (!dataKey || dataKey !== textKey)) {
-            keys.push(textKey);
-        }
-        return keys;
     },
     
     closeMenuOnOutsideClick() {
@@ -255,10 +241,23 @@ const Navigation = {
             const menu = document.getElementById('mobile-menu');
             const link = e.target.closest('a');
             
-            // 링크를 클릭했고, 모바일 메뉴가 열려있으면 메뉴 닫기
+            // 링크를 클릭했고, 모바일 메뉴가 열려있으면
             if (link && menu && menu.contains(link) && !menu.classList.contains('hidden')) {
                 // 드롭다운 버튼이 아닌 실제 링크인 경우에만
                 if (!link.classList.contains('mobile-dropdown-btn')) {
+                    // 링크가 속한 드롭다운 그룹 찾기
+                    const dropdownContent = link.closest('.mobile-dropdown-content');
+                    if (dropdownContent) {
+                        const dropdownBtn = dropdownContent.previousElementSibling;
+                        if (dropdownBtn && dropdownBtn.classList.contains('mobile-dropdown-btn')) {
+                            const menuKey = dropdownBtn.dataset.menuKey;
+                            if (menuKey) {
+                                localStorage.setItem('lastOpenedMenu', menuKey);
+                            }
+                        }
+                    }
+                    
+                    // 메뉴 닫기
                     menu.classList.add('hidden');
                     document.getElementById('menu-icon')?.classList.remove('hidden');
                     document.getElementById('close-icon')?.classList.add('hidden');
