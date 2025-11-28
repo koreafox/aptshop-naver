@@ -319,11 +319,23 @@
     </div>
     
     <!-- Scroll to Top Button -->
-    <button id="scroll-to-top" class="hidden fixed bottom-8 right-4 bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 z-40">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-        </svg>
-    </button>
+    <!-- Floating Buttons Container -->
+    <div class="fixed bottom-8 right-4 flex flex-col gap-3 z-40">
+        <a href="https://blog.naver.com/aptshop7" target="_blank" rel="noopener noreferrer" class="bg-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110" aria-label="네이버 블로그">
+            <img src="../img/footer-blog.png" alt="네이버 블로그" class="w-8 h-8" width="32" height="32">
+        </a>
+        <a href="https://www.youtube.com/@아파트샵" target="_blank" rel="noopener noreferrer" class="bg-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110" aria-label="유튜브">
+            <img src="../img/footer-youtube.png" alt="유튜브" class="w-8 h-8" width="32" height="32">
+        </a>
+        <a href="https://smartstore.naver.com/aptshop7/" target="_blank" rel="noopener noreferrer" class="bg-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110" aria-label="네이버 스마트스토어">
+            <img src="../img/footer-smartstore.png" alt="네이버 스마트스토어" class="w-8 h-8" width="32" height="32">
+        </a>
+        <button id="scroll-to-top" class="hidden bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+            </svg>
+        </button>
+    </div>
     
     <!-- Scripts -->
     <script src="../js/main.js"></script>
