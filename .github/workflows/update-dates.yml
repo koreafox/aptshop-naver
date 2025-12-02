@@ -30,19 +30,18 @@ jobs:
         run: |
           # Get current date in required formats
           SITEMAP_DATE=$(date -u +"%Y-%m-%d")
-          RSS_DATE=$(date -u +"%a, %d %b %Y %H:%M:%S %z")
+          RSS_DATE=$(date -u +"%a, %d %b %Y %H:%M:%S +0000")
           
-          # Update sitemap.xml dates
-          sed -i "s|<lastmod>[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}</lastmod>|<lastmod>$SITEMAP_DATE</lastmod>|g" sitemap.xml
+          # Update sitemap.xml dates (only main and products pages)
+          sed -i.bak "s|<lastmod>[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}</lastmod>|<lastmod>$SITEMAP_DATE</lastmod>|g" sitemap.xml
+          rm sitemap.xml.bak
           
           # Update rss.xml lastBuildDate
-          sed -i "s|<lastBuildDate>.*</lastBuildDate>|<lastBuildDate>$RSS_DATE</lastBuildDate>|g" rss.xml
+          sed -i.bak "s|<lastBuildDate>.*</lastBuildDate>|<lastBuildDate>$RSS_DATE</lastBuildDate>|g" rss.xml
+          rm rss.xml.bak
           
-          # Update rss.xml pubDate for all items
-          sed -i "s|<pubDate>.*</pubDate>|<pubDate>$RSS_DATE</pubDate>|g" rss.xml
-          
-          echo "Updated sitemap.xml with date: $SITEMAP_DATE"
-          echo "Updated rss.xml with date: $RSS_DATE"
+          echo "✅ Updated sitemap.xml with date: $SITEMAP_DATE"
+          echo "✅ Updated rss.xml with date: $RSS_DATE"
       
       - name: Check for changes
         id: check_changes
