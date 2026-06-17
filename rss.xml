@@ -10,14 +10,14 @@
     <language>ko</language>
     <lastBuildDate>Wed, 17 Jun 2026 15:01:13 +0000</lastBuildDate>
     <atom:link href="https://aptshop.kr/rss.xml" rel="self" type="application/rss+xml" />
-    <copyright>Copyright 2024 아파트샵. All rights reserved.</copyright>
+    <copyright>Copyright 2026 아파트샵. All rights reserved.</copyright>
     <managingEditor>aptshop7@naver.com (아파트샵)</managingEditor>
     <webMaster>aptshop7@naver.com (아파트샵)</webMaster>
     <category>제조/유통</category>
     <ttl>1440</ttl>
     <image>
       <url>https://aptshop.kr/img/logo_aptshop.png</url>
-      <title>황소밴드 공식 판매점 - 아파트샵</title>
+      <title>황소밴드 공식 온라인 판매점 - 아파트샵</title>
       <link>https://aptshop.kr/</link>
       <width>144</width>
       <height>144</height>
@@ -25,15 +25,15 @@
 
     <!-- 메인 페이지 -->
     <item>
-      <title>황소밴드 온라인 공식 판매점 - 아파트샵</title>
+      <title>황소밴드 공식 온라인 판매점 - 아파트샵</title>
       <link>https://aptshop.kr/</link>
-      <description>황소밴드 온라인 공식 판매점 아파트샵. 특허받은 강력한 조임력으로 1인 보수 작업 완료! 100% SUS304 스테인리스 품질보증.</description>
+      <description>황소밴드 공식 온라인 판매점 아파트샵. 특허받은 강력한 조임력으로 1인 보수 작업 완료! 100% SUS304 스테인리스 품질보증.</description>
       <pubDate>Sun, 24 Nov 2024 10:00:00 +0900</pubDate>
       <guid isPermaLink="true">https://aptshop.kr/</guid>
       <category>제품소개</category>
       <dc:creator>아파트샵</dc:creator>
       <content:encoded><![CDATA[
-        <h1>황소밴드 공식 판매점</h1>
+        <h1>황소밴드 공식 온라인 판매점</h1>
         <p>특허받은 강력한 조임력으로 1인 보수 작업 완료!</p>
         <p>100% SUS304 스테인리스 품질보증</p>
         <img src="https://aptshop.kr/img/product_single_type.jpg" alt="황소밴드 싱글" />
