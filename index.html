@@ -279,77 +279,43 @@
             </div>
         </section>
 
-        <!-- Product Slider Section -->
+        <!-- 핵심 소개 (영상 + 특허/Made in Korea 이미지) -->
         <section class="py-16 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                        파이프 누수 보수, 황소밴드로 해결하세요
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+                        황소밴드 온라인 공식 판매
                     </h2>
+                    <p class="text-lg text-gray-500">파이프 누수, 황소밴드로 해결하세요</p>
                 </div>
-                
-                <!-- Slider Container -->
-                <div class="relative max-w-4xl mx-auto">
-                    <!-- Slider Wrapper -->
-                    <div class="overflow-hidden rounded-lg">
-                        <div id="productSlider" class="flex transition-transform duration-500 ease-in-out">
-                            <!-- Slide 1 - YouTube Video -->
-                            <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-gray-50 p-2 product-slide">
-                                <iframe 
-                                    class="w-full h-full rounded-lg"
-                                    src="https://www.youtube.com/embed/_l-1wXGrRg4?si=sYvgdC1YUN6dP6-h&playsinline=1" 
-                                    title="YouTube video player" 
-                                    frameborder="0" 
-                                    playsinline
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen; web-share" 
-                                    referrerpolicy="strict-origin-when-cross-origin" 
-                                    allowfullscreen>
-                                </iframe>
-                            </div>
-                            <!-- Slide 2 -->
-                            <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-gray-50 p-2 product-slide">
-                                <img src="img/intro_prod1.png" alt="황소밴드 호스밴드 제품 특징 - 누수밴드 강력한 조임력" class="w-full h-full object-contain" width="800" height="600" loading="lazy">
-                            </div>
-                            <!-- Slide 3 -->
-                            <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-gray-50 p-2 product-slide">
-                                <img src="img/intro_prod2.png" alt="황소밴드 설치 방법 - 호스밴드 누수밴드 간편 시공" class="w-full h-full object-contain" width="800" height="600" loading="lazy">
-                            </div>
-                            <!-- Slide 4 -->
-                            <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-gray-50 p-2 product-slide">
-                                <img src="img/intro_prod3.png" alt="황소밴드 규격 안내 - 호스밴드 누수밴드 사이즈" class="w-full h-full object-contain" width="800" height="600" loading="lazy">
-                            </div>
-                            <!-- Slide 5 -->
-                            <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-gray-50 p-2 product-slide">
-                                <img src="img/intro_prod4.png" alt="황소밴드 안전클립 - 호스밴드 누수밴드 특허기술" class="w-full h-full object-contain" width="800" height="600" loading="lazy">
-                            </div>
-                            <!-- Slide 6 -->
-                            <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-gray-50 p-2 product-slide">
-                                <img src="img/intro_prod5.png" alt="황소밴드 특허증 - 호스밴드 누수밴드 제10-1424730호" class="w-full h-full object-contain" width="800" height="600" loading="lazy">
-                            </div>
-                        </div>
+
+                <!-- 2단 구성: 좌 영상 / 우 이미지 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mx-auto items-stretch" style="max-width:64rem;">
+                    <div class="rounded-xl overflow-hidden shadow-lg bg-black" style="aspect-ratio:16/9;">
+                        <iframe
+                            class="w-full h-full"
+                            src="https://www.youtube.com/embed/_l-1wXGrRg4?si=sYvgdC1YUN6dP6-h&playsinline=1"
+                            title="황소밴드 제품 소개 영상"
+                            frameborder="0"
+                            playsinline
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
                     </div>
-                    
-                    <!-- Navigation Buttons -->
-                    <button id="prevBtn" class="absolute left-0 md:left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 md:p-3 rounded-full shadow-lg transition-all duration-300 z-10">
-                        <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                        </svg>
-                    </button>
-                    <button id="nextBtn" class="absolute right-0 md:right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 md:p-3 rounded-full shadow-lg transition-all duration-300 z-10">
-                        <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                    </button>
-                    
-                    <!-- Number Indicator -->
-                    <div class="flex justify-center gap-3 mt-6">
-                        <button class="slider-dot w-8 h-8 md:w-10 md:h-10 rounded-full bg-blue-600 text-white font-semibold text-sm md:text-base transition-all duration-300 hover:scale-110" data-slide="0">1</button>
-                        <button class="slider-dot w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-300 text-gray-700 font-semibold text-sm md:text-base transition-all duration-300 hover:scale-110" data-slide="1">2</button>
-                        <button class="slider-dot w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-300 text-gray-700 font-semibold text-sm md:text-base transition-all duration-300 hover:scale-110" data-slide="2">3</button>
-                        <button class="slider-dot w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-300 text-gray-700 font-semibold text-sm md:text-base transition-all duration-300 hover:scale-110" data-slide="3">4</button>
-                        <button class="slider-dot w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-300 text-gray-700 font-semibold text-sm md:text-base transition-all duration-300 hover:scale-110" data-slide="4">5</button>
-                        <button class="slider-dot w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-300 text-gray-700 font-semibold text-sm md:text-base transition-all duration-300 hover:scale-110" data-slide="5">6</button>
+                    <div class="rounded-xl overflow-hidden shadow-lg bg-white flex items-center justify-center" style="aspect-ratio:16/9;">
+                        <img src="img/intro_prod5.png" alt="황소밴드는 대한민국 생산 MADE IN KOREA - 특허청 등록 특허 제10-1424730호 누수밴드" class="w-full h-full object-contain" width="1166" height="1128" loading="lazy">
                     </div>
+                </div>
+
+                <!-- 하단 버튼 -->
+                <div class="flex flex-col sm:flex-row gap-3 justify-center mx-auto mt-10" style="max-width:32rem;">
+                    <a href="menu/products.html" class="bg-blue-600 text-white px-6 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl text-center" style="flex:1; white-space:nowrap;">
+                        제품 보기
+                    </a>
+                    <a href="https://smartstore.naver.com/aptshop7/" target="_blank" rel="noopener" class="bg-green-600 text-white px-6 py-4 rounded-lg font-semibold hover:bg-green-700 transition-all duration-300 shadow-lg hover:shadow-xl text-center" style="flex:1; white-space:nowrap;">
+                        온라인 구매하기
+                    </a>
                 </div>
             </div>
         </section>
@@ -438,8 +404,17 @@
                             <p class="text-gray-600">어렵지 않습니다. 누수 부위에 패킹패드를 위치시킨 뒤 볼트를 드라이버로 조이면 완료됩니다. 360도 회전 패킹패드 덕분에 1인 작업이 가능하며, 특별한 공구가 필요 없습니다.</p>
                         </div>
                         <div class="bg-white p-6 rounded-lg shadow">
-                            <h4 class="font-bold text-gray-900 mb-2">Q. 어디서 구매할 수 있나요?</h4>
-                            <p class="text-gray-600">아파트샵 네이버 스마트스토어(smartstore.naver.com/aptshop7)에서 정품을 구매하실 수 있습니다. 전국 당일배송 가능. 전화 문의: 010-7357-8613<br><a href="menu/products.html" class="text-blue-600 hover:underline font-medium">황소밴드 전 제품 라인업 보기</a> · <a href="menu/social.html" class="text-blue-600 hover:underline font-medium">소셜마켓 구매처 안내</a></p>
+                            <h4 class="font-bold text-gray-900 mb-4">Q. 어디서 구매할 수 있나요?</h4>
+                            <div class="flex flex-col sm:flex-row gap-3">
+                                <a href="https://smartstore.naver.com/aptshop7/" target="_blank" rel="noopener"
+                                   class="bg-green-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors text-center" style="flex:1; white-space:nowrap;">
+                                    네이버 스마트스토어 구매하기
+                                </a>
+                                <a href="https://www.coupang.com/np/search?component=&q=%ED%99%A9%EC%86%8C%EB%B0%B4%EB%93%9C" target="_blank" rel="noopener"
+                                   class="text-white px-5 py-3 rounded-lg font-semibold transition-colors text-center" style="flex:1; white-space:nowrap; background-color:#e3132d;" onmouseover="this.style.backgroundColor='#c10f25'" onmouseout="this.style.backgroundColor='#e3132d'">
+                                    쿠팡 구매하기
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -497,15 +472,18 @@
                 <!-- 추가 포토 후기 갤러리 -->
                 <div class="mt-8">
                     <p class="text-center text-gray-500 text-sm mb-4">실제 고객님들이 남겨주신 사진 후기</p>
-                    <div class="grid gap-3 md:gap-4 mx-auto" style="max-width:42rem; grid-template-columns:repeat(3,minmax(0,1fr));">
-                        <img src="img/reviews/review_photo_2.jpg" alt="황소밴드 구매 고객 사진 후기 - 스테인리스 누수밴드 제품" class="w-full object-cover rounded-lg shadow-sm" style="aspect-ratio:1/1;" width="600" height="600" loading="lazy">
-                        <img src="img/reviews/review_photo_4.jpg" alt="황소밴드 구매 고객 사진 후기 - 호스밴드 제품 실물" class="w-full object-cover rounded-lg shadow-sm" style="aspect-ratio:1/1;" width="600" height="600" loading="lazy">
-                        <img src="img/reviews/review_photo_6.jpg" alt="황소밴드 구매 고객 사진 후기 - 파이프 누수밴드 설치" class="w-full object-cover rounded-lg shadow-sm" style="aspect-ratio:1/1;" width="600" height="600" loading="lazy">
+                    <div class="grid gap-3 md:gap-4 mx-auto" style="max-width:56rem; grid-template-columns:repeat(4,minmax(0,1fr));">
+                        <img src="img/reviews/gallery_1.jpg" alt="황소밴드 구매 고객 사진 후기 - 스테인리스 누수밴드 제품" class="w-full object-cover rounded-lg shadow-sm" style="aspect-ratio:1/1;" width="500" height="500" loading="lazy">
+                        <img src="img/reviews/gallery_2.jpg" alt="황소밴드 구매 고객 사진 후기 - 호스밴드 제품 실물" class="w-full object-cover rounded-lg shadow-sm" style="aspect-ratio:1/1;" width="500" height="500" loading="lazy">
+                        <img src="img/reviews/gallery_3.jpg" alt="황소밴드 구매 고객 사진 후기 - 누수밴드 제품" class="w-full object-cover rounded-lg shadow-sm" style="aspect-ratio:1/1;" width="500" height="500" loading="lazy">
+                        <img src="img/reviews/gallery_4.jpg" alt="황소밴드 구매 고객 사진 후기 - 패킹패드 누수밴드" class="w-full object-cover rounded-lg shadow-sm" style="aspect-ratio:1/1;" width="500" height="500" loading="lazy">
+                        <img src="img/reviews/gallery_5.jpg" alt="황소밴드 구매 고객 사진 후기 - 스테인리스 호스밴드" class="w-full object-cover rounded-lg shadow-sm" style="aspect-ratio:1/1;" width="500" height="500" loading="lazy">
+                        <img src="img/reviews/gallery_6.jpg" alt="황소밴드 구매 고객 사진 후기 - 배관 누수 실제 설치" class="w-full object-cover rounded-lg shadow-sm" style="aspect-ratio:1/1;" width="500" height="500" loading="lazy">
+                        <img src="img/reviews/gallery_7.jpg" alt="황소밴드 구매 고객 사진 후기 - 파이프 누수 보수 현장" class="w-full object-cover rounded-lg shadow-sm" style="aspect-ratio:1/1;" width="500" height="500" loading="lazy">
+                        <img src="img/reviews/gallery_8.jpg" alt="황소밴드 구매 고객 사진 후기 - 누수밴드 설치 완료" class="w-full object-cover rounded-lg shadow-sm" style="aspect-ratio:1/1;" width="500" height="500" loading="lazy">
                     </div>
                 </div>
                 <div class="text-center mt-10">
-                    <a href="menu/products.html#reviews"
-                       class="inline-block text-blue-600 font-semibold hover:underline mr-6">후기 더보기 →</a>
                     <a href="https://smartstore.naver.com/aptshop7/" target="_blank" rel="noopener"
                        class="inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
                         네이버 스토어에서 구매하기
