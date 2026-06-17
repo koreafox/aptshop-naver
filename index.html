@@ -276,57 +276,60 @@
                         </iframe>
                     </div>
 
-                    <!-- 우측: 좌(텍스트) | 우(이미지 컬럼, 영상 높이 채움) -->
-                    <div class="text-center md:text-left flex flex-col md:flex-row gap-6 h-full">
-                        <!-- 좌측 텍스트 컬럼: 타이틀(위)·스펙(중간)·버튼(아래) -->
-                        <div class="flex flex-col flex-1 h-full" style="min-width:0;">
-                            <!-- 타이틀 (영상 윗부분과 맞춤) -->
-                            <div>
-                                <h1 class="text-3xl md:text-4xl font-bold mb-3" style="line-height:1.2; letter-spacing:-0.03em; text-shadow:0 2px 8px rgba(0,0,0,0.4);">
-                                    황소밴드 공식 온라인 판매점
-                                </h1>
-                                <p class="text-base md:text-xl" style="text-shadow:0 1px 6px rgba(0,0,0,0.4);">
-                                    파이프 누수, 황소밴드로 즉시 해결하세요
-                                </p>
-                            </div>
-                            <!-- 핵심 스펙 (가운데) -->
-                            <ul class="text-left space-y-3 my-auto py-6">
-                                <li class="flex items-start">
-                                    <span class="flex-shrink-0 mr-3 mt-1" aria-hidden="true">✓</span>
-                                    <span><strong>특허 제10-1424730호</strong> · 대한민국 특허청 등록</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="flex-shrink-0 mr-3 mt-1" aria-hidden="true">✓</span>
-                                    <span><strong>SUS304 100% 스테인리스</strong> 밴드 · 반영구 사용</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="flex-shrink-0 mr-3 mt-1" aria-hidden="true">✓</span>
-                                    <span>패킹재 <strong>고압 수압 30kg/cm²</strong> 견딤</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="flex-shrink-0 mr-3 mt-1" aria-hidden="true">✓</span>
-                                    <span>강력한 조임력 <strong>토크 200kgf/cm</strong> · 1인 설치</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="flex-shrink-0 mr-3 mt-1" aria-hidden="true">🇰🇷</span>
-                                    <span><strong>MADE IN KOREA</strong> · 국내 생산</span>
-                                </li>
-                            </ul>
-                            <!-- 버튼 (영상 아랫부분과 맞춤) -->
-                            <div class="flex flex-col sm:flex-row gap-3" style="max-width:30rem;">
-                                <a href="menu/products.html" class="bg-white text-blue-600 px-6 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl text-center" style="flex:1; white-space:nowrap;">
-                                    제품 보기
-                                </a>
-                                <a href="https://smartstore.naver.com/aptshop7/" target="_blank" rel="noopener" class="bg-blue-700 text-white px-6 py-4 rounded-lg font-semibold hover:bg-blue-800 transition-all duration-300 shadow-lg hover:shadow-xl text-center" style="flex:1; white-space:nowrap;">
-                                    온라인 구매하기
-                                </a>
-                            </div>
+                    <!-- 우측: 타이틀(전체폭, 위) + [스펙·버튼 | 이미지 2개(하단)] -->
+                    <div class="text-center md:text-left flex flex-col h-full">
+                        <!-- 타이틀: 전체 폭 사용 (이미지에 막히지 않음) -->
+                        <div>
+                            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:whitespace-nowrap" style="line-height:1.2; letter-spacing:-0.04em; text-shadow:0 2px 8px rgba(0,0,0,0.4);">
+                                황소밴드 공식 온라인 판매점
+                            </h1>
+                            <p class="text-base md:text-xl" style="text-shadow:0 1px 6px rgba(0,0,0,0.4);">
+                                파이프 누수, 황소밴드로 즉시 해결하세요
+                            </p>
                         </div>
 
-                        <!-- 우측 이미지 컬럼: 위/아래로 분산 (영상 높이 채움, 둘째 이미지가 버튼 라인까지) -->
-                        <div class="flex-shrink-0 mx-auto md:mx-0 flex flex-row md:flex-col md:justify-between gap-3 h-full" style="max-width:13rem;">
-                            <img src="img/products_all_3.jpg" alt="황소밴드 호스밴드 누수밴드 제품 - SUS304 스테인리스 밴드" class="w-full rounded-xl shadow-2xl bg-white" width="500" height="308" loading="eager">
-                            <img src="img/products_all_4.jpg" alt="황소밴드 더블형 누수밴드 패키지 - 특허 제10-1424730호" class="w-full rounded-xl shadow-2xl bg-white" width="500" height="282" loading="eager">
+                        <!-- 하단부: 좌(스펙+버튼) | 우(이미지 2개, 하단 붙음) -->
+                        <div class="flex flex-col md:flex-row gap-6 flex-1 mt-6" style="min-height:0;">
+                            <!-- 좌: 스펙(위) + 버튼(아래) -->
+                            <div class="flex flex-col flex-1 h-full" style="min-width:0;">
+                                <ul class="text-left space-y-3 my-auto">
+                                    <li class="flex items-start">
+                                        <span class="flex-shrink-0 mr-3 mt-1" aria-hidden="true">✓</span>
+                                        <span><strong>특허 제10-1424730호</strong> · 대한민국 특허청 등록</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="flex-shrink-0 mr-3 mt-1" aria-hidden="true">✓</span>
+                                        <span><strong>SUS304 100% 스테인리스</strong> 밴드 · 반영구 사용</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="flex-shrink-0 mr-3 mt-1" aria-hidden="true">✓</span>
+                                        <span>패킹재 <strong>고압 수압 30kg/cm²</strong> 견딤</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="flex-shrink-0 mr-3 mt-1" aria-hidden="true">✓</span>
+                                        <span>강력한 조임력 <strong>토크 200kgf/cm</strong> · 1인 설치</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="flex-shrink-0 mr-3 mt-1" aria-hidden="true">🇰🇷</span>
+                                        <span><strong>MADE IN KOREA</strong> · 국내 생산</span>
+                                    </li>
+                                </ul>
+                                <!-- 버튼 -->
+                                <div class="flex flex-col sm:flex-row gap-3" style="max-width:30rem;">
+                                    <a href="menu/products.html" class="bg-white text-blue-600 px-6 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl text-center" style="flex:1; white-space:nowrap;">
+                                        제품 보기
+                                    </a>
+                                    <a href="https://smartstore.naver.com/aptshop7/" target="_blank" rel="noopener" class="bg-blue-700 text-white px-6 py-4 rounded-lg font-semibold hover:bg-blue-800 transition-all duration-300 shadow-lg hover:shadow-xl text-center" style="flex:1; white-space:nowrap;">
+                                        온라인 구매하기
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- 우: 이미지 2개 (하단에 붙여서 세로로) -->
+                            <div class="flex-shrink-0 mx-auto md:mx-0 flex flex-row md:flex-col justify-end gap-3" style="max-width:12rem;">
+                                <img src="img/products_all_3.jpg" alt="황소밴드 호스밴드 누수밴드 제품 - SUS304 스테인리스 밴드" class="w-full rounded-xl shadow-2xl bg-white" width="500" height="308" loading="eager">
+                                <img src="img/products_all_4.jpg" alt="황소밴드 더블형 누수밴드 패키지 - 특허 제10-1424730호" class="w-full rounded-xl shadow-2xl bg-white" width="500" height="282" loading="eager">
+                            </div>
                         </div>
                     </div>
                 </div>
