@@ -74,9 +74,12 @@ const ComponentLoader = {
                 }
                 // If basePath is './', keep as is
             }
-            // Fix /index.html or index.html links
-            else if (href === '/index.html' || href === 'index.html') {
-                link.setAttribute('href', basePath + 'index.html');
+            // Home link: keep the clean root URL ("/") canonical.
+            // Avoid /index.html, which Google treats as a duplicate of "/".
+            else if (href === '/' || href === '/index.html' || href === 'index.html') {
+                // From a sub-directory ("../") the site lives one level up, so
+                // resolve to the parent root; from the homepage ("./") keep "/".
+                link.setAttribute('href', basePath === '../' ? '../' : '/');
             }
             // Fix root-relative paths (starting with /)
             else if (href.startsWith('/') && !href.startsWith('//')) {

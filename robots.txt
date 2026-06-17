@@ -1,8 +1,12 @@
 User-agent: *
-Disallow:
+Allow: /
+
+# Naver (네이버 검색 봇)
+User-agent: Yeti
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
 
 Sitemap: https://aptshop.kr/sitemap.xml
-
-# RSS Feed
-# 네이버 검색 최적화를 위한 RSS 피드
-Allow: /rss.xml

@@ -4,12 +4,20 @@ on:
   push:
     branches:
       - main
-      - master
     paths:
       - '**.html'
       - '**.css'
       - '**.js'
       - 'img/**'
+  workflow_dispatch:        # 수동 실행 허용 (검증용)
+
+# git push 가 동작하도록 쓰기 권한 부여 (기본 read-only 저장소 대응)
+permissions:
+  contents: write
+
+concurrency:
+  group: update-dates-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   update-dates:
