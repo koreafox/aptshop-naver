@@ -138,7 +138,7 @@
         /* Hero 2단 비율: 모바일 1단, 데스크톱 영상40 : 텍스트60 */
         .hero-grid{display:grid; grid-template-columns:1fr; gap:2rem; align-items:center}
         @media (min-width:768px){
-            .hero-grid{grid-template-columns:minmax(0,2fr) minmax(0,3fr); gap:3rem}
+            .hero-grid{grid-template-columns:minmax(0,2fr) minmax(0,3fr); gap:3rem; align-items:stretch}
         }
     </style>
     
@@ -276,17 +276,20 @@
                         </iframe>
                     </div>
 
-                    <!-- 우측: 타이틀 + 핵심 스펙 + 버튼 -->
-                    <div class="text-center md:text-left">
-                        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:whitespace-nowrap" style="line-height:1.2; letter-spacing:-0.04em; text-shadow:0 2px 8px rgba(0,0,0,0.4);">
-                            황소밴드 공식 온라인 판매점
-                        </h1>
-                        <p class="text-base md:text-xl mb-6" style="text-shadow:0 1px 6px rgba(0,0,0,0.4);">
-                            파이프 누수, 황소밴드로 즉시 해결하세요
-                        </p>
+                    <!-- 우측: 타이틀(위) + 스펙·이미지(중간) + 버튼(아래) -->
+                    <div class="text-center md:text-left flex flex-col h-full">
+                        <!-- 상단: 타이틀 (영상 윗부분과 맞춤) -->
+                        <div>
+                            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:whitespace-nowrap" style="line-height:1.2; letter-spacing:-0.04em; text-shadow:0 2px 8px rgba(0,0,0,0.4);">
+                                황소밴드 공식 온라인 판매점
+                            </h1>
+                            <p class="text-base md:text-xl" style="text-shadow:0 1px 6px rgba(0,0,0,0.4);">
+                                파이프 누수, 황소밴드로 즉시 해결하세요
+                            </p>
+                        </div>
 
-                        <!-- 핵심 스펙 + 제품 이미지 (가로 배치) -->
-                        <div class="flex flex-col md:flex-row md:items-center gap-6 mb-8">
+                        <!-- 중간: 핵심 스펙 + 제품 이미지 2개 (가로 배치) -->
+                        <div class="flex flex-col md:flex-row md:items-center gap-6 my-auto py-6">
                             <ul class="text-left space-y-3 flex-1">
                                 <li class="flex items-start">
                                     <span class="flex-shrink-0 mr-3 mt-1" aria-hidden="true">✓</span>
@@ -309,13 +312,14 @@
                                     <span><strong>MADE IN KOREA</strong> · 국내 생산</span>
                                 </li>
                             </ul>
-                            <!-- 제품 이미지 -->
-                            <div class="flex-shrink-0 mx-auto md:mx-0" style="max-width:15rem;">
-                                <img src="img/products_all_3.jpg" alt="황소밴드 호스밴드 누수밴드 제품 - SUS304 스테인리스 밴드" class="w-full rounded-xl shadow-2xl bg-white" width="500" height="313" loading="eager">
+                            <!-- 제품 이미지 2개 (세로로) -->
+                            <div class="flex-shrink-0 mx-auto md:mx-0 flex flex-row md:flex-col gap-3" style="max-width:13rem;">
+                                <img src="img/products_all_3.jpg" alt="황소밴드 호스밴드 누수밴드 제품 - SUS304 스테인리스 밴드" class="w-full rounded-xl shadow-2xl bg-white" width="500" height="308" loading="eager">
+                                <img src="img/products_all_4.jpg" alt="황소밴드 더블형 누수밴드 패키지 - 특허 제10-1424730호" class="w-full rounded-xl shadow-2xl bg-white" width="500" height="500" loading="eager">
                             </div>
                         </div>
 
-                        <!-- 버튼 -->
+                        <!-- 하단: 버튼 (영상 아랫부분과 맞춤) -->
                         <div class="flex flex-col sm:flex-row gap-3" style="max-width:30rem;">
                             <a href="menu/products.html" class="bg-white text-blue-600 px-6 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl text-center" style="flex:1; white-space:nowrap;">
                                 제품 보기
