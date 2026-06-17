@@ -140,6 +140,11 @@
         @media (min-width:768px){
             .hero-grid{grid-template-columns:minmax(0,2fr) minmax(0,3fr); gap:3rem; align-items:stretch}
         }
+        /* Hero 이미지 컬럼: 모바일 세로(폭 18rem), 데스크톱 12rem 세로+분산 */
+        .hero-img-col{width:100%; max-width:18rem}
+        @media (min-width:768px){
+            .hero-img-col{max-width:12rem; justify-content:space-between}
+        }
     </style>
     
     <!-- Tailwind CSS -->
@@ -325,8 +330,11 @@
                                 </div>
                             </div>
 
-                            <!-- 우: 이미지 2개 (하단에 붙여서 세로로) -->
-                            <div class="flex-shrink-0 mx-auto md:mx-0 flex flex-row md:flex-col justify-end gap-3" style="max-width:12rem;">
+                            <!-- 우: 이미지 3개 (특허는 위, 제품 2개는 하단) -->
+                            <div class="hero-img-col flex-shrink-0 mx-auto md:mx-0 flex flex-col gap-3 h-full">
+                                <!-- 위: 특허 이미지 -->
+                                <img src="img/products_all_patent.jpg" alt="대한민국 특허청 등록 특허 - 황소밴드 누수밴드 제10-1424730호" class="w-full rounded-xl shadow-2xl bg-white" width="500" height="315" loading="eager">
+                                <!-- 아래: 제품 이미지 2개 (붙여서) -->
                                 <img src="img/products_all_3.jpg" alt="황소밴드 호스밴드 누수밴드 제품 - SUS304 스테인리스 밴드" class="w-full rounded-xl shadow-2xl bg-white" width="500" height="308" loading="eager">
                                 <img src="img/products_all_4.jpg" alt="황소밴드 더블형 누수밴드 패키지 - 특허 제10-1424730호" class="w-full rounded-xl shadow-2xl bg-white" width="500" height="282" loading="eager">
                             </div>
