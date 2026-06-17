@@ -265,8 +265,9 @@
                         파이프 누수, 황소밴드로 즉시 해결하세요
                     </p>
                 </div>
-                <!-- 2단 구성: 좌 영상 / 우 특허 이미지 -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mx-auto items-stretch" style="max-width:64rem;">
+                <!-- 3단 구성: 영상 / 제품 상세 / 특허 이미지 -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 mx-auto items-start" style="max-width:72rem;">
+                    <!-- 영상 -->
                     <div class="rounded-xl overflow-hidden shadow-2xl bg-black" style="aspect-ratio:16/9;">
                         <iframe
                             class="w-full h-full"
@@ -279,8 +280,13 @@
                             allowfullscreen>
                         </iframe>
                     </div>
-                    <div class="rounded-xl overflow-hidden shadow-2xl bg-white flex items-center justify-center" style="aspect-ratio:16/9;">
-                        <img src="img/intro_prod5.png" alt="황소밴드는 대한민국 생산 MADE IN KOREA - 특허청 등록 특허 제10-1424730호 누수밴드" class="w-full h-full object-contain" width="1166" height="1128" loading="eager" fetchpriority="high">
+                    <!-- 제품 상세 스펙 이미지 (텍스트가 핵심이라 잘리지 않게 자연 비율 유지) -->
+                    <div class="rounded-xl overflow-hidden shadow-2xl">
+                        <img src="img/product_detail_spec.jpg" alt="황소밴드 구조 - 패킹재 고온고압 수압 30kg, 밴드 SUS304 스테인리스, 십자나사, 고정클립, 토크 200kgf/cm" class="w-full block" width="1000" height="669" loading="eager">
+                    </div>
+                    <!-- 특허 이미지 -->
+                    <div class="rounded-xl overflow-hidden shadow-2xl">
+                        <img src="img/intro_prod5.png" alt="황소밴드는 대한민국 생산 MADE IN KOREA - 특허청 등록 특허 제10-1424730호 누수밴드" class="w-full block" width="1166" height="1128" loading="eager" fetchpriority="high">
                     </div>
                 </div>
 
