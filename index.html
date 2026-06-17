@@ -135,6 +135,11 @@
         .hero-gradient{background:linear-gradient(90deg,#2563eb,#9333ea)}
         .pt-20{padding-top:5rem}
         body{font-family:system-ui,-apple-system,sans-serif}
+        /* Hero 2단 비율: 모바일 1단, 데스크톱 영상40 : 텍스트60 */
+        .hero-grid{display:grid; grid-template-columns:1fr; gap:2rem; align-items:center}
+        @media (min-width:768px){
+            .hero-grid{grid-template-columns:minmax(0,2fr) minmax(0,3fr); gap:3rem}
+        }
     </style>
     
     <!-- Tailwind CSS -->
@@ -256,9 +261,9 @@
         <!-- Hero Section (영상 + 핵심 정보) -->
         <section class="hero-gradient text-white relative" style="padding-top:4.5rem; padding-bottom:4.5rem;">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative" style="z-index:1;">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+                <div class="hero-grid">
                     <!-- 좌측: 제품 소개 영상 -->
-                    <div class="rounded-2xl overflow-hidden shadow-2xl bg-black mx-auto w-full" style="max-width:30rem; aspect-ratio:1/1;">
+                    <div class="rounded-2xl overflow-hidden shadow-2xl bg-black mx-auto md:mx-0 w-full" style="max-width:30rem; aspect-ratio:1/1;">
                         <iframe
                             class="w-full h-full"
                             src="https://www.youtube.com/embed/_l-1wXGrRg4?si=sYvgdC1YUN6dP6-h&playsinline=1"
@@ -273,7 +278,7 @@
 
                     <!-- 우측: 타이틀 + 핵심 스펙 + 버튼 -->
                     <div class="text-center md:text-left">
-                        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:whitespace-nowrap" style="line-height:1.25; text-shadow:0 2px 8px rgba(0,0,0,0.4);">
+                        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:whitespace-nowrap" style="line-height:1.2; letter-spacing:-0.04em; text-shadow:0 2px 8px rgba(0,0,0,0.4);">
                             황소밴드 공식 온라인 판매점
                         </h1>
                         <p class="text-base md:text-xl mb-6" style="text-shadow:0 1px 6px rgba(0,0,0,0.4);">
