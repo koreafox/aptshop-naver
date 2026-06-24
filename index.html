@@ -66,6 +66,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
+    <!-- WebSite Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "황소밴드 공식 온라인 판매점",
+        "alternateName": ["아파트샵", "황소밴드", "호스밴드", "누수밴드"],
+        "url": "https://aptshop.kr/",
+        "inLanguage": "ko-KR",
+        "publisher": {
+            "@type": "Organization",
+            "name": "아파트샵",
+            "url": "https://aptshop.kr/",
+            "logo": "https://aptshop.kr/img/logo_aptshop.png"
+        }
+    }
+    </script>
+
     <!-- Structured Data for Google -->
     <script type="application/ld+json">
     {
@@ -267,6 +285,48 @@
         ]
     }
     </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "황소밴드 가격은 얼마인가요?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "싱글밴드 8,500원~9,450원, 더블밴드 10,900원~12,900원, 공업용밴드 2,300원~8,800원입니다. 규격에 따라 가격이 다릅니다."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "호스밴드 규격은 어떻게 선택하나요?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "파이프 외경을 측정하여 선택합니다. 10-32A, 15-40A, 50-80A, 100-125A 등 다양한 규격이 있습니다. 규격 선택이 어려우면 아파트샵에 문의하면 안내받을 수 있습니다."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "황소밴드 설치는 어렵나요?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "어렵지 않습니다. 누수 부위에 패킹패드를 위치시킨 뒤 볼트를 드라이버로 조이면 완료됩니다. 360도 회전 패킹패드 덕분에 1인 작업이 가능하며, 특별한 공구가 필요 없습니다."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "황소밴드는 어디서 구매할 수 있나요?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "황소밴드는 네이버 스마트스토어 아파트샵 공식 스토어와 쿠팡에서 구매할 수 있습니다."
+                }
+            }
+        ]
+    }
+    </script>
 </head>
 <body class="pt-20">
     <!-- Header Container -->
@@ -451,6 +511,50 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Static Internal Links for Search and Users -->
+        <section class="py-12 bg-white border-t border-gray-100" aria-labelledby="site-links-title">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-8">
+                    <h2 id="site-links-title" class="text-2xl md:text-3xl font-bold text-gray-900">황소밴드 주요 정보 바로가기</h2>
+                    <p class="text-gray-500 mt-2">제품 규격, 브랜드 정보, 인증서, 구매처, 상담 정보를 한 번에 확인하세요.</p>
+                </div>
+                <nav class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" aria-label="황소밴드 주요 페이지">
+                    <a href="/menu/products.html#hwangso" class="block rounded-lg border border-gray-200 p-5 hover:border-blue-500 hover:shadow-md transition-all">
+                        <span class="block font-bold text-gray-900">황소밴드 제품소개</span>
+                        <span class="block text-sm text-gray-600 mt-1">싱글·더블·공업용 규격과 가격</span>
+                    </a>
+                    <a href="/menu/brand.html" class="block rounded-lg border border-gray-200 p-5 hover:border-blue-500 hover:shadow-md transition-all">
+                        <span class="block font-bold text-gray-900">황소밴드 브랜드</span>
+                        <span class="block text-sm text-gray-600 mt-1">특허 누수밴드 브랜드 스토리</span>
+                    </a>
+                    <a href="/menu/certifications.html" class="block rounded-lg border border-gray-200 p-5 hover:border-blue-500 hover:shadow-md transition-all">
+                        <span class="block font-bold text-gray-900">특허·인증서</span>
+                        <span class="block text-sm text-gray-600 mt-1">특허 제10-1424730호 및 시험성적</span>
+                    </a>
+                    <a href="/menu/social.html" class="block rounded-lg border border-gray-200 p-5 hover:border-blue-500 hover:shadow-md transition-all">
+                        <span class="block font-bold text-gray-900">황소밴드 구매처</span>
+                        <span class="block text-sm text-gray-600 mt-1">네이버 스마트스토어와 쿠팡 구매</span>
+                    </a>
+                    <a href="/menu/company.html" class="block rounded-lg border border-gray-200 p-5 hover:border-blue-500 hover:shadow-md transition-all">
+                        <span class="block font-bold text-gray-900">아파트샵 기업정보</span>
+                        <span class="block text-sm text-gray-600 mt-1">공식 온라인 판매점 정보</span>
+                    </a>
+                    <a href="/menu/news.html" class="block rounded-lg border border-gray-200 p-5 hover:border-blue-500 hover:shadow-md transition-all">
+                        <span class="block font-bold text-gray-900">황소밴드 소식</span>
+                        <span class="block text-sm text-gray-600 mt-1">신제품, 협약, 공식 소식</span>
+                    </a>
+                    <a href="/menu/contact.html" class="block rounded-lg border border-gray-200 p-5 hover:border-blue-500 hover:shadow-md transition-all">
+                        <span class="block font-bold text-gray-900">규격·설치 문의</span>
+                        <span class="block text-sm text-gray-600 mt-1">전화 상담 010-7357-8613</span>
+                    </a>
+                    <a href="/sitemap.html" class="block rounded-lg border border-gray-200 p-5 hover:border-blue-500 hover:shadow-md transition-all">
+                        <span class="block font-bold text-gray-900">전체 사이트맵</span>
+                        <span class="block text-sm text-gray-600 mt-1">검색봇과 사용자를 위한 전체 링크</span>
+                    </a>
+                </nav>
             </div>
         </section>
 

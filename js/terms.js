@@ -97,7 +97,7 @@ const privacyContent = `
 <ul class="list-disc list-inside mb-4 space-y-2">
     <li>개인정보 보호책임자: 지상진</li>
     <li>연락처: 010-7357-8613</li>
-    <li>이메일: aptshop7@naver.com</li>
+    <li>이메일: aptshop7@gmail.com</li>
 </ul>
 
 <h3 class="text-lg font-bold mb-4 mt-6">제9조 (개인정보의 안전성 확보조치)</h3>

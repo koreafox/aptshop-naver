@@ -65,7 +65,12 @@ const ComponentLoader = {
                 return;
             }
             
-            // Fix menu/ links based on current location
+            // Root-relative links are stable from every page and best for crawlers.
+            if (href.startsWith('/') && !href.startsWith('//')) {
+                return;
+            }
+
+            // Fix legacy menu/ links based on current location
             if (href.includes('menu/')) {
                 if (basePath === '../') {
                     // We're in menu/, so remove 'menu/' prefix
@@ -80,15 +85,6 @@ const ComponentLoader = {
                 // From a sub-directory ("../") the site lives one level up, so
                 // resolve to the parent root; from the homepage ("./") keep "/".
                 link.setAttribute('href', basePath === '../' ? '../' : '/');
-            }
-            // Fix root-relative paths (starting with /)
-            else if (href.startsWith('/') && !href.startsWith('//')) {
-                // Remove leading slash and add basePath
-                href = href.substring(1);
-                if (basePath === '../' && href.includes('menu/')) {
-                    href = href.replace(/menu\//g, '');
-                }
-                link.setAttribute('href', (basePath === '../' ? '' : basePath) + href);
             }
         });
     },
