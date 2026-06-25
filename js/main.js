@@ -581,7 +581,38 @@ const ProductSlider = {
 };
 
 // ========================================
-// 8. Application Initialization
+// 8. Inline YouTube Player Module
+// ========================================
+const InlineVideoPlayer = {
+    init() {
+        document.querySelectorAll('[data-youtube-play]').forEach(trigger => {
+            trigger.addEventListener('click', (event) => {
+                event.preventDefault();
+                this.play(trigger);
+            });
+        });
+    },
+
+    play(trigger) {
+        const videoId = trigger.dataset.youtubeId;
+        if (!videoId) return;
+
+        const title = trigger.dataset.youtubeTitle || 'YouTube video player';
+        const iframe = document.createElement('iframe');
+
+        iframe.className = 'block w-full h-full border-0';
+        iframe.src = `https://www.youtube.com/embed/${encodeURIComponent(videoId)}?autoplay=1&playsinline=1&rel=0`;
+        iframe.title = title;
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        iframe.allowFullscreen = true;
+        iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+
+        trigger.replaceWith(iframe);
+    }
+};
+
+// ========================================
+// 9. Application Initialization
 // ========================================
 const App = {
     async init() {
@@ -602,6 +633,7 @@ const App = {
             Performance.init();
             ImageModal.init();
             ProductSlider.init();
+            InlineVideoPlayer.init();
             
             // Mark app as ready
             document.body.classList.add('app-ready');
@@ -613,7 +645,7 @@ const App = {
 };
 
 // ========================================
-// 8. Start Application
+// 10. Start Application
 // ========================================
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => App.init());
