@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" as="image" href="img/hero10-bgg.webp" fetchpriority="high">
+
+    <!-- Load the existing brand font without blocking the first render. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300..700&amp;display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300..700&amp;display=swap"></noscript>
     
     <!-- SEO Meta Tags -->
     <title>황소밴드 공식 온라인 판매점 | 아파트샵 - 파이프 누수밴드 전문</title>
@@ -61,10 +68,6 @@
     <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
     <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
     <meta name="theme-color" content="#2563eb">
-    
-    <!-- Preconnect for Performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <!-- WebSite Schema -->
     <script type="application/ld+json">
@@ -152,8 +155,7 @@
             "@type": "AggregateOffer",
             "priceCurrency": "KRW",
             "lowPrice": "2300",
-            "highPrice": "12900",
-            "offerCount": "22",
+            "offerCount": "42",
             "availability": "https://schema.org/InStock",
             "url": "https://smartstore.naver.com/aptshop7/"
           }
@@ -311,7 +313,7 @@
                 "name": "황소밴드 가격은 얼마인가요?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "싱글밴드 8,500원~9,450원, 더블밴드 10,900원~12,900원, 공업용밴드 2,300원~8,800원입니다. 규격에 따라 가격이 다릅니다."
+                    "text": "싱글밴드는 8,500원부터, 더블밴드는 10,900원부터, 공업용밴드는 2,300원부터입니다. 규격별 최신 가격은 공식 구매처에서 확인해 주세요."
                 }
             },
             {
@@ -319,7 +321,7 @@
                 "name": "호스밴드 규격은 어떻게 선택하나요?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "파이프 외경을 측정하여 선택합니다. 10-32A, 15-40A, 50-80A, 100-125A 등 다양한 규격이 있습니다. 규격 선택이 어려우면 아파트샵에 문의하면 안내받을 수 있습니다."
+                    "text": "파이프 외경을 측정하여 선택합니다. 10-32A, 15-40A, 50-80A, 100-125A 기본 규격과 40A부터 300A까지 단일 규격을 제공합니다. 규격 선택이 어려우면 아파트샵에 문의하면 안내받을 수 있습니다."
                 }
             },
             {
@@ -357,11 +359,11 @@
                         <a href="/menu/video.html" class="relative block w-full h-full group" data-youtube-play data-youtube-id="_l-1wXGrRg4" data-youtube-title="황소밴드 사용방법(호스밴드)" aria-label="황소밴드 사용방법 영상 재생">
                             <img
                                 class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                                src="https://i.ytimg.com/vi/_l-1wXGrRg4/maxresdefault.jpg"
+                                src="img/video-poster.webp"
                                 alt="황소밴드 사용방법 영상 썸네일"
                                 width="1280"
                                 height="720"
-                                fetchpriority="high">
+                                fetchpriority="high" loading="eager">
                             <span class="absolute inset-0 bg-black bg-opacity-30 transition-colors duration-300 group-hover:bg-opacity-20" aria-hidden="true"></span>
                             <span class="absolute left-1/2 top-1/2 flex h-20 w-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white bg-opacity-95 shadow-xl transition-transform duration-300 group-hover:scale-110" aria-hidden="true">
                                 <svg class="ml-1 h-9 w-9 text-blue-700" viewBox="0 0 24 24" fill="currentColor" focusable="false">
@@ -444,7 +446,7 @@
                 <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- 패킹재 -->
                     <div class="bg-gray-50 rounded-xl overflow-hidden border-t-4 border-blue-600 shadow-sm">
-                        <img src="img/parts/part_packing.webp" alt="황소밴드 패킹재 - 고온·고압에 강한 누수 차단 패킹" class="w-full object-cover" style="aspect-ratio:1/1;" width="500" height="500" loading="lazy">
+                        <img src="img/parts/part_packing.webp" alt="황소밴드 패킹재 - 고온·고압에 강한 누수 차단 패킹" class="w-full object-cover" style="aspect-ratio:1/1;" width="500" height="500" loading="lazy" decoding="async">
                         <div class="p-6">
                             <h3 class="text-lg font-bold text-gray-900 mb-2">패킹재</h3>
                             <p class="text-gray-600 text-sm leading-relaxed">고온 및 고압에 강한 패킹재.<br><strong class="text-blue-700">수압 30kg/cm²</strong>의 높은 수압에도 누수를 차단합니다.</p>
@@ -452,7 +454,7 @@
                     </div>
                     <!-- 밴드 -->
                     <div class="bg-gray-50 rounded-xl overflow-hidden border-t-4 border-blue-600 shadow-sm">
-                        <img src="img/parts/part_band.webp" alt="황소밴드 밴드 - SUS304 100% 스테인리스 누수밴드" class="w-full object-cover" style="aspect-ratio:1/1;" width="500" height="500" loading="lazy">
+                        <img src="img/parts/part_band.webp" alt="황소밴드 밴드 - SUS304 100% 스테인리스 누수밴드" class="w-full object-cover" style="aspect-ratio:1/1;" width="500" height="500" loading="lazy" decoding="async">
                         <div class="p-6">
                             <h3 class="text-lg font-bold text-gray-900 mb-2">밴드</h3>
                             <p class="text-gray-600 text-sm leading-relaxed"><strong class="text-blue-700">SUS304 100% 스테인리스</strong>.<br>부식에 강해 반영구적으로 사용할 수 있습니다.</p>
@@ -460,7 +462,7 @@
                     </div>
                     <!-- 나사 -->
                     <div class="bg-gray-50 rounded-xl overflow-hidden border-t-4 border-blue-600 shadow-sm">
-                        <img src="img/parts/part_bolt.webp" alt="황소밴드 나사 - 십자형 스테인리스 강력 조임 볼트" class="w-full object-cover" style="aspect-ratio:1/1;" width="500" height="500" loading="lazy">
+                        <img src="img/parts/part_bolt.webp" alt="황소밴드 나사 - 십자형 스테인리스 강력 조임 볼트" class="w-full object-cover" style="aspect-ratio:1/1;" width="500" height="500" loading="lazy" decoding="async">
                         <div class="p-6">
                             <h3 class="text-lg font-bold text-gray-900 mb-2">나사</h3>
                             <p class="text-gray-600 text-sm leading-relaxed">십자(+) 형태, 100% 스테인리스.<br>드라이버 하나로 <strong class="text-blue-700">토크 200kgf/cm</strong> 강력 조임.</p>
@@ -468,7 +470,7 @@
                     </div>
                     <!-- 고정클립 -->
                     <div class="bg-gray-50 rounded-xl overflow-hidden border-t-4 border-blue-600 shadow-sm">
-                        <img src="img/parts/part_clip.webp" alt="황소밴드 고정클립 - 시공 후 잔여 밴드 마감 고정 클립" class="w-full object-cover" style="aspect-ratio:1/1;" width="500" height="500" loading="lazy">
+                        <img src="img/parts/part_clip.webp" alt="황소밴드 고정클립 - 시공 후 잔여 밴드 마감 고정 클립" class="w-full object-cover" style="aspect-ratio:1/1;" width="500" height="500" loading="lazy" decoding="async">
                         <div class="p-6">
                             <h3 class="text-lg font-bold text-gray-900 mb-2">고정클립</h3>
                             <p class="text-gray-600 text-sm leading-relaxed">시공 후 잔여 밴드를 깔끔하게 고정.<br>마감이 안전하고 단정합니다.</p>
@@ -489,13 +491,13 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                        <img src="img/intro_prod1.webp" alt="황소밴드 호스밴드 누수밴드 제품 소개 - SUS304 스테인리스 파이프 누수보수 밴드" class="w-full h-auto" width="1178" height="1204" loading="lazy">
+                        <img src="img/intro_prod1.webp" srcset="img/responsive/intro_prod1-400.webp 400w, img/responsive/intro_prod1-800.webp 800w, img/intro_prod1.webp 1178w" sizes="(min-width: 1280px) 400px, (min-width: 768px) calc((100vw - 80px) / 3), calc(100vw - 32px)" alt="황소밴드 호스밴드 누수밴드 제품 소개 - SUS304 스테인리스 파이프 누수보수 밴드" class="w-full h-auto" width="1178" height="1204" loading="lazy" decoding="async">
                     </div>
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                        <img src="img/intro_prod2.png" alt="황소밴드 누수밴드 설치 방법 - 360도 회전 패킹패드 드라이버 1인 설치" class="w-full h-auto" width="1168" height="1450" loading="lazy">
+                        <img src="img/intro_prod2.png" srcset="img/responsive/intro_prod2-400.webp 400w, img/responsive/intro_prod2-800.webp 800w, img/intro_prod2.png 1168w" sizes="(min-width: 1280px) 400px, (min-width: 768px) calc((100vw - 80px) / 3), calc(100vw - 32px)" alt="황소밴드 누수밴드 설치 방법 - 360도 회전 패킹패드 드라이버 1인 설치" class="w-full h-auto" width="1168" height="1450" loading="lazy" decoding="async">
                     </div>
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                        <img src="img/intro_prod3.webp" alt="황소밴드 호스밴드 규격 및 특징 - 3배 강력한 조임력 반영구 사용" class="w-full h-auto" width="1174" height="1318" loading="lazy">
+                        <img src="img/intro_prod3.webp" srcset="img/responsive/intro_prod3-400.webp 400w, img/responsive/intro_prod3-800.webp 800w, img/intro_prod3.webp 1174w" sizes="(min-width: 1280px) 400px, (min-width: 768px) calc((100vw - 80px) / 3), calc(100vw - 32px)" alt="황소밴드 호스밴드 규격 및 특징 - 3배 강력한 조임력 반영구 사용" class="w-full h-auto" width="1174" height="1318" loading="lazy" decoding="async">
                     </div>
                 </div>
 
@@ -505,11 +507,11 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div class="bg-white p-6 rounded-lg shadow">
                             <h4 class="font-bold text-gray-900 mb-2">Q. 황소밴드 가격은 얼마인가요?</h4>
-                            <p class="text-gray-600">싱글밴드 8,500원~9,450원, 더블밴드 10,900원~12,900원, 공업용밴드 2,300원~8,800원입니다. 규격에 따라 가격이 다릅니다.</p>
+                            <p class="text-gray-600">싱글밴드는 8,500원부터, 더블밴드는 10,900원부터, 공업용밴드는 2,300원부터입니다. 규격별 최신 가격은 공식 구매처에서 확인해 주세요.</p>
                         </div>
                         <div class="bg-white p-6 rounded-lg shadow">
                             <h4 class="font-bold text-gray-900 mb-2">Q. 호스밴드 규격은 어떻게 선택하나요?</h4>
-                            <p class="text-gray-600">파이프 외경을 측정하여 선택합니다. 10-32A, 15-40A, 50-80A, 100-125A 등 다양한 규격이 있습니다. 문의 주시면 안내해드립니다.</p>
+                            <p class="text-gray-600">파이프 외경을 측정하여 선택합니다. 10-32A, 15-40A, 50-80A, 100-125A 기본 규격과 40A부터 300A까지 단일 규격을 제공합니다. 규격 선택이 어려우면 아파트샵에 문의하면 안내받을 수 있습니다.</p>
                         </div>
                         <div class="bg-white p-6 rounded-lg shadow">
                             <h4 class="font-bold text-gray-900 mb-2">Q. 황소밴드 설치는 어렵나요?</h4>
@@ -520,60 +522,16 @@
                             <div class="flex items-center gap-4 flex-wrap">
                                 <a href="https://smartstore.naver.com/aptshop7/" target="_blank" rel="noopener"
                                    class="block bg-white rounded-lg p-3 shadow-sm hover:scale-105 transition-transform duration-300" style="width:13rem; border:1px solid #e5e7eb;">
-                                    <img src="img/social_smartstore.png" alt="네이버 스마트스토어에서 황소밴드 구매하기" class="w-full h-auto" width="972" height="228" loading="lazy">
+                                    <img src="img/social_smartstore.png" alt="네이버 스마트스토어에서 황소밴드 구매하기" class="w-full h-auto" width="972" height="228" loading="lazy" decoding="async">
                                 </a>
                                 <a href="https://www.coupang.com/np/search?component=&q=%ED%99%A9%EC%86%8C%EB%B0%B4%EB%93%9C" target="_blank" rel="noopener"
                                    class="block bg-white rounded-lg p-3 shadow-sm hover:scale-105 transition-transform duration-300" style="width:13rem; border:1px solid #e5e7eb;">
-                                    <img src="img/social_coupang.png" alt="쿠팡에서 황소밴드 구매하기" class="w-full h-auto" width="350" height="82" loading="lazy">
+                                    <img src="img/social_coupang.png" alt="쿠팡에서 황소밴드 구매하기" class="w-full h-auto" width="350" height="82" loading="lazy" decoding="async">
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Static Internal Links for Search and Users -->
-        <section class="py-12 bg-white border-t border-gray-100" aria-labelledby="site-links-title">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-8">
-                    <h2 id="site-links-title" class="text-2xl md:text-3xl font-bold text-gray-900">황소밴드 주요 정보 바로가기</h2>
-                    <p class="text-gray-500 mt-2">제품 규격, 브랜드 정보, 인증서, 구매처, 상담 정보를 한 번에 확인하세요.</p>
-                </div>
-                <nav class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" aria-label="황소밴드 주요 페이지">
-                    <a href="/menu/products.html#hwangso" class="block rounded-lg border border-gray-200 p-5 hover:border-blue-500 hover:shadow-md transition-all">
-                        <span class="block font-bold text-gray-900">황소밴드 제품소개</span>
-                        <span class="block text-sm text-gray-600 mt-1">싱글·더블·공업용 규격과 가격</span>
-                    </a>
-                    <a href="/menu/brand.html" class="block rounded-lg border border-gray-200 p-5 hover:border-blue-500 hover:shadow-md transition-all">
-                        <span class="block font-bold text-gray-900">황소밴드 브랜드</span>
-                        <span class="block text-sm text-gray-600 mt-1">특허 누수밴드 브랜드 스토리</span>
-                    </a>
-                    <a href="/menu/certifications.html" class="block rounded-lg border border-gray-200 p-5 hover:border-blue-500 hover:shadow-md transition-all">
-                        <span class="block font-bold text-gray-900">특허·인증서</span>
-                        <span class="block text-sm text-gray-600 mt-1">특허 제10-1424730호 및 시험성적</span>
-                    </a>
-                    <a href="/menu/social.html" class="block rounded-lg border border-gray-200 p-5 hover:border-blue-500 hover:shadow-md transition-all">
-                        <span class="block font-bold text-gray-900">황소밴드 구매처</span>
-                        <span class="block text-sm text-gray-600 mt-1">네이버 스마트스토어와 쿠팡 구매</span>
-                    </a>
-                    <a href="/menu/company.html" class="block rounded-lg border border-gray-200 p-5 hover:border-blue-500 hover:shadow-md transition-all">
-                        <span class="block font-bold text-gray-900">아파트샵 기업정보</span>
-                        <span class="block text-sm text-gray-600 mt-1">공식 온라인 판매점 정보</span>
-                    </a>
-                    <a href="/menu/news.html" class="block rounded-lg border border-gray-200 p-5 hover:border-blue-500 hover:shadow-md transition-all">
-                        <span class="block font-bold text-gray-900">황소밴드 소식</span>
-                        <span class="block text-sm text-gray-600 mt-1">신제품, 협약, 공식 소식</span>
-                    </a>
-                    <a href="/menu/contact.html" class="block rounded-lg border border-gray-200 p-5 hover:border-blue-500 hover:shadow-md transition-all">
-                        <span class="block font-bold text-gray-900">규격·설치 문의</span>
-                        <span class="block text-sm text-gray-600 mt-1">전화 상담 010-7357-8613</span>
-                    </a>
-                    <a href="/sitemap.html" class="block rounded-lg border border-gray-200 p-5 hover:border-blue-500 hover:shadow-md transition-all">
-                        <span class="block font-bold text-gray-900">전체 사이트맵</span>
-                        <span class="block text-sm text-gray-600 mt-1">검색봇과 사용자를 위한 전체 링크</span>
-                    </a>
-                </nav>
             </div>
         </section>
 
@@ -591,33 +549,33 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <figure class="bg-gray-50 rounded-xl shadow-sm overflow-hidden flex flex-col h-full">
-                        <img src="img/reviews/review_photo_1.jpg" alt="황소밴드 실제 구매 고객 후기 사진 - 배관 누수 보수 설치" class="w-full object-cover" style="aspect-ratio:1/1;" width="600" height="600" loading="lazy">
+                        <img src="img/reviews/review_photo_1.jpg" alt="황소밴드 실제 구매 고객 후기 사진 - 배관 누수 보수 설치" class="w-full object-cover" style="aspect-ratio:1/1;" width="600" height="600" loading="lazy" decoding="async">
                         <div class="p-6 flex flex-col flex-1">
                             <figcaption class="flex items-center justify-between mb-3">
                                 <span class="font-semibold text-gray-800">kgc0***</span>
-                                <time datetime="2025-07-09" class="text-xs text-gray-400">2025-07-09</time>
+                                <time datetime="2025-07-09" class="text-xs text-gray-500">2025-07-09</time>
                             </figcaption>
                             <div class="text-yellow-400 text-lg mb-3" aria-label="5점 만점에 5점">★★★★★</div>
                             <blockquote class="text-gray-600 text-sm leading-relaxed flex-1">남편이 배관 일을 하는데 알루미늄 테이프나 스프레이는 둘 다 금방 새더라고요. 호스밴드는 조임력이 확실해서 파이프를 꽉 잡아주고 드라이버 하나로 설치 끝나요. 부식 안 되는 재질이라 오래 써도 문제없어요. 이제 이거 없으면 일 못한다고 할 정도예요!</blockquote>
                         </div>
                     </figure>
                     <figure class="bg-gray-50 rounded-xl shadow-sm overflow-hidden flex flex-col h-full">
-                        <img src="img/reviews/review_photo_3.jpg" alt="황소밴드 실제 구매 고객 후기 사진 - 아파트 시설 관리 호스밴드" class="w-full object-cover" style="aspect-ratio:1/1;" width="600" height="600" loading="lazy">
+                        <img src="img/reviews/review_photo_3.jpg" alt="황소밴드 실제 구매 고객 후기 사진 - 아파트 시설 관리 호스밴드" class="w-full object-cover" style="aspect-ratio:1/1;" width="600" height="600" loading="lazy" decoding="async">
                         <div class="p-6 flex flex-col flex-1">
                             <figcaption class="flex items-center justify-between mb-3">
                                 <span class="font-semibold text-gray-800">kore******</span>
-                                <time datetime="2025-07-10" class="text-xs text-gray-400">2025-07-10</time>
+                                <time datetime="2025-07-10" class="text-xs text-gray-500">2025-07-10</time>
                             </figcaption>
                             <div class="text-yellow-400 text-lg mb-3" aria-label="5점 만점에 5점">★★★★★</div>
                             <blockquote class="text-gray-600 text-sm leading-relaxed flex-1">아파트 시설 관리하면서 스프레이랑 알루미늄 테이프 써봤지만 시간 낭비였어요. 호스밴드는 조임력 쎄고 파이프 사이즈 따라 10mm부터 100mm까지 골라 쓸 수 있어서 현장마다 딱 맞아요. 부식 안 되니까 재작업 걱정 없습니다.</blockquote>
                         </div>
                     </figure>
                     <figure class="bg-gray-50 rounded-xl shadow-sm overflow-hidden flex flex-col h-full">
-                        <img src="img/reviews/review_photo_5.jpg" alt="황소밴드 실제 구매 고객 후기 사진 - 집 배관 누수 특허 호스밴드" class="w-full object-cover" style="aspect-ratio:1/1;" width="600" height="600" loading="lazy">
+                        <img src="img/reviews/review_photo_5.jpg" alt="황소밴드 실제 구매 고객 후기 사진 - 집 배관 누수 특허 호스밴드" class="w-full object-cover" style="aspect-ratio:1/1;" width="600" height="600" loading="lazy" decoding="async">
                         <div class="p-6 flex flex-col flex-1">
                             <figcaption class="flex items-center justify-between mb-3">
                                 <span class="font-semibold text-gray-800">coco*****</span>
-                                <time datetime="2025-07-03" class="text-xs text-gray-400">2025-07-03</time>
+                                <time datetime="2025-07-03" class="text-xs text-gray-500">2025-07-03</time>
                             </figcaption>
                             <div class="text-yellow-400 text-lg mb-3" aria-label="5점 만점에 5점">★★★★★</div>
                             <blockquote class="text-gray-600 text-sm leading-relaxed flex-1">집 배관에 문제가 생겨 알루미늄 테이프로 마감했는데 자꾸 떨어지고 새더라고요. 특허받은 호스밴드는 조임력이 뛰어나고 설치도 쉬워서 금방 고정했어요. 다양한 규격이 있어 상황에 맞게 쓸 수 있는 것도 큰 장점입니다. 강력 추천!</blockquote>
@@ -629,26 +587,26 @@
                 <div class="mt-8">
                     <p class="text-center text-gray-500 text-sm mb-4">실제 고객님들이 남겨주신 사진 후기</p>
                     <div class="grid gap-3 md:gap-4 mx-auto review-gallery" style="max-width:64rem; grid-template-columns:repeat(5,minmax(0,1fr));">
-                        <img src="img/reviews/gallery_1.jpg" alt="황소밴드 구매 고객 사진 후기 - 스테인리스 누수밴드 제품" class="w-full object-cover rounded-lg shadow-sm" style="aspect-ratio:1/1;" width="500" height="500" loading="lazy">
-                        <img src="img/reviews/gallery_2.jpg" alt="황소밴드 구매 고객 사진 후기 - 호스밴드 제품 실물" class="w-full object-cover rounded-lg shadow-sm" style="aspect-ratio:1/1;" width="500" height="500" loading="lazy">
-                        <img src="img/reviews/gallery_3.jpg" alt="황소밴드 구매 고객 사진 후기 - 누수밴드 제품" class="w-full object-cover rounded-lg shadow-sm" style="aspect-ratio:1/1;" width="500" height="500" loading="lazy">
-                        <img src="img/reviews/gallery_4.jpg" alt="황소밴드 구매 고객 사진 후기 - 패킹패드 누수밴드" class="w-full object-cover rounded-lg shadow-sm" style="aspect-ratio:1/1;" width="500" height="500" loading="lazy">
-                        <img src="img/reviews/gallery_5.jpg" alt="황소밴드 구매 고객 사진 후기 - 스테인리스 호스밴드" class="w-full object-cover rounded-lg shadow-sm" style="aspect-ratio:1/1;" width="500" height="500" loading="lazy">
-                        <img src="img/reviews/gallery_6.jpg" alt="황소밴드 구매 고객 사진 후기 - 배관 누수 실제 설치" class="w-full object-cover rounded-lg shadow-sm" style="aspect-ratio:1/1;" width="500" height="500" loading="lazy">
-                        <img src="img/reviews/gallery_7.jpg" alt="황소밴드 구매 고객 사진 후기 - 파이프 누수 보수 현장" class="w-full object-cover rounded-lg shadow-sm" style="aspect-ratio:1/1;" width="500" height="500" loading="lazy">
-                        <img src="img/reviews/gallery_8.jpg" alt="황소밴드 구매 고객 사진 후기 - 누수밴드 설치 완료" class="w-full object-cover rounded-lg shadow-sm" style="aspect-ratio:1/1;" width="500" height="500" loading="lazy">
-                        <img src="img/reviews/review_photo_1.jpg" alt="황소밴드 구매 고객 사진 후기 - 배관 누수 보수 설치" class="w-full object-cover rounded-lg shadow-sm" style="aspect-ratio:1/1;" width="500" height="500" loading="lazy">
-                        <img src="img/reviews/review_photo_3.jpg" alt="황소밴드 구매 고객 사진 후기 - 아파트 시설 관리 호스밴드" class="w-full object-cover rounded-lg shadow-sm" style="aspect-ratio:1/1;" width="500" height="500" loading="lazy">
+                        <img src="img/reviews/gallery_1.jpg" alt="황소밴드 구매 고객 사진 후기 - 스테인리스 누수밴드 제품" class="w-full object-cover rounded-lg shadow-sm" style="aspect-ratio:1/1;" width="500" height="500" loading="lazy" decoding="async">
+                        <img src="img/reviews/gallery_2.jpg" alt="황소밴드 구매 고객 사진 후기 - 호스밴드 제품 실물" class="w-full object-cover rounded-lg shadow-sm" style="aspect-ratio:1/1;" width="500" height="500" loading="lazy" decoding="async">
+                        <img src="img/reviews/gallery_3.jpg" alt="황소밴드 구매 고객 사진 후기 - 누수밴드 제품" class="w-full object-cover rounded-lg shadow-sm" style="aspect-ratio:1/1;" width="500" height="500" loading="lazy" decoding="async">
+                        <img src="img/reviews/gallery_4.jpg" alt="황소밴드 구매 고객 사진 후기 - 패킹패드 누수밴드" class="w-full object-cover rounded-lg shadow-sm" style="aspect-ratio:1/1;" width="500" height="500" loading="lazy" decoding="async">
+                        <img src="img/reviews/gallery_5.jpg" alt="황소밴드 구매 고객 사진 후기 - 스테인리스 호스밴드" class="w-full object-cover rounded-lg shadow-sm" style="aspect-ratio:1/1;" width="500" height="500" loading="lazy" decoding="async">
+                        <img src="img/reviews/gallery_6.jpg" alt="황소밴드 구매 고객 사진 후기 - 배관 누수 실제 설치" class="w-full object-cover rounded-lg shadow-sm" style="aspect-ratio:1/1;" width="500" height="500" loading="lazy" decoding="async">
+                        <img src="img/reviews/gallery_7.jpg" alt="황소밴드 구매 고객 사진 후기 - 파이프 누수 보수 현장" class="w-full object-cover rounded-lg shadow-sm" style="aspect-ratio:1/1;" width="500" height="500" loading="lazy" decoding="async">
+                        <img src="img/reviews/gallery_8.jpg" alt="황소밴드 구매 고객 사진 후기 - 누수밴드 설치 완료" class="w-full object-cover rounded-lg shadow-sm" style="aspect-ratio:1/1;" width="500" height="500" loading="lazy" decoding="async">
+                        <img src="img/reviews/review_photo_1.jpg" alt="황소밴드 구매 고객 사진 후기 - 배관 누수 보수 설치" class="w-full object-cover rounded-lg shadow-sm" style="aspect-ratio:1/1;" width="500" height="500" loading="lazy" decoding="async">
+                        <img src="img/reviews/review_photo_3.jpg" alt="황소밴드 구매 고객 사진 후기 - 아파트 시설 관리 호스밴드" class="w-full object-cover rounded-lg shadow-sm" style="aspect-ratio:1/1;" width="500" height="500" loading="lazy" decoding="async">
                     </div>
                 </div>
                 <div class="flex items-center gap-4 justify-center mx-auto mt-10 flex-wrap">
                     <a href="https://smartstore.naver.com/aptshop7/" target="_blank" rel="noopener"
                        class="block bg-white rounded-lg p-2 shadow-sm hover:scale-105 transition-transform duration-300" style="width:10rem; border:1px solid #e5e7eb;">
-                        <img src="img/social_smartstore.png" alt="네이버 스마트스토어에서 황소밴드 구매하기" class="w-full h-auto" width="972" height="228" loading="lazy">
+                        <img src="img/social_smartstore.png" alt="네이버 스마트스토어에서 황소밴드 구매하기" class="w-full h-auto" width="972" height="228" loading="lazy" decoding="async">
                     </a>
                     <a href="https://www.coupang.com/np/search?component=&q=%ED%99%A9%EC%86%8C%EB%B0%B4%EB%93%9C" target="_blank" rel="noopener"
                        class="block bg-white rounded-lg p-2 shadow-sm hover:scale-105 transition-transform duration-300" style="width:10rem; border:1px solid #e5e7eb;">
-                        <img src="img/social_coupang.png" alt="쿠팡에서 황소밴드 구매하기" class="w-full h-auto" width="350" height="82" loading="lazy">
+                        <img src="img/social_coupang.png" alt="쿠팡에서 황소밴드 구매하기" class="w-full h-auto" width="350" height="82" loading="lazy" decoding="async">
                     </a>
                 </div>
             </div>
@@ -659,24 +617,24 @@
     <div id="footer-container"></div>
     
     <!-- Image Modal -->
-    <div id="image-modal" class="hidden fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
-        <button id="close-modal" class="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors z-10">
+    <div id="image-modal" role="dialog" aria-modal="true" aria-labelledby="modal-caption" class="hidden fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
+        <button id="close-modal" aria-label="이미지 확대 보기 닫기" class="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors z-10">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
         </button>
         <div class="max-w-5xl max-h-full overflow-auto">
-            <img id="modal-image" src="" alt="확대 이미지" class="w-full h-auto">
+            <img id="modal-image" alt="확대 이미지" class="w-full h-auto">
             <p id="modal-caption" class="text-white text-center mt-4 text-lg font-semibold"></p>
         </div>
     </div>
     
     <!-- Terms Modal -->
-    <div id="terms-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">
+    <div id="terms-modal" role="dialog" aria-modal="true" aria-labelledby="terms-title" class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">
         <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden">
             <div class="flex justify-between items-center p-6 border-b">
-                <h2 class="text-2xl font-bold text-gray-900">이용약관</h2>
-                <button onclick="closeTermsModal()" class="text-gray-500 hover:text-gray-700">
+                <h2 id="terms-title" class="text-2xl font-bold text-gray-900">이용약관</h2>
+                <button onclick="closeTermsModal()" aria-label="이용약관 닫기" class="text-gray-500 hover:text-gray-700">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
@@ -687,11 +645,11 @@
     </div>
     
     <!-- Privacy Modal -->
-    <div id="privacy-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">
+    <div id="privacy-modal" role="dialog" aria-modal="true" aria-labelledby="privacy-title" class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">
         <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden">
             <div class="flex justify-between items-center p-6 border-b">
-                <h2 class="text-2xl font-bold text-gray-900">개인정보처리방침</h2>
-                <button onclick="closePrivacyModal()" class="text-gray-500 hover:text-gray-700">
+                <h2 id="privacy-title" class="text-2xl font-bold text-gray-900">개인정보처리방침</h2>
+                <button onclick="closePrivacyModal()" aria-label="개인정보처리방침 닫기" class="text-gray-500 hover:text-gray-700">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
@@ -717,7 +675,7 @@
         </a>
         
         <!-- Scroll to Top Button -->
-        <button id="scroll-to-top" class="hidden bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300">
+        <button id="scroll-to-top" aria-label="맨 위로 이동" class="hidden bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
             </svg>
@@ -794,8 +752,7 @@
                             "@type": "AggregateOffer",
                             "priceCurrency": "KRW",
                             "lowPrice": "8500",
-                            "highPrice": "9450",
-                            "offerCount": "4",
+                            "offerCount": "14",
                             "availability": "https://schema.org/InStock",
                             "url": "https://smartstore.naver.com/aptshop7/"
                         }
@@ -838,8 +795,7 @@
                             "@type": "AggregateOffer",
                             "priceCurrency": "KRW",
                             "lowPrice": "10900",
-                            "highPrice": "12900",
-                            "offerCount": "4",
+                            "offerCount": "14",
                             "availability": "https://schema.org/InStock",
                             "url": "https://smartstore.naver.com/aptshop7/"
                         }

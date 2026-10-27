@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Load the existing brand font without blocking the first render. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300..700&amp;display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300..700&amp;display=swap"></noscript>
+
     <title>페이지를 찾을 수 없습니다 (404) | 아파트샵 - 황소밴드 공식 판매점</title>
     <meta name="description" content="요청하신 페이지를 찾을 수 없습니다. 황소밴드 공식 판매점 아파트샵 홈으로 이동해 주세요.">
 
@@ -58,6 +64,37 @@
     <!-- Footer -->
     <div id="footer-container"></div>
 
+    <!-- Terms Modal -->
+    <div id="terms-modal" role="dialog" aria-modal="true" aria-labelledby="terms-title" class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden">
+            <div class="flex justify-between items-center p-6 border-b">
+                <h2 id="terms-title" class="text-2xl font-bold text-gray-900">이용약관</h2>
+                <button type="button" onclick="closeTermsModal()" class="text-gray-500 hover:text-gray-700" aria-label="이용약관 닫기">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="terms-content" class="p-6 overflow-y-auto max-h-[calc(90vh-120px)] text-sm text-gray-700 leading-relaxed"></div>
+        </div>
+    </div>
+
+    <!-- Privacy Modal -->
+    <div id="privacy-modal" role="dialog" aria-modal="true" aria-labelledby="privacy-title" class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden">
+            <div class="flex justify-between items-center p-6 border-b">
+                <h2 id="privacy-title" class="text-2xl font-bold text-gray-900">개인정보처리방침</h2>
+                <button type="button" onclick="closePrivacyModal()" class="text-gray-500 hover:text-gray-700" aria-label="개인정보처리방침 닫기">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="privacy-content" class="p-6 overflow-y-auto max-h-[calc(90vh-120px)] text-sm text-gray-700 leading-relaxed"></div>
+        </div>
+    </div>
+
     <script src="/js/main.js"></script>
+    <script src="/js/terms.js"></script>
 </body>
 </html>

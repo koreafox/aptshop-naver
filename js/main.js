@@ -125,62 +125,141 @@ const ComponentLoader = {
 // ========================================
 const Navigation = {
     init() {
+        this.desktopMedia = window.matchMedia('(min-width: 1024px)');
+        this.initDesktopMenu();
         this.initMobileMenu();
         this.initMobileDropdowns();
         this.closeMenuOnOutsideClick();
         this.closeMenuOnLinkClick();
+        document.addEventListener('keydown', (event) => {
+            const menu = document.getElementById('mobile-menu');
+            if (event.key === 'Escape' && menu && !menu.classList.contains('hidden')) {
+                event.preventDefault();
+                this.setMobileMenuOpen(false, true);
+            }
+        });
+        this.desktopMedia.addEventListener('change', () => {
+            this.setMobileMenuOpen(false);
+            document.querySelectorAll('[data-desktop-dropdown]').forEach(group => {
+                this.setDesktopDropdownOpen(group, false);
+            });
+        });
     },
-    
+
+    setDesktopDropdownOpen(group, isOpen) {
+        const button = group.querySelector('.nav-link');
+        const content = button?.nextElementSibling;
+        if (!button || !content) return;
+
+        if (isOpen) {
+            document.querySelectorAll('[data-desktop-dropdown]').forEach(other => {
+                if (other !== group) this.setDesktopDropdownOpen(other, false);
+            });
+        }
+        button.setAttribute('aria-expanded', String(isOpen));
+        content.setAttribute('aria-hidden', String(!isOpen));
+        content.classList.toggle('opacity-0', !isOpen);
+        content.classList.toggle('invisible', !isOpen);
+        content.classList.toggle('opacity-100', isOpen);
+        content.classList.toggle('visible', isOpen);
+        content.inert = !isOpen;
+    },
+
+    initDesktopMenu() {
+        document.querySelectorAll('[data-desktop-dropdown]').forEach(group => {
+            const button = group.querySelector('.nav-link');
+            const content = button?.nextElementSibling;
+            if (!button || !content) return;
+
+            this.setDesktopDropdownOpen(group, false);
+            group.addEventListener('mouseenter', () => this.setDesktopDropdownOpen(group, true));
+            group.addEventListener('mouseleave', () => {
+                if (!group.contains(document.activeElement)) this.setDesktopDropdownOpen(group, false);
+            });
+            group.addEventListener('focusout', (event) => {
+                if (!group.contains(event.relatedTarget)) this.setDesktopDropdownOpen(group, false);
+            });
+            button.addEventListener('click', (event) => {
+                // Pointer hover already opens the menu; keyboard activation toggles it.
+                const isOpen = event.detail > 0 || button.getAttribute('aria-expanded') !== 'true';
+                this.setDesktopDropdownOpen(group, isOpen);
+            });
+            button.addEventListener('keydown', (event) => {
+                if (event.key !== 'ArrowDown' && event.key !== 'ArrowUp') return;
+                event.preventDefault();
+                this.setDesktopDropdownOpen(group, true);
+                const links = content.querySelectorAll('a[href]');
+                const index = event.key === 'ArrowUp' ? links.length - 1 : 0;
+                links[index]?.focus();
+            });
+            group.addEventListener('keydown', (event) => {
+                if (event.key !== 'Escape') return;
+                event.preventDefault();
+                event.stopPropagation();
+                button.focus();
+                this.setDesktopDropdownOpen(group, false);
+            });
+        });
+    },
+
+    setMobileMenuOpen(isOpen, returnFocus = false) {
+        const button = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        if (!button || !menu) return;
+
+        isOpen = Boolean(isOpen && !this.desktopMedia.matches);
+        const wasOpen = !menu.classList.contains('hidden');
+        if (isOpen && !wasOpen) this.mobilePreviousOverflow = document.body.style.overflow;
+        menu.classList.toggle('hidden', !isOpen);
+        menu.setAttribute('aria-hidden', String(!isOpen));
+        button.setAttribute('aria-expanded', String(isOpen));
+        button.setAttribute('aria-label', isOpen ? '메뉴 닫기' : '메뉴 열기');
+        document.getElementById('menu-icon')?.classList.toggle('hidden', isOpen);
+        document.getElementById('close-icon')?.classList.toggle('hidden', !isOpen);
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+            if (!wasOpen) this.restoreMenuStates();
+        } else if (wasOpen) {
+            document.body.style.overflow = this.mobilePreviousOverflow || '';
+        }
+        if (returnFocus && wasOpen) button.focus();
+    },
+
     initMobileMenu() {
         const button = document.getElementById('mobile-menu-button');
         const menu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('menu-icon');
-        const closeIcon = document.getElementById('close-icon');
-        
         if (!button || !menu) return;
-        
-        button.addEventListener('click', (e) => {
-            e.stopPropagation();
-            const isHidden = menu.classList.contains('hidden');
-            
-            menu.classList.toggle('hidden');
-            menuIcon?.classList.toggle('hidden');
-            closeIcon?.classList.toggle('hidden');
-            
-            // Prevent body scroll when menu is open
-            document.body.style.overflow = isHidden ? 'hidden' : '';
-            
-            // Restore submenu states when opening menu
-            if (isHidden) {
-                setTimeout(() => {
-                    this.restoreMenuStates();
-                }, 100);
-            }
+
+        this.setMobileMenuOpen(false);
+        button.addEventListener('click', () => {
+            this.setMobileMenuOpen(menu.classList.contains('hidden'));
         });
     },
-    
+
+    setMobileDropdownOpen(button, isOpen) {
+        const content = button.nextElementSibling;
+        if (!content) return;
+        content.classList.toggle('hidden', !isOpen);
+        content.setAttribute('aria-hidden', String(!isOpen));
+        button.setAttribute('aria-expanded', String(isOpen));
+        button.querySelector('svg')?.classList.toggle('rotate-180', isOpen);
+    },
+
     initMobileDropdowns() {
-        const dropdownBtns = document.querySelectorAll('.mobile-dropdown-btn');
-        
-        dropdownBtns.forEach((btn) => {
-            btn.addEventListener('click', () => {
-                const content = btn.nextElementSibling;
-                const icon = btn.querySelector('svg');
-                const menuKey = btn.dataset.menuKey;
-                
-                if (content && icon && menuKey) {
-                    const isHidden = content.classList.contains('hidden');
-                    content.classList.toggle('hidden');
-                    icon.classList.toggle('rotate-180');
-                    
-                    // Save state
-                    this.saveMenuState(menuKey, !isHidden);
-                }
+        document.querySelectorAll('.mobile-dropdown-btn').forEach(button => {
+            const content = button.nextElementSibling;
+            if (!content) return;
+            this.setMobileDropdownOpen(button, !content.classList.contains('hidden'));
+            button.addEventListener('click', () => {
+                const isOpen = content.classList.contains('hidden');
+                this.setMobileDropdownOpen(button, isOpen);
+                this.saveMenuState(button.dataset.menuKey, isOpen);
             });
         });
     },
     
     saveMenuState(menuKey, isOpen) {
+        if (!menuKey) return;
         try {
             if (isOpen) {
                 localStorage.setItem('lastOpenedMenu', menuKey);
@@ -199,19 +278,9 @@ const Navigation = {
             const lastOpenedMenu = localStorage.getItem('lastOpenedMenu');
             if (!lastOpenedMenu) return;
             
-            const dropdownBtns = document.querySelectorAll('.mobile-dropdown-btn');
-            
-            dropdownBtns.forEach((btn) => {
-                const menuKey = btn.dataset.menuKey;
-                
-                if (menuKey === lastOpenedMenu) {
-                    const content = btn.nextElementSibling;
-                    const icon = btn.querySelector('svg');
-                    
-                    if (content && icon) {
-                        content.classList.remove('hidden');
-                        icon.classList.add('rotate-180');
-                    }
+            document.querySelectorAll('.mobile-dropdown-btn').forEach(button => {
+                if (button.dataset.menuKey === lastOpenedMenu) {
+                    this.setMobileDropdownOpen(button, true);
                 }
             });
         } catch (e) {
@@ -224,45 +293,27 @@ const Navigation = {
             const menu = document.getElementById('mobile-menu');
             const button = document.getElementById('mobile-menu-button');
             
-            if (menu && !menu.classList.contains('hidden') && 
+            if (menu && !menu.classList.contains('hidden') &&
                 !menu.contains(e.target) && !button?.contains(e.target)) {
-                menu.classList.add('hidden');
-                document.getElementById('menu-icon')?.classList.remove('hidden');
-                document.getElementById('close-icon')?.classList.add('hidden');
-                document.body.style.overflow = '';
+                this.setMobileMenuOpen(false);
             }
+            document.querySelectorAll('[data-desktop-dropdown]').forEach(group => {
+                if (!group.contains(e.target)) this.setDesktopDropdownOpen(group, false);
+            });
         });
     },
     
     closeMenuOnLinkClick() {
-        // 모바일 메뉴 내부의 모든 링크에 클릭 이벤트 추가
         document.addEventListener('click', (e) => {
             const menu = document.getElementById('mobile-menu');
             const link = e.target.closest('a');
-            
-            // 링크를 클릭했고, 모바일 메뉴가 열려있으면
-            if (link && menu && menu.contains(link) && !menu.classList.contains('hidden')) {
-                // 드롭다운 버튼이 아닌 실제 링크인 경우에만
-                if (!link.classList.contains('mobile-dropdown-btn')) {
-                    // 링크가 속한 드롭다운 그룹 찾기
-                    const dropdownContent = link.closest('.mobile-dropdown-content');
-                    if (dropdownContent) {
-                        const dropdownBtn = dropdownContent.previousElementSibling;
-                        if (dropdownBtn && dropdownBtn.classList.contains('mobile-dropdown-btn')) {
-                            const menuKey = dropdownBtn.dataset.menuKey;
-                            if (menuKey) {
-                                localStorage.setItem('lastOpenedMenu', menuKey);
-                            }
-                        }
-                    }
-                    
-                    // 메뉴 닫기
-                    menu.classList.add('hidden');
-                    document.getElementById('menu-icon')?.classList.remove('hidden');
-                    document.getElementById('close-icon')?.classList.add('hidden');
-                    document.body.style.overflow = '';
-                }
+            if (!link || !menu || !menu.contains(link) || menu.classList.contains('hidden')) return;
+
+            const dropdownButton = link.closest('.mobile-dropdown-content')?.previousElementSibling;
+            if (dropdownButton?.classList.contains('mobile-dropdown-btn')) {
+                this.saveMenuState(dropdownButton.dataset.menuKey, true);
             }
+            this.setMobileMenuOpen(false);
         });
     }
 };
@@ -282,17 +333,17 @@ const ScrollManager = {
                 const href = this.getAttribute('href');
                 if (href === '#') return;
                 
-                e.preventDefault();
-                const target = document.querySelector(href);
+                const target = document.getElementById(decodeURIComponent(href.slice(1)));
                 
                 if (target) {
+                    e.preventDefault();
                     const headerOffset = 80;
                     const elementPosition = target.getBoundingClientRect().top;
                     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
                     
                     window.scrollTo({
                         top: offsetPosition,
-                        behavior: 'smooth'
+                        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
                     });
                 }
             });
@@ -324,12 +375,12 @@ const ScrollManager = {
                 });
                 ticking = true;
             }
-        });
+        }, { passive: true });
         
         btn.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
-                behavior: 'smooth'
+                behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
             });
         });
     }
@@ -404,21 +455,36 @@ const Performance = {
     },
     
     prefetchLinks() {
-        const links = document.querySelectorAll('a[href$=".html"]');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const link = entry.target;
-                    const prefetchLink = document.createElement('link');
-                    prefetchLink.rel = 'prefetch';
-                    prefetchLink.href = link.href;
-                    document.head.appendChild(prefetchLink);
-                    observer.unobserve(link);
-                }
-            });
-        });
-        
-        links.forEach(link => observer.observe(link));
+        const connection = navigator.connection;
+        if (connection?.saveData || /(^|-)2g$/.test(connection?.effectiveType || '')) return;
+
+        const prefetched = new Set();
+        let hoverTimer;
+        const prefetch = (link) => {
+            if (!link || link.hasAttribute('download') || prefetched.size >= 5) return;
+            const url = new URL(link.href, location.href);
+            if (url.origin !== location.origin || !url.pathname.endsWith('.html') ||
+                url.pathname === location.pathname) return;
+            url.hash = '';
+            if (prefetched.has(url.href)) return;
+
+            prefetched.add(url.href);
+            const hint = document.createElement('link');
+            hint.rel = 'prefetch';
+            hint.href = url.href;
+            document.head.appendChild(hint);
+        };
+
+        // Warm only links the visitor intends to open, including dynamically loaded navigation.
+        document.addEventListener('pointerover', (event) => {
+            if (event.pointerType !== 'mouse') return;
+            const link = event.target.closest('a[href]');
+            clearTimeout(hoverTimer);
+            if (link) hoverTimer = setTimeout(() => {
+                if (link.matches(':hover')) prefetch(link);
+            }, 150);
+        }, { passive: true });
+        document.addEventListener('focusin', (event) => prefetch(event.target.closest('a[href]')));
     }
 };
 
@@ -466,16 +532,22 @@ const ImageModal = {
     },
     
     open(src, caption) {
+        this.previousFocus = document.activeElement;
+        this.previousOverflow = document.body.style.overflow;
         this.modalImage.src = src;
         this.modalImage.alt = caption;
         this.modalCaption.textContent = caption;
         this.modal.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
+        this.closeBtn?.focus();
     },
     
     close() {
+        if (this.modal.classList.contains('hidden')) return;
         this.modal.classList.add('hidden');
-        document.body.style.overflow = '';
+        this.modalImage.removeAttribute('src');
+        document.body.style.overflow = this.previousOverflow || '';
+        this.previousFocus?.focus({ preventScroll: true });
     }
 };
 
@@ -617,15 +689,7 @@ const InlineVideoPlayer = {
 const App = {
     async init() {
         try {
-            // Load components first
-            const componentsLoaded = await ComponentLoader.loadAll();
-            
-            if (componentsLoaded) {
-                // Wait a bit for components to render
-                setTimeout(() => {
-                    Navigation.init();
-                }, 100);
-            }
+            const componentsLoaded = ComponentLoader.loadAll();
             
             // Initialize other modules
             ScrollManager.init();
@@ -634,6 +698,10 @@ const App = {
             ImageModal.init();
             ProductSlider.init();
             InlineVideoPlayer.init();
+
+            // Page interactions need not wait for the shared header and footer.
+            await componentsLoaded;
+            Navigation.init();
             
             // Mark app as ready
             document.body.classList.add('app-ready');

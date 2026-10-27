@@ -1,0 +1,37 @@
+name: Validate Site Metadata
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**.html'
+      - '**.css'
+      - '**.js'
+      - 'img/**'
+      - 'sitemap.xml'
+      - 'rss.xml'
+      - 'robots.txt'
+      - 'scripts/validate-site-metadata.py'
+      - '.github/workflows/validate-site-metadata.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-site-metadata-${{ github.ref }}
+  cancel-in-progress: true
+
+# Update only the affected URL's lastmod when its main content, structured data,
+# or links change significantly. CSS/JS-only changes must not reset every date.
+# Update RSS lastBuildDate only when the feed content changes.
+jobs:
+  validate-site-metadata:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate sitemap, RSS, and robots metadata
+        run: python3 scripts/validate-site-metadata.py

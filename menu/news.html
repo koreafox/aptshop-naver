@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Load the existing brand font without blocking the first render. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300..700&amp;display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300..700&amp;display=swap"></noscript>
     
     <!-- SEO Meta Tags -->
     <title>황소밴드 최신 소식 | 누수밴드 신제품·이벤트 - 아파트샵</title>
@@ -77,9 +83,6 @@
     }
     </script>
     
-    <!-- Preconnect for Performance -->
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
-    
     <!-- Tailwind CSS -->
     <link rel="stylesheet" href="../css/tailwind-output.css">
     
@@ -96,7 +99,7 @@
         <!-- Hero Section -->
         <section class="text-white py-8 md:py-12 relative overflow-hidden">
             <div class="absolute inset-0">
-                <img src="../img/hero11-bgg_fair.jpg" alt="황소밴드 전시회 부스" class="w-full h-full object-cover">
+                <img src="../img/hero11-bgg_fair.jpg" alt="황소밴드 전시회 부스" class="w-full h-full object-cover" width="1020" height="338" loading="eager">
             </div>
             <div class="absolute inset-0 bg-gradient-to-r from-blue-600/70 to-purple-600/70"></div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -143,7 +146,7 @@
                     <!-- News 1 -->
                     <a href="https://kr.aving.net/news/articleView.html?idxno=1537047" target="_blank" class="block bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden animate-on-scroll">
                         <div class="aspect-w-16 aspect-h-9 bg-gray-100">
-                            <img src="../img/news_1.jpeg" alt="SSTT 2019 황소밴드" class="w-full h-64 object-cover">
+                            <img src="../img/news_1.jpeg" alt="SSTT 2019 황소밴드" class="w-full h-64 object-cover" width="208" height="208" loading="lazy" decoding="async">
                         </div>
                         <div class="border-t border-gray-200"></div>
                         <div class="p-6">
@@ -156,7 +159,7 @@
                     <!-- News 2 -->
                     <a href="https://magazine.hankyung.com/business/article/201701170682b" target="_blank" class="block bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden animate-on-scroll">
                         <div class="aspect-w-16 aspect-h-9 bg-gray-100">
-                            <img src="../img/news_2.jpeg" alt="2017 우수브랜드대상 황소밴드" class="w-full h-64 object-cover">
+                            <img src="../img/news_2.jpeg" alt="2017 우수브랜드대상 황소밴드" class="w-full h-64 object-cover" width="200" height="200" loading="lazy" decoding="async">
                         </div>
                         <div class="border-t border-gray-200"></div>
                         <div class="p-6">
@@ -191,11 +194,11 @@
     <div id="footer-container"></div>
     
     <!-- Terms Modal -->
-    <div id="terms-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">
+    <div id="terms-modal" role="dialog" aria-modal="true" aria-labelledby="terms-title" class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">
         <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden">
             <div class="flex justify-between items-center p-6 border-b">
-                <h2 class="text-2xl font-bold text-gray-900">이용약관</h2>
-                <button onclick="closeTermsModal()" class="text-gray-500 hover:text-gray-700">
+                <h2 id="terms-title" class="text-2xl font-bold text-gray-900">이용약관</h2>
+                <button onclick="closeTermsModal()" aria-label="이용약관 닫기" class="text-gray-500 hover:text-gray-700">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
@@ -206,11 +209,11 @@
     </div>
     
     <!-- Privacy Modal -->
-    <div id="privacy-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">
+    <div id="privacy-modal" role="dialog" aria-modal="true" aria-labelledby="privacy-title" class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">
         <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden">
             <div class="flex justify-between items-center p-6 border-b">
-                <h2 class="text-2xl font-bold text-gray-900">개인정보처리방침</h2>
-                <button onclick="closePrivacyModal()" class="text-gray-500 hover:text-gray-700">
+                <h2 id="privacy-title" class="text-2xl font-bold text-gray-900">개인정보처리방침</h2>
+                <button onclick="closePrivacyModal()" aria-label="개인정보처리방침 닫기" class="text-gray-500 hover:text-gray-700">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
@@ -334,7 +337,7 @@
         <a href="https://smartstore.naver.com/aptshop7/" target="_blank" rel="noopener noreferrer" class="bg-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110" aria-label="네이버 스마트스토어">
             <img src="../img/footer-smartstore.png" alt="네이버 스마트스토어" class="w-8 h-8" width="32" height="32">
         </a>
-        <button id="scroll-to-top" class="hidden bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300">
+        <button id="scroll-to-top" aria-label="맨 위로 이동" class="hidden bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
             </svg>

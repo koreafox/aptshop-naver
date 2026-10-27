@@ -10,15 +10,15 @@
             </div>
 
             <!-- Desktop Navigation -->
-            <nav class="hidden lg:flex space-x-1">
-                <div class="relative group">
-                    <button class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors">
+            <nav class="hidden lg:flex space-x-1" aria-label="주요 메뉴">
+                <div class="relative group" data-desktop-dropdown>
+                    <button type="button" aria-expanded="false" aria-controls="desktop-company-menu" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors">
                         회사소개
                         <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </button>
-                    <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                    <div id="desktop-company-menu" class="absolute left-0 top-full pt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible transition-opacity duration-200">
                         <a href="/menu/brand.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">브랜드</a>
                         <a href="/menu/company.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">기업정보</a>
                         <a href="/menu/video.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">사용방법 영상</a>
@@ -27,51 +27,51 @@
                     </div>
                 </div>
 
-                <div class="relative group">
-                    <button class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                <div class="relative group" data-desktop-dropdown>
+                    <button type="button" aria-expanded="false" aria-controls="desktop-products-menu" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors">
                         제품소개
                         <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </button>
-                    <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                    <div id="desktop-products-menu" class="absolute left-0 top-full pt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible transition-opacity duration-200">
                         <a href="/menu/products.html#hwangso" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">황소밴드</a>
                         <a href="/menu/products.html#industrial" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">공업용밴드</a>
                     </div>
                 </div>
 
-                <div class="relative group">
-                    <button class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                <div class="relative group" data-desktop-dropdown>
+                    <button type="button" aria-expanded="false" aria-controls="desktop-purchase-menu" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors">
                         제품구매
                         <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </button>
-                    <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                    <div id="desktop-purchase-menu" class="absolute left-0 top-full pt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible transition-opacity duration-200">
                         <a href="/menu/social.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">소셜마켓</a>
                     </div>
                 </div>
 
-                <div class="relative group">
-                    <button class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                <div class="relative group" data-desktop-dropdown>
+                    <button type="button" aria-expanded="false" aria-controls="desktop-news-menu" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors">
                         뉴스
                         <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </button>
-                    <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                    <div id="desktop-news-menu" class="absolute left-0 top-full pt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible transition-opacity duration-200">
                         <a href="/menu/news.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">기사 및 보도자료</a>
                     </div>
                 </div>
 
-                <div class="relative group">
-                    <button class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                <div class="relative group" data-desktop-dropdown>
+                    <button type="button" aria-expanded="false" aria-controls="desktop-partners-menu" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors">
                         파트너스
                         <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </button>
-                    <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                    <div id="desktop-partners-menu" class="absolute left-0 top-full pt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible transition-opacity duration-200">
                         <a href="/menu/partners.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">파트너스</a>
                         <a href="/menu/contact.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">문의 및 상담</a>
                     </div>
@@ -80,8 +80,8 @@
 
             <!-- Mobile menu button -->
             <div class="lg:hidden">
-                <button id="mobile-menu-button" class="text-gray-700 hover:text-blue-600 focus:outline-none">
-                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button id="mobile-menu-button" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-menu" class="text-gray-700 hover:text-blue-600">
+                    <svg class="h-6 w-6" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
@@ -91,16 +91,16 @@
     </div>
 
     <!-- Mobile Navigation -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t">
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t" aria-hidden="true">
         <div class="px-2 pt-2 pb-3 space-y-1">
             <div class="mobile-dropdown">
-                <button class="mobile-dropdown-btn w-full text-left px-3 py-2 text-gray-700 hover:bg-blue-50 font-medium flex justify-between items-center" data-menu-key="company">
+                <button type="button" aria-expanded="false" aria-controls="mobile-company-menu" class="mobile-dropdown-btn w-full text-left px-3 py-2 text-gray-700 hover:bg-blue-50 font-medium flex justify-between items-center" data-menu-key="company">
                     회사소개
                     <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                     </svg>
                 </button>
-                <div class="mobile-dropdown-content hidden pl-4">
+                <div id="mobile-company-menu" class="mobile-dropdown-content hidden pl-4">
                     <a href="/menu/brand.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-blue-50">브랜드</a>
                     <a href="/menu/company.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-blue-50">기업정보</a>
                     <a href="/menu/video.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-blue-50">사용방법 영상</a>
@@ -110,50 +110,50 @@
             </div>
 
             <div class="mobile-dropdown">
-                <button class="mobile-dropdown-btn w-full text-left px-3 py-2 text-gray-700 hover:bg-blue-50 font-medium flex justify-between items-center" data-menu-key="products">
+                <button type="button" aria-expanded="false" aria-controls="mobile-products-menu" class="mobile-dropdown-btn w-full text-left px-3 py-2 text-gray-700 hover:bg-blue-50 font-medium flex justify-between items-center" data-menu-key="products">
                     제품소개
                     <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                     </svg>
                 </button>
-                <div class="mobile-dropdown-content hidden pl-4">
+                <div id="mobile-products-menu" class="mobile-dropdown-content hidden pl-4">
                     <a href="/menu/products.html#hwangso" class="block px-3 py-2 text-sm text-gray-600 hover:bg-blue-50">황소밴드</a>
                     <a href="/menu/products.html#industrial" class="block px-3 py-2 text-sm text-gray-600 hover:bg-blue-50">공업용밴드</a>
                 </div>
             </div>
 
             <div class="mobile-dropdown">
-                <button class="mobile-dropdown-btn w-full text-left px-3 py-2 text-gray-700 hover:bg-blue-50 font-medium flex justify-between items-center" data-menu-key="purchase">
+                <button type="button" aria-expanded="false" aria-controls="mobile-purchase-menu" class="mobile-dropdown-btn w-full text-left px-3 py-2 text-gray-700 hover:bg-blue-50 font-medium flex justify-between items-center" data-menu-key="purchase">
                     제품구매
                     <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                     </svg>
                 </button>
-                <div class="mobile-dropdown-content hidden pl-4">
+                <div id="mobile-purchase-menu" class="mobile-dropdown-content hidden pl-4">
                     <a href="/menu/social.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-blue-50">소셜마켓</a>
                 </div>
             </div>
 
             <div class="mobile-dropdown">
-                <button class="mobile-dropdown-btn w-full text-left px-3 py-2 text-gray-700 hover:bg-blue-50 font-medium flex justify-between items-center" data-menu-key="news">
+                <button type="button" aria-expanded="false" aria-controls="mobile-news-menu" class="mobile-dropdown-btn w-full text-left px-3 py-2 text-gray-700 hover:bg-blue-50 font-medium flex justify-between items-center" data-menu-key="news">
                     뉴스
                     <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                     </svg>
                 </button>
-                <div class="mobile-dropdown-content hidden pl-4">
+                <div id="mobile-news-menu" class="mobile-dropdown-content hidden pl-4">
                     <a href="/menu/news.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-blue-50">기사 및 보도자료</a>
                 </div>
             </div>
 
             <div class="mobile-dropdown">
-                <button class="mobile-dropdown-btn w-full text-left px-3 py-2 text-gray-700 hover:bg-blue-50 font-medium flex justify-between items-center" data-menu-key="partners">
+                <button type="button" aria-expanded="false" aria-controls="mobile-partners-menu" class="mobile-dropdown-btn w-full text-left px-3 py-2 text-gray-700 hover:bg-blue-50 font-medium flex justify-between items-center" data-menu-key="partners">
                     파트너스
                     <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                     </svg>
                 </button>
-                <div class="mobile-dropdown-content hidden pl-4">
+                <div id="mobile-partners-menu" class="mobile-dropdown-content hidden pl-4">
                     <a href="/menu/partners.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-blue-50">파트너스</a>
                     <a href="/menu/contact.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-blue-50">문의 및 상담</a>
                 </div>

@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Load the existing brand font without blocking the first render. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300..700&amp;display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300..700&amp;display=swap"></noscript>
     
     <!-- SEO Meta Tags -->
     <title>황소밴드 인증서 | 호스밴드 특허 | 누수밴드 품질인증 - 아파트샵</title>
@@ -145,9 +151,6 @@
         ]
     }
     </script>
-    
-    <!-- Preconnect for Performance -->
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
     
     <!-- Tailwind CSS -->
     <link rel="stylesheet" href="../css/tailwind-output.css">
@@ -422,11 +425,11 @@
     <div id="footer-container"></div>
     
     <!-- Terms Modal -->
-    <div id="terms-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">
+    <div id="terms-modal" role="dialog" aria-modal="true" aria-labelledby="terms-title" class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">
         <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden">
             <div class="flex justify-between items-center p-6 border-b">
-                <h2 class="text-2xl font-bold text-gray-900">이용약관</h2>
-                <button onclick="closeTermsModal()" class="text-gray-500 hover:text-gray-700">
+                <h2 id="terms-title" class="text-2xl font-bold text-gray-900">이용약관</h2>
+                <button onclick="closeTermsModal()" aria-label="이용약관 닫기" class="text-gray-500 hover:text-gray-700">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
@@ -437,11 +440,11 @@
     </div>
     
     <!-- Privacy Modal -->
-    <div id="privacy-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">
+    <div id="privacy-modal" role="dialog" aria-modal="true" aria-labelledby="privacy-title" class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">
         <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden">
             <div class="flex justify-between items-center p-6 border-b">
-                <h2 class="text-2xl font-bold text-gray-900">개인정보처리방침</h2>
-                <button onclick="closePrivacyModal()" class="text-gray-500 hover:text-gray-700">
+                <h2 id="privacy-title" class="text-2xl font-bold text-gray-900">개인정보처리방침</h2>
+                <button onclick="closePrivacyModal()" aria-label="개인정보처리방침 닫기" class="text-gray-500 hover:text-gray-700">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
@@ -463,7 +466,7 @@
         <a href="https://smartstore.naver.com/aptshop7/" target="_blank" rel="noopener noreferrer" class="bg-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110" aria-label="네이버 스마트스토어">
             <img src="../img/footer-smartstore.png" alt="네이버 스마트스토어" class="w-8 h-8" width="32" height="32">
         </a>
-        <button id="scroll-to-top" class="hidden bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300">
+        <button id="scroll-to-top" aria-label="맨 위로 이동" class="hidden bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
             </svg>

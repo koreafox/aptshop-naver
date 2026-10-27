@@ -114,48 +114,68 @@ const privacyContent = `
 <p class="mt-8 text-xs text-gray-500">본 개인정보처리방침은 2025년 1월 1일부터 시행됩니다.</p>
 `;
 
+// Preserve focus and scroll state independently for each policy dialog.
+const policyModalStates = new WeakMap();
+
+function openPolicyModal(modalId, contentId, html) {
+    const modal = document.getElementById(modalId);
+    const content = document.getElementById(contentId);
+    if (!modal || !content || !modal.classList.contains('hidden')) return;
+
+    policyModalStates.set(modal, {
+        focus: document.activeElement,
+        overflow: document.body.style.overflow
+    });
+    if (!content.hasChildNodes()) content.innerHTML = html;
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+    modal.querySelector('button')?.focus();
+}
+
+function closePolicyModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (!modal || modal.classList.contains('hidden')) return;
+
+    const previous = policyModalStates.get(modal);
+    modal.classList.add('hidden');
+    document.body.style.overflow = previous?.overflow || '';
+    previous?.focus?.focus({ preventScroll: true });
+}
+
 // 모달 열기/닫기 함수
 function openTermsModal() {
-    const modal = document.getElementById('terms-modal');
-    const content = document.getElementById('terms-content');
-    if (modal && content) {
-        content.innerHTML = termsContent;
-        modal.classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-    }
+    openPolicyModal('terms-modal', 'terms-content', termsContent);
 }
 
 function closeTermsModal() {
-    const modal = document.getElementById('terms-modal');
-    if (modal) {
-        modal.classList.add('hidden');
-        document.body.style.overflow = '';
-    }
+    closePolicyModal('terms-modal');
 }
 
 function openPrivacyModal() {
-    const modal = document.getElementById('privacy-modal');
-    const content = document.getElementById('privacy-content');
-    if (modal && content) {
-        content.innerHTML = privacyContent;
-        modal.classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-    }
+    openPolicyModal('privacy-modal', 'privacy-content', privacyContent);
 }
 
 function closePrivacyModal() {
-    const modal = document.getElementById('privacy-modal');
-    if (modal) {
-        modal.classList.add('hidden');
-        document.body.style.overflow = '';
-    }
+    closePolicyModal('privacy-modal');
 }
 
 // ESC 키로 모달 닫기
 document.addEventListener('keydown', (e) => {
+    const modal = document.querySelector('#privacy-modal:not(.hidden), #terms-modal:not(.hidden)');
+    if (!modal) return;
     if (e.key === 'Escape') {
-        closeTermsModal();
-        closePrivacyModal();
+        closePolicyModal(modal.id);
+    } else if (e.key === 'Tab') {
+        const focusable = Array.from(modal.querySelectorAll('button, a[href], input, select, textarea, [tabindex="0"]'));
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last?.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first?.focus();
+        }
     }
 });
 

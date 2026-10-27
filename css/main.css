@@ -1,5 +1,4 @@
 /* Main Stylesheet - 아파트샵 황소밴드 */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap');
 
 /* ========================================
    1. Base Styles
@@ -30,7 +29,7 @@ body {
    2. Hero Section
    ======================================== */
 .hero-gradient {
-    background-image: url('../img/hero10-bgg.jpg');
+    background-image: url('../img/hero10-bgg.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
