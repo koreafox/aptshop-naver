@@ -4,11 +4,30 @@
 
 ## 결론과 확인 범위
 
-`highPrice` 누락 경고는 사이트 전체 미노출 원인으로 확인되지 않았다. 공개 HTTP·DNS와 저장소를 조사했으나 Search Console 계정 내부의 색인 제외 사유, Google 선택 표준 URL, 수동 조치·보안 문제는 확인하지 못했다. 원인을 단정하거나 검색 노출을 보장하지 않는다.
+`highPrice` 누락 경고는 사이트 전체 미노출 원인으로 확인되지 않았다. 공개 HTTP·DNS와 저장소를 조사했다. 사용자가 추가 제공한 Search Console 스크린샷에서는 홈페이지가 ‘URL이 Google에 등록되어 있음’, ‘페이지 색인이 생성됨’으로 확인된다. 따라서 홈페이지 미색인이 현재 문제라는 가설은 배제하고 검색어별 노출·순위 문제를 조사해야 한다. Google 선택 표준 URL, 검색어별 성과, 수동 조치·보안 문제 보고서 전체는 아직 확인하지 못했으므로 순위 원인을 단정하거나 노출을 보장하지 않는다.
 
 - 사이트맵의 13개 URL은 일반/Googlebot UA 요청에서 200, robots는 전체 허용, canonical 정상, X-Robots-Tag 차단 없음. UA 비교는 실제 Googlebot의 접근을 증명하지 않는다.
 - HTTPS 정상, HTTP apex → HTTPS 301, 없는 경로는 실제 404.
 - `www.aptshop.kr`은 DNS가 해석되지 않았다. 정상 apex의 색인 제외를 직접 설명하는 증거는 아니다.
+
+## 추가 Search Console 증거와 9월 알림 해석
+
+사용자 스크린샷에서 2026-11-06 크롤링 완료, 홈페이지 색인 완료, 상품 항목 5개와 리뷰 항목 10개가 확인된다. 경고가 표시된 황소밴드 전체·싱글·더블 3개는 기존 홈페이지 코드의 highPrice 누락 항목과 일치한다. 공업용 두 항목에는 기존 highPrice가 있어 경고가 없었다. 스크린샷은 배포 전 수집 데이터를 보여주므로 배포 후 재수집 전까지 표시가 남을 수 있다.
+
+2026-09-24 알림의 ‘적절한 표준 태그가 포함된 대체 페이지’와 ‘리디렉션이 포함된 페이지’는 중복 URL을 대표 URL로 통합하는 정상 처리일 수 있다. 당시 알림의 영향 URL 목록은 제공되지 않았으므로 모든 과거 사례가 해결되었다고 단정하지 않는다.
+
+현재 확인 결과:
+
+| 주소 | 실제 응답 / canonical | 해석 |
+| --- | --- | --- |
+| http://aptshop.kr/ | 301 → https://aptshop.kr/ | HTTP 원본의 색인 제외는 정상 |
+| https://aptshop.kr/ | 200, canonical 동일 | 대표 홈페이지, 스크린샷에서 색인 완료 |
+| https://aptshop.kr/index.html | 200, canonical https://aptshop.kr/ | 대체 URL로 제외될 수 있으며 정상 |
+| https://aptshop.kr/?utm_source=test | 200, canonical https://aptshop.kr/ | 추적 매개변수 URL 통합은 정상 |
+| https://aptshop.kr/menu/products.html | 200, canonical 동일 | 독립 제품 목록 대표 URL |
+| https://www.aptshop.kr/ | DNS 해석 실패 | 외부 DNS 조치 필요 |
+
+대체 URL과 리디렉션 URL을 모두 색인시키려고 canonical을 제거하거나 HTTP 리디렉션을 해제하지 않는다. 영향 URL 목록에 대표 HTTPS URL 자체가 포함되어 있다면 해당 URL의 Google 선택 표준 URL과 리디렉션 경로를 개별 조사해야 한다. 검색 성과는 홈페이지와 제품 페이지의 쿼리별 노출수·평균 순위·국가·기기 필터를 기준으로 확인한다.
 
 ## 적용한 변경
 
