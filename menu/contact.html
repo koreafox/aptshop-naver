@@ -9,13 +9,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300..700&amp;display=swap" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300..700&amp;display=swap"></noscript>
-    
+
     <!-- SEO Meta Tags -->
     <title>문의 및 상담 - 황소밴드 | 아파트샵 - 고객지원센터</title>
     <meta name="description" content="황소밴드 구매 문의, 설치 방법, A/S 상담. 전문 상담원이 친절하게 안내해드립니다. 전화: 010-7357-8613">
     <meta name="keywords" content="황소밴드, 문의, 고객상담, 설치방법, AS상담, 연락처, 구매문의, 기술지원">
-    <meta name="robots" content="index, follow">
-    
+    <meta name="robots" content="index, follow, max-image-preview:large">
+
     <!-- Open Graph Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="아파트샵">
@@ -34,13 +34,13 @@
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://aptshop.kr/menu/contact.html">
-    
+
     <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" title="황소밴드 공식 온라인 판매점 - 아파트샵 RSS" href="https://aptshop.kr/rss.xml">
-    
+
     <!-- 네이버 사이트 소유 확인 메타태그 -->
     <meta name="naver-site-verification" content="aab4e90a7b6f11cff5bcbd1d4d7fc82eb261770f" />
-    
+
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
@@ -60,60 +60,49 @@
     <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
     <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
     <meta name="theme-color" content="#2563eb">
-    
+
     <!-- Breadcrumb Schema -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "홈",
-          "item": "https://aptshop.kr/"
+            "@type": "ListItem",
+            "position": 1,
+            "name": "홈",
+            "item": "https://aptshop.kr/"
         },
         {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "문의 및 상담",
-          "item": "https://aptshop.kr/menu/contact.html"
+            "@type": "ListItem",
+            "position": 2,
+            "name": "문의 및 상담",
+            "item": "https://aptshop.kr/menu/contact.html"
         }
-      ]
-    }
+    ]
+}
     </script>
-    
-    <!-- LocalBusiness Schema -->
+
+    <!-- Contact page linked to the online seller -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "아파트샵",
-      "image": "https://aptshop.kr/img/logo_aptshop.png",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "경수대로 546, 5층 5029",
-        "addressLocality": "안양시 동안구",
-        "addressRegion": "경기도",
-        "postalCode": "14056",
-        "addressCountry": "KR"
-      },
-      "telephone": "+82-10-7357-8613",
-      "email": "aptshop7@gmail.com",
-      "url": "https://aptshop.kr",
-      "priceRange": "₩₩",
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "09:00",
-        "closes": "18:00"
-      }
+{
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "@id": "https://aptshop.kr/menu/contact.html#webpage",
+    "name": "아파트샵 문의 및 상담",
+    "url": "https://aptshop.kr/menu/contact.html",
+    "mainEntity": {
+        "@id": "https://aptshop.kr/#organization"
+    },
+    "isPartOf": {
+        "@id": "https://aptshop.kr/#website"
     }
+}
     </script>
-    
+
     <!-- Tailwind CSS -->
     <link rel="stylesheet" href="../css/tailwind-output.css">
-    
+
     <!-- Custom Styles -->
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/responsive.css">
@@ -159,6 +148,7 @@
                     </button>
                     <div id="desktop-products-menu" class="absolute left-0 top-full pt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible transition-opacity duration-200">
                         <a href="/menu/products.html#hwangso" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">황소밴드</a>
+                        <a href="/menu/selection-guide.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">규격 선택·구매 가이드</a>
                         <a href="/menu/products.html#industrial" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">공업용밴드</a>
                     </div>
                 </div>
@@ -240,6 +230,7 @@
                     </svg>
                 </button>
                 <div id="mobile-products-menu" class="mobile-dropdown-content hidden pl-4">
+                    <a href="/menu/selection-guide.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-blue-50">규격 선택·구매 가이드</a>
                     <a href="/menu/products.html#hwangso" class="block px-3 py-2 text-sm text-gray-600 hover:bg-blue-50">황소밴드</a>
                     <a href="/menu/products.html#industrial" class="block px-3 py-2 text-sm text-gray-600 hover:bg-blue-50">공업용밴드</a>
                 </div>
@@ -285,7 +276,7 @@
     </div>
 </header>
 <!-- component:end --></div>
-    
+
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
@@ -303,7 +294,7 @@
                 </div>
             </div>
         </section>
-       
+
         <!-- Contact Info Section -->
         <section class="py-12 bg-gray-50">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -341,23 +332,23 @@
                         자주 묻는 질문
                     </h2>
                 </div>
-                
+
                 <div class="space-y-4">
                     <div class="bg-gray-50 p-6 rounded-xl animate-on-scroll">
                         <h3 class="text-lg font-bold text-gray-900 mb-2">Q. 배송은 얼마나 걸리나요?</h3>
                         <p class="text-gray-700">A. 주문 후 1-2일 내 발송되며, 지역에 따라 2-3일 내 수령 가능합니다.</p>
                     </div>
-                    
+
                     <div class="bg-gray-50 p-6 rounded-xl animate-on-scroll">
                         <h3 class="text-lg font-bold text-gray-900 mb-2">Q. 제품 사이즈는 어떻게 선택하나요?</h3>
                         <p class="text-gray-700">A. 파이프 외경을 측정하신 후, 해당 사이즈에 맞는 제품을 선택해주세요. 문의 주시면 상세히 안내해드립니다.</p>
                     </div>
-                    
+
                     <div class="bg-gray-50 p-6 rounded-xl animate-on-scroll">
                         <h3 class="text-lg font-bold text-gray-900 mb-2">Q. 대량 구매 시 할인이 가능한가요?</h3>
                         <p class="text-gray-700">A. 대량 구매 시 별도 할인이 가능합니다. 전화나 이메일로 문의해주세요.</p>
                     </div>
-                    
+
                     <div class="bg-gray-50 p-6 rounded-xl animate-on-scroll">
                         <h3 class="text-lg font-bold text-gray-900 mb-2">Q. 설치가 어려운데 도움을 받을 수 있나요?</h3>
                         <p class="text-gray-700">A. 전화 상담을 통해 설치 방법을 자세히 안내해드립니다. 360도 회전 패킹패드로 1인 설치가 가능합니다.</p>
@@ -365,7 +356,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- CTA Section -->
         <section class="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll">
@@ -386,7 +377,7 @@
             </div>
         </section>
     </main>
-    
+
     <!-- Footer Container -->
     <div id="footer-container" data-prerendered="true"><!-- component:start -->
 <!-- Footer Component -->
@@ -411,6 +402,7 @@
                     <li><a href="/menu/video.html" class="text-gray-400 hover:text-white text-sm transition-colors">사용방법 영상</a></li>
                     <li><a href="/menu/history.html" class="text-gray-400 hover:text-white text-sm transition-colors">기업연혁</a></li>
                     <li><a href="/#reviews" class="text-gray-400 hover:text-white text-sm transition-colors">고객 후기</a></li>
+                    <li><a href="/menu/selection-guide.html" class="text-gray-400 hover:text-white text-sm transition-colors">규격 선택·구매 가이드</a></li>
                     <li><a href="/sitemap.html" class="text-gray-400 hover:text-white text-sm transition-colors">사이트맵</a></li>
                 </ul>
             </div>
@@ -457,7 +449,7 @@
 </footer>
 <noscript><style>.footer-links { display: grid !important; }</style></noscript>
 <!-- component:end --></div>
-    
+
     <!-- Terms Modal -->
     <div id="terms-modal" role="dialog" aria-modal="true" aria-labelledby="terms-title" class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">
         <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden">
@@ -472,7 +464,7 @@
             <div id="terms-content" class="p-6 overflow-y-auto max-h-[calc(90vh-120px)] text-sm text-gray-700 leading-relaxed"></div>
         </div>
     </div>
-    
+
     <!-- Privacy Modal -->
     <div id="privacy-modal" role="dialog" aria-modal="true" aria-labelledby="privacy-title" class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">
         <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden">
@@ -487,7 +479,7 @@
             <div id="privacy-content" class="p-6 overflow-y-auto max-h-[calc(90vh-120px)] text-sm text-gray-700 leading-relaxed"></div>
         </div>
     </div>
-    
+
     <!-- Scroll to Top Button -->
     <!-- Floating Buttons Container -->
     <div class="fixed bottom-8 right-4 flex flex-col gap-3 z-40">
@@ -506,7 +498,7 @@
             </svg>
         </button>
     </div>
-    
+
     <!-- Scripts -->
     <script src="../js/main.js"></script>
     <script src="../js/terms.js"></script>

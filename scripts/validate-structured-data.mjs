@@ -9,6 +9,10 @@ for (const page of pages) {
     const visit = value => {
         if (!value || typeof value !== 'object') return;
         const types = [value['@type']].flat();
+        assert(!types.includes('FAQPage'), `${page}: retired FAQ rich-result markup`);
+        if (types.includes('VideoObject')) {
+            assert(!value.contentUrl?.includes('youtube.com/watch'), `${page}: contentUrl must point to media bytes`);
+        }
         // Category/home pages must not reuse variant offers or off-site review aggregates.
         if (catalog) for (const type of ['Product', 'AggregateOffer', 'AggregateRating', 'Review']) {
             assert(!types.includes(type), `${page}: inappropriate catalog markup ${type}`);
@@ -23,11 +27,16 @@ for (const page of pages) {
         visit(JSON.parse(match[1])); blocks++;
     }
     if (page === 'sitemap.html') continue;
+    for (const id of ['terms-modal', 'terms-content', 'privacy-modal', 'privacy-content']) {
+        assert(html.includes(`id="${id}"`), `${page}: missing policy dialog ${id}`);
+    }
     for (const name of ['header', 'footer']) {
         const component = readFileSync(`components/${name}.html`, 'utf8').trim();
         assert(html.includes(`data-prerendered="true"><!-- component:start -->\n${component}\n<!-- component:end -->`), `${page}: rebuild stale ${name}`);
     }
 }
+const home = readFileSync('index.html', 'utf8');
+assert(home.includes('"@id": "https://aptshop.kr/#organization"'), 'Missing stable organization entity');
 const products = readFileSync('menu/products.html','utf8');
 for (const id of ['single','double','industrial']) assert(products.includes(`id="${id}"`), `Missing catalog target: ${id}`);
 console.log(`Validated ${blocks} JSON-LD blocks and static navigation across ${pages.length} pages.`);

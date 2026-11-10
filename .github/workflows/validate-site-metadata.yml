@@ -40,3 +40,6 @@ jobs:
 
       - name: Validate structured data and pre-rendered navigation
         run: node scripts/validate-structured-data.mjs
+
+      - name: Validate page metadata, internal links, assets and anchors
+        run: python3 scripts/validate-page-links.py

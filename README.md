@@ -97,6 +97,7 @@ npm ci
 npm run build
 npm run validate:seo
 python3 scripts/validate-site-metadata.py
+python3 scripts/validate-page-links.py
 ```
 
 홈페이지와 제품 목록은 카탈로그이므로 단일 상품의 가격·평점 리치 결과 마크업을 사용하지 않습니다.

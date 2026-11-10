@@ -28,11 +28,6 @@ const StructuredData = {
                 "@type": "Brand",
                 "name": "황소밴드"
             },
-            "manufacturer": {
-                "@type": "Organization",
-                "name": "아파트샵",
-                "url": "https://aptshop.kr"
-            },
             "offers": {
                 "@type": product.offerType || "Offer",
                 "url": product.url,
@@ -45,6 +40,8 @@ const StructuredData = {
             },
             "category": product.category || "파이프 누수보수"
         };
+
+        if (product.manufacturer) schema.manufacturer = product.manufacturer;
 
         // AggregateOffer인 경우 lowPrice, highPrice, offerCount 추가
         if (product.offerType === "AggregateOffer") {
