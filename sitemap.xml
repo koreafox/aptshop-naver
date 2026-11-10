@@ -2,10 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-    <!-- 메인 페이지 -->
     <url>
         <loc>https://aptshop.kr/</loc>
         <lastmod>2026-11-10</lastmod>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/video-poster.webp</image:loc>
+        </image:image>
         <image:image>
             <image:loc>https://aptshop.kr/img/products_all_patent.jpg</image:loc>
         </image:image>
@@ -14,15 +16,6 @@
         </image:image>
         <image:image>
             <image:loc>https://aptshop.kr/img/products_all_4.jpg</image:loc>
-        </image:image>
-        <image:image>
-            <image:loc>https://aptshop.kr/img/intro_prod1.webp</image:loc>
-        </image:image>
-        <image:image>
-            <image:loc>https://aptshop.kr/img/intro_prod2.png</image:loc>
-        </image:image>
-        <image:image>
-            <image:loc>https://aptshop.kr/img/intro_prod3.webp</image:loc>
         </image:image>
         <image:image>
             <image:loc>https://aptshop.kr/img/parts/part_packing.webp</image:loc>
@@ -36,15 +29,74 @@
         <image:image>
             <image:loc>https://aptshop.kr/img/parts/part_clip.webp</image:loc>
         </image:image>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/intro_prod1.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/intro_prod2.png</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/intro_prod3.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/social_smartstore.png</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/social_coupang.png</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/reviews/review_photo_1.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/reviews/review_photo_3.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/reviews/review_photo_5.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/reviews/gallery_1.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/reviews/gallery_2.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/reviews/gallery_3.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/reviews/gallery_4.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/reviews/gallery_5.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/reviews/gallery_6.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/reviews/gallery_7.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/reviews/gallery_8.jpg</image:loc>
+        </image:image>
     </url>
-    <!-- 회사소개 -->
     <url>
         <loc>https://aptshop.kr/menu/brand.html</loc>
         <lastmod>2026-11-10</lastmod>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/hero11-bgg_double.jpg</image:loc>
+        </image:image>
     </url>
     <url>
         <loc>https://aptshop.kr/menu/company.html</loc>
         <lastmod>2026-11-10</lastmod>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/hero11-bgg_business2.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/social_smartstore.png</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/social_coupang.png</image:loc>
+        </image:image>
         <image:image>
             <image:loc>https://aptshop.kr/img/company_aptshop.jpg</image:loc>
         </image:image>
@@ -59,22 +111,109 @@
             <video:player_loc>https://www.youtube.com/embed/_l-1wXGrRg4</video:player_loc>
             <video:duration>20</video:duration>
             <video:publication_date>2025-04-29T17:56:14-07:00</video:publication_date>
-            <video:family_friendly>yes</video:family_friendly>
-            <video:uploader info="https://aptshop.kr/menu/company.html">아파트샵</video:uploader>
         </video:video>
     </url>
     <url>
         <loc>https://aptshop.kr/menu/history.html</loc>
         <lastmod>2026-10-27</lastmod>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/hero11-bgg_business3.png</image:loc>
+        </image:image>
     </url>
     <url>
         <loc>https://aptshop.kr/menu/mission.html</loc>
         <lastmod>2026-10-27</lastmod>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/hero11-bgg_global.jpg</image:loc>
+        </image:image>
     </url>
-
-    <!-- 제품 -->
     <url>
         <loc>https://aptshop.kr/menu/products.html</loc>
+        <lastmod>2026-11-10</lastmod>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/hero11-bgg_double.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/products/single_band.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/products/double_band.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/products/industrial_band.jpg</image:loc>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://aptshop.kr/menu/certifications.html</loc>
+        <lastmod>2026-11-10</lastmod>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/cert_2.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/cert_1.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/cert_3.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/cert_4.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/cert_5.jpg</image:loc>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://aptshop.kr/menu/social.html</loc>
+        <lastmod>2026-10-27</lastmod>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/hero11-bgg_delivery.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/social_smartstore.png</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/social_coupang.png</image:loc>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://aptshop.kr/menu/news.html</loc>
+        <lastmod>2026-10-27</lastmod>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/hero11-bgg_fair.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/news_1.jpeg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/news_2.jpeg</image:loc>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://aptshop.kr/menu/partners.html</loc>
+        <lastmod>2026-10-27</lastmod>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/hero11-bgg_partner.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/logo_hsband.png</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/logo_praedico.png</image:loc>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://aptshop.kr/menu/contact.html</loc>
+        <lastmod>2026-11-10</lastmod>
+        <image:image>
+            <image:loc>https://aptshop.kr/img/hero11-bgg_qa.png</image:loc>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://aptshop.kr/sitemap.html</loc>
+        <lastmod>2026-11-10</lastmod>
+    </url>
+    <url>
+        <loc>https://aptshop.kr/menu/selection-guide.html</loc>
         <lastmod>2026-11-10</lastmod>
         <image:image>
             <image:loc>https://aptshop.kr/img/products/single_band.jpg</image:loc>
@@ -85,45 +224,5 @@
         <image:image>
             <image:loc>https://aptshop.kr/img/products/industrial_band.jpg</image:loc>
         </image:image>
-        <image:image>
-            <image:loc>https://aptshop.kr/img/product_all_type.jpg</image:loc>
-        </image:image>
-    </url>
-    <url>
-        <loc>https://aptshop.kr/menu/certifications.html</loc>
-        <lastmod>2026-11-10</lastmod>
-        <image:image>
-            <image:loc>https://aptshop.kr/img/cert_1.jpg</image:loc>
-        </image:image>
-    </url>
-
-    <!-- 구매 -->
-    <url>
-        <loc>https://aptshop.kr/menu/social.html</loc>
-        <lastmod>2026-10-27</lastmod>
-    </url>
-
-    <!-- 소식 -->
-    <url>
-        <loc>https://aptshop.kr/menu/news.html</loc>
-        <lastmod>2026-10-27</lastmod>
-    </url>
-
-    <!-- 파트너스 -->
-    <url>
-        <loc>https://aptshop.kr/menu/partners.html</loc>
-        <lastmod>2026-10-27</lastmod>
-    </url>
-    <url>
-        <loc>https://aptshop.kr/menu/contact.html</loc>
-        <lastmod>2026-11-10</lastmod>
-    </url>
-    <url>
-        <loc>https://aptshop.kr/sitemap.html</loc>
-        <lastmod>2026-11-10</lastmod>
-    </url>
-    <url>
-        <loc>https://aptshop.kr/menu/selection-guide.html</loc>
-        <lastmod>2026-11-10</lastmod>
     </url>
 </urlset>

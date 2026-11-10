@@ -1,0 +1,75 @@
+{
+  "origin": "https://aptshop.kr",
+  "pages": [
+    {
+      "path": "/",
+      "lastmod": "2026-11-10",
+      "publishedAt": "2026-06-23T10:00:00+09:00"
+    },
+    {
+      "path": "/menu/brand.html",
+      "lastmod": "2026-11-10",
+      "publishedAt": "2026-06-23T09:40:00+09:00"
+    },
+    {
+      "path": "/menu/company.html",
+      "lastmod": "2026-11-10",
+      "publishedAt": "2026-06-23T09:30:00+09:00"
+    },
+    {
+      "path": "/menu/video.html",
+      "lastmod": "2026-11-10",
+      "publishedAt": "2026-11-10T01:07:57+00:00"
+    },
+    {
+      "path": "/menu/history.html",
+      "lastmod": "2026-10-27",
+      "publishedAt": "2026-06-23T09:20:00+09:00"
+    },
+    {
+      "path": "/menu/mission.html",
+      "lastmod": "2026-10-27",
+      "publishedAt": "2026-06-23T09:10:00+09:00"
+    },
+    {
+      "path": "/menu/products.html",
+      "lastmod": "2026-11-10",
+      "publishedAt": "2026-06-23T09:50:00+09:00"
+    },
+    {
+      "path": "/menu/certifications.html",
+      "lastmod": "2026-11-10",
+      "publishedAt": "2026-06-23T08:20:00+09:00"
+    },
+    {
+      "path": "/menu/social.html",
+      "lastmod": "2026-10-27",
+      "publishedAt": "2026-06-23T08:30:00+09:00"
+    },
+    {
+      "path": "/menu/news.html",
+      "lastmod": "2026-10-27",
+      "publishedAt": "2026-06-23T08:40:00+09:00"
+    },
+    {
+      "path": "/menu/partners.html",
+      "lastmod": "2026-10-27",
+      "publishedAt": "2026-06-23T09:00:00+09:00"
+    },
+    {
+      "path": "/menu/contact.html",
+      "lastmod": "2026-11-10",
+      "publishedAt": "2026-06-23T08:50:00+09:00"
+    },
+    {
+      "path": "/sitemap.html",
+      "lastmod": "2026-11-10",
+      "rss": false
+    },
+    {
+      "path": "/menu/selection-guide.html",
+      "lastmod": "2026-11-10",
+      "publishedAt": "2026-11-10T01:07:57+00:00"
+    }
+  ]
+}

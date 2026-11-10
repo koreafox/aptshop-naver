@@ -102,3 +102,23 @@ python3 scripts/validate-page-links.py
 
 홈페이지와 제품 목록은 카탈로그이므로 단일 상품의 가격·평점 리치 결과 마크업을 사용하지 않습니다.
 개별 상품 마크업을 추가하려면 해당 상세 페이지에 실제 규격, 최신 가격, 재고와 자체 수집 리뷰를 검증한 뒤 적용해야 합니다.
+
+### XML 사이트맵·RSS 유지보수
+
+`npm run build`는 본문의 제목·설명·이미지·영상 정보를 읽어 `sitemap.xml`과 `rss.xml`도 생성합니다.
+생성 파일을 직접 수정하지 말고 본문과 `data/site-metadata.json`을 수정하세요.
+
+- 새 공개 페이지: 날짜 목록에 canonical 경로와 실제 수정일(`lastmod`), 최초 RSS 발행일(`publishedAt`, 시간대 포함)을 추가합니다.
+- 중요한 본문·구조화 데이터 수정: 해당 페이지만 `lastmod`를 갱신합니다. CSS·공통 메뉴 수정만으로 전체 날짜를 바꾸지 않습니다.
+- RSS의 `publishedAt`과 canonical GUID는 최초 발행 후 유지합니다. 기존 항목을 새 글처럼 보이게 만들지 않습니다.
+- RSS는 최신 발행순이며, `lastBuildDate`는 실제 피드 내용이 바뀔 때만 갱신됩니다. 재빌드만으로 날짜가 바뀌지 않습니다.
+- HTML 사이트맵은 탐색용이므로 RSS에서 제외합니다(`rss: false`).
+- 정식 크롤러 정책 경로는 `/robots.txt`입니다. 모든 공개 페이지·이미지와 CSS/JS, XML/RSS 접근 허용을 검사합니다.
+
+```bash
+npm run build:metadata
+npm run check:metadata
+python3 scripts/validate-site-metadata.py
+```
+
+CI는 생성 파일과 본문 불일치, 잘못된 canonical·이미지·영상, RSS 중복·순서·발행일 변조와 주요 크롤러 차단을 검사합니다.

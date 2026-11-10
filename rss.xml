@@ -4,22 +4,48 @@
     <title>아파트샵 | 황소밴드 제품·자료 안내</title>
     <link>https://aptshop.kr/</link>
     <description>황소밴드 제품 규격·구매 가이드, 사용방법과 공개 특허·시험자료를 안내합니다.</description>
-    <language>ko</language>
-    <lastBuildDate>Tue, 10 Nov 2026 01:07:57 +0000</lastBuildDate>
+    <language>ko-KR</language>
+    <lastBuildDate>Tue, 10 Nov 2026 01:23:15 GMT</lastBuildDate>
     <atom:link href="https://aptshop.kr/rss.xml" rel="self" type="application/rss+xml" />
+    <docs>https://www.rssboard.org/rss-specification</docs>
+    <ttl>60</ttl>
+    <item>
+      <title>황소밴드 규격 선택·구매 가이드 | 싱글·더블·공업용 - 아파트샵</title>
+      <link>https://aptshop.kr/menu/selection-guide.html</link>
+      <description>황소밴드 싱글·더블·공업용 판매 규격 비교, 외경·사진 상담 준비, 시험자료 적용 범위와 구매처를 한곳에서 확인하세요.</description>
+      <pubDate>Tue, 10 Nov 2026 01:07:57 GMT</pubDate>
+      <guid isPermaLink="true">https://aptshop.kr/menu/selection-guide.html</guid>
+      <dc:creator>아파트샵</dc:creator>
+    </item>
+    <item>
+      <title>황소밴드 사용방법 영상 | 아파트샵</title>
+      <link>https://aptshop.kr/menu/video.html</link>
+      <description>황소밴드 호스밴드 설치와 사용방법을 공식 영상으로 확인하세요. 파이프 누수 보수용 황소밴드 사용법 안내.</description>
+      <pubDate>Tue, 10 Nov 2026 01:07:57 GMT</pubDate>
+      <guid isPermaLink="true">https://aptshop.kr/menu/video.html</guid>
+      <dc:creator>아파트샵</dc:creator>
+    </item>
     <item>
       <title>황소밴드 공식 온라인 판매점 | 아파트샵 - 파이프 누수밴드 전문</title>
       <link>https://aptshop.kr/</link>
       <description>아파트샵은 황소밴드 공식 온라인 판매점입니다. 파이프 누수 보수용 싱글·더블·공업용 밴드의 규격과 사용방법을 확인하고 공식 구매처에서 주문하세요.</description>
-      <pubDate>Tue, 23 Jun 2026 10:00:00 +0900</pubDate>
+      <pubDate>Tue, 23 Jun 2026 01:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://aptshop.kr/</guid>
+      <dc:creator>아파트샵</dc:creator>
+    </item>
+    <item>
+      <title>황소밴드 제품소개 | 호스밴드 규격 · 누수밴드 전 라인업 - 아파트샵</title>
+      <link>https://aptshop.kr/menu/products.html</link>
+      <description>황소밴드 전 제품 라인업. 특허 누수밴드 싱글·더블·공업용 10A~300A. 1인 설치 가능 ☎ 010-7357-8613</description>
+      <pubDate>Tue, 23 Jun 2026 00:50:00 GMT</pubDate>
+      <guid isPermaLink="true">https://aptshop.kr/menu/products.html</guid>
       <dc:creator>아파트샵</dc:creator>
     </item>
     <item>
       <title>황소밴드 브랜드 소개 | 특허 SUS304 누수밴드 - 아파트샵</title>
       <link>https://aptshop.kr/menu/brand.html</link>
       <description>황소밴드 브랜드 스토리. 특허 제10-1424730호 SUS304 스테인리스 누수밴드. 아파트샵 공식 온라인 판매점 ☎ 010-7357-8613</description>
-      <pubDate>Tue, 23 Jun 2026 09:40:00 +0900</pubDate>
+      <pubDate>Tue, 23 Jun 2026 00:40:00 GMT</pubDate>
       <guid isPermaLink="true">https://aptshop.kr/menu/brand.html</guid>
       <dc:creator>아파트샵</dc:creator>
     </item>
@@ -27,23 +53,15 @@
       <title>아파트샵 기업정보 | 황소밴드 공식 온라인 판매점</title>
       <link>https://aptshop.kr/menu/company.html</link>
       <description>아파트샵 기업정보. 황소밴드 누수밴드 공식 온라인 판매점. 특허 제품 상담과 전국 배송 문의 ☎ 010-7357-8613</description>
-      <pubDate>Tue, 23 Jun 2026 09:30:00 +0900</pubDate>
+      <pubDate>Tue, 23 Jun 2026 00:30:00 GMT</pubDate>
       <guid isPermaLink="true">https://aptshop.kr/menu/company.html</guid>
-      <dc:creator>아파트샵</dc:creator>
-    </item>
-    <item>
-      <title>황소밴드 사용방법 영상 | 아파트샵</title>
-      <link>https://aptshop.kr/menu/video.html</link>
-      <description>황소밴드 호스밴드 설치와 사용방법을 공식 영상으로 확인하세요. 파이프 누수 보수용 황소밴드 사용법 안내.</description>
-      <pubDate>Tue, 10 Nov 2026 01:07:57 +0000</pubDate>
-      <guid isPermaLink="true">https://aptshop.kr/menu/video.html</guid>
       <dc:creator>아파트샵</dc:creator>
     </item>
     <item>
       <title>아파트샵 기업연혁 | 황소밴드 누수밴드 공식 온라인 판매점 성장기록</title>
       <link>https://aptshop.kr/menu/history.html</link>
       <description>아파트샵 기업연혁. 황소밴드 공식 온라인 판매점의 설립부터 현재까지 성장 과정을 확인하세요.</description>
-      <pubDate>Tue, 23 Jun 2026 09:20:00 +0900</pubDate>
+      <pubDate>Tue, 23 Jun 2026 00:20:00 GMT</pubDate>
       <guid isPermaLink="true">https://aptshop.kr/menu/history.html</guid>
       <dc:creator>아파트샵</dc:creator>
     </item>
@@ -51,47 +69,15 @@
       <title>아파트샵 미션·비전 | 황소밴드로 누수 걱정 없는 세상</title>
       <link>https://aptshop.kr/menu/mission.html</link>
       <description>아파트샵 미션: 특허 황소밴드로 누수 걱정 없는 배관 환경 실현. 품질·신뢰·혁신 핵심가치로 성장합니다.</description>
-      <pubDate>Tue, 23 Jun 2026 09:10:00 +0900</pubDate>
+      <pubDate>Tue, 23 Jun 2026 00:10:00 GMT</pubDate>
       <guid isPermaLink="true">https://aptshop.kr/menu/mission.html</guid>
-      <dc:creator>아파트샵</dc:creator>
-    </item>
-    <item>
-      <title>황소밴드 제품소개 | 호스밴드 규격 · 누수밴드 전 라인업 - 아파트샵</title>
-      <link>https://aptshop.kr/menu/products.html</link>
-      <description>황소밴드 전 제품 라인업. 특허 누수밴드 싱글·더블·공업용 10A~300A. 1인 설치 가능 ☎ 010-7357-8613</description>
-      <pubDate>Tue, 23 Jun 2026 09:50:00 +0900</pubDate>
-      <guid isPermaLink="true">https://aptshop.kr/menu/products.html</guid>
-      <dc:creator>아파트샵</dc:creator>
-    </item>
-    <item>
-      <title>황소밴드 특허·KTC 시험자료 원본 | 자료 범위 안내 - 아파트샵</title>
-      <link>https://aptshop.kr/menu/certifications.html</link>
-      <description>황소밴드 특허증, 50A 시료의 KTC 토크·내압 시험 결과와 과거 공급 관련 자료의 명의·기간을 원본 이미지로 확인하세요.</description>
-      <pubDate>Tue, 23 Jun 2026 08:20:00 +0900</pubDate>
-      <guid isPermaLink="true">https://aptshop.kr/menu/certifications.html</guid>
-      <dc:creator>아파트샵</dc:creator>
-    </item>
-    <item>
-      <title>황소밴드 온라인 구매 | 네이버 스마트스토어 - 아파트샵</title>
-      <link>https://aptshop.kr/menu/social.html</link>
-      <description>황소밴드 정품 공식 스토어. 네이버 스마트스토어에서 싱글·더블·공업용밴드 전 제품 구매 가능.</description>
-      <pubDate>Tue, 23 Jun 2026 08:30:00 +0900</pubDate>
-      <guid isPermaLink="true">https://aptshop.kr/menu/social.html</guid>
-      <dc:creator>아파트샵</dc:creator>
-    </item>
-    <item>
-      <title>황소밴드 최신 소식 | 누수밴드 신제품·이벤트 - 아파트샵</title>
-      <link>https://aptshop.kr/menu/news.html</link>
-      <description>황소밴드·호스밴드 최신 소식. 신제품 출시, 전시회 참가, 이벤트 정보를 아파트샵에서 확인하세요.</description>
-      <pubDate>Tue, 23 Jun 2026 08:40:00 +0900</pubDate>
-      <guid isPermaLink="true">https://aptshop.kr/menu/news.html</guid>
       <dc:creator>아파트샵</dc:creator>
     </item>
     <item>
       <title>황소밴드 파트너스 | 누수밴드 유통·납품 협력사 - 아파트샵</title>
       <link>https://aptshop.kr/menu/partners.html</link>
       <description>황소밴드 파트너사 안내. 누수밴드·호스밴드 도매 및 납품 문의는 아파트샵으로 ☎ 010-7357-8613</description>
-      <pubDate>Tue, 23 Jun 2026 09:00:00 +0900</pubDate>
+      <pubDate>Tue, 23 Jun 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://aptshop.kr/menu/partners.html</guid>
       <dc:creator>아파트샵</dc:creator>
     </item>
@@ -99,16 +85,32 @@
       <title>문의 및 상담 - 황소밴드 | 아파트샵 - 고객지원센터</title>
       <link>https://aptshop.kr/menu/contact.html</link>
       <description>황소밴드 구매 문의, 설치 방법, A/S 상담. 전문 상담원이 친절하게 안내해드립니다. 전화: 010-7357-8613</description>
-      <pubDate>Tue, 23 Jun 2026 08:50:00 +0900</pubDate>
+      <pubDate>Mon, 22 Jun 2026 23:50:00 GMT</pubDate>
       <guid isPermaLink="true">https://aptshop.kr/menu/contact.html</guid>
       <dc:creator>아파트샵</dc:creator>
     </item>
     <item>
-      <title>황소밴드 규격 선택·구매 가이드 | 싱글·더블·공업용 - 아파트샵</title>
-      <link>https://aptshop.kr/menu/selection-guide.html</link>
-      <description>황소밴드 싱글·더블·공업용 판매 규격 비교, 외경·사진 상담 준비, 시험자료 적용 범위와 구매처를 한곳에서 확인하세요.</description>
-      <pubDate>Tue, 10 Nov 2026 01:07:57 +0000</pubDate>
-      <guid isPermaLink="true">https://aptshop.kr/menu/selection-guide.html</guid>
+      <title>황소밴드 최신 소식 | 누수밴드 신제품·이벤트 - 아파트샵</title>
+      <link>https://aptshop.kr/menu/news.html</link>
+      <description>황소밴드·호스밴드 최신 소식. 신제품 출시, 전시회 참가, 이벤트 정보를 아파트샵에서 확인하세요.</description>
+      <pubDate>Mon, 22 Jun 2026 23:40:00 GMT</pubDate>
+      <guid isPermaLink="true">https://aptshop.kr/menu/news.html</guid>
+      <dc:creator>아파트샵</dc:creator>
+    </item>
+    <item>
+      <title>황소밴드 온라인 구매 | 네이버 스마트스토어 - 아파트샵</title>
+      <link>https://aptshop.kr/menu/social.html</link>
+      <description>황소밴드 정품 공식 스토어. 네이버 스마트스토어에서 싱글·더블·공업용밴드 전 제품 구매 가능.</description>
+      <pubDate>Mon, 22 Jun 2026 23:30:00 GMT</pubDate>
+      <guid isPermaLink="true">https://aptshop.kr/menu/social.html</guid>
+      <dc:creator>아파트샵</dc:creator>
+    </item>
+    <item>
+      <title>황소밴드 특허·KTC 시험자료 원본 | 자료 범위 안내 - 아파트샵</title>
+      <link>https://aptshop.kr/menu/certifications.html</link>
+      <description>황소밴드 특허증, 50A 시료의 KTC 토크·내압 시험 결과와 과거 공급 관련 자료의 명의·기간을 원본 이미지로 확인하세요.</description>
+      <pubDate>Mon, 22 Jun 2026 23:20:00 GMT</pubDate>
+      <guid isPermaLink="true">https://aptshop.kr/menu/certifications.html</guid>
       <dc:creator>아파트샵</dc:creator>
     </item>
   </channel>
