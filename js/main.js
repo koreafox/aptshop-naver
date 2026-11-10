@@ -97,6 +97,11 @@ const ComponentLoader = {
                 return false;
             }
             
+            // The build embeds trusted shared components in the initial HTML.
+            if (element.dataset.prerendered === "true" && element.children.length) {
+                this.fixComponentLinks(elementId);
+                return true;
+            }
             await this.loadComponent(elementId, componentPath);
             return true;
         } catch (error) {

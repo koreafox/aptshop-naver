@@ -25,3 +25,7 @@ review_*.xlsx
 
 # Claude Code local config
 .claude/
+
+# Local browser QA artifacts
+.playwright-cli/
+output/playwright/

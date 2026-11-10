@@ -12,7 +12,9 @@ on:
       - 'sitemap.xml'
       - 'rss.xml'
       - 'robots.txt'
-      - 'scripts/validate-site-metadata.py'
+      - 'scripts/**'
+      - 'package.json'
+      - 'package-lock.json'
       - '.github/workflows/validate-site-metadata.yml'
   workflow_dispatch:
 
@@ -35,3 +37,6 @@ jobs:
 
       - name: Validate sitemap, RSS, and robots metadata
         run: python3 scripts/validate-site-metadata.py
+
+      - name: Validate structured data and pre-rendered navigation
+        run: node scripts/validate-structured-data.mjs

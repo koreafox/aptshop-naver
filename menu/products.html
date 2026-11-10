@@ -65,225 +65,67 @@
     
     <!-- Breadcrumb Schema -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "홈",
-          "item": "https://aptshop.kr/"
+            "@type": "ListItem",
+            "position": 1,
+            "name": "홈",
+            "item": "https://aptshop.kr/"
         },
         {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "제품소개",
-          "item": "https://aptshop.kr/menu/products.html"
+            "@type": "ListItem",
+            "position": 2,
+            "name": "제품소개",
+            "item": "https://aptshop.kr/menu/products.html"
         }
-      ]
-    }
+    ]
+}
     </script>
 
-    <!-- Product Schema for SEO -->
+    <!-- Collection metadata: prices and reviews belong on verified individual product pages. -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
+{
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": "https://aptshop.kr/menu/products.html#webpage",
+    "name": "황소밴드 제품소개",
+    "url": "https://aptshop.kr/menu/products.html",
+    "inLanguage": "ko-KR",
+    "isPartOf": {
+        "@id": "https://aptshop.kr/#website"
+    },
+    "mainEntity": {
         "@type": "ItemList",
         "name": "황소밴드 제품 목록",
-        "description": "황소밴드(호스밴드) 전 제품 라인업. 파이프 누수 보수용 누수밴드 전문.",
         "numberOfItems": 3,
         "itemListElement": [
             {
                 "@type": "ListItem",
                 "position": 1,
-                "item": {
-                    "@type": "Product",
-                    "name": "황소밴드 싱글밴드",
-                    "alternateName": ["호스밴드 싱글", "누수밴드 싱글"],
-                    "description": "파이프 점누수 보수용 싱글밴드. 10-32A부터 300A까지 다양한 규격. 특허받은 360도 회전 패킹패드로 1인 작업 가능.",
-                    "image": "https://aptshop.kr/img/products/single_band.jpg",
-                    "brand": {"@type": "Brand", "name": "황소밴드"},
-                    "category": "파이프 누수 보수용품",
-                    "material": "SUS304 스테인리스",
-                    "aggregateRating": {
-                        "@type": "AggregateRating",
-                        "ratingValue": "4.9",
-                        "bestRating": "5",
-                        "worstRating": "1",
-                        "ratingCount": "31",
-                        "reviewCount": "31"
-                    },
-                    "review": {
-                        "@type": "Review",
-                        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-                        "author": {"@type": "Person", "name": "kore******"},
-                        "datePublished": "2025-07-10",
-                        "reviewBody": "아파트 시설 관리하면서 스프레이랑 알루미늄 테이프 써봤지만 솔직히 시간 낭비였어요. 호스밴드는 그야말로 제대로 된 물건입니다. 조임력 쎄고. 파이프 사이즈 따라 10mm부터 100mm까지 골라 쓸 수 있어서 현장마다 딱 맞아요. 부식 안 되니까 재작업 걱정 없습니다."
-                    },
-                    "offers": {
-                        "@type": "AggregateOffer",
-                        "priceCurrency": "KRW",
-                        "lowPrice": "8500",
-                        "offerCount": "14",
-                        "availability": "https://schema.org/InStock",
-                        "url": "https://smartstore.naver.com/aptshop7/"
-                    }
-                }
+                "name": "황소밴드 싱글밴드",
+                "url": "https://aptshop.kr/menu/products.html#single"
             },
             {
                 "@type": "ListItem",
                 "position": 2,
-                "item": {
-                    "@type": "Product",
-                    "name": "황소밴드 더블밴드",
-                    "alternateName": ["호스밴드 더블", "누수밴드 더블"],
-                    "description": "강력한 조임력의 더블밴드. 10-32A부터 300A까지 다양한 규격. 기존 호스밴드 대비 3배 강력한 조임력. 고압 배관 누수에 적합.",
-                    "image": "https://aptshop.kr/img/products/double_band.jpg",
-                    "brand": {"@type": "Brand", "name": "황소밴드"},
-                    "category": "파이프 누수 보수용품",
-                    "material": "SUS304 스테인리스",
-                    "aggregateRating": {
-                        "@type": "AggregateRating",
-                        "ratingValue": "4.9",
-                        "bestRating": "5",
-                        "worstRating": "1",
-                        "ratingCount": "31",
-                        "reviewCount": "31"
-                    },
-                    "review": {
-                        "@type": "Review",
-                        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-                        "author": {"@type": "Person", "name": "kore******"},
-                        "datePublished": "2025-07-10",
-                        "reviewBody": "아파트 시설 관리하면서 스프레이랑 알루미늄 테이프 써봤지만 솔직히 시간 낭비였어요. 호스밴드는 그야말로 제대로 된 물건입니다. 조임력 쎄고. 파이프 사이즈 따라 10mm부터 100mm까지 골라 쓸 수 있어서 현장마다 딱 맞아요. 부식 안 되니까 재작업 걱정 없습니다."
-                    },
-                    "offers": {
-                        "@type": "AggregateOffer",
-                        "priceCurrency": "KRW",
-                        "lowPrice": "10900",
-                        "offerCount": "14",
-                        "availability": "https://schema.org/InStock",
-                        "url": "https://smartstore.naver.com/aptshop7/"
-                    }
-                }
+                "name": "황소밴드 더블밴드",
+                "url": "https://aptshop.kr/menu/products.html#double"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "item": {
-                    "@type": "Product",
-                    "name": "황소밴드 공업용밴드",
-                    "alternateName": ["호스밴드 공업용", "산업용 누수밴드"],
-                    "description": "산업현장용 대구경 공업용밴드. 40A부터 300A까지 대형 파이프 누수 보수. 아파트 관리사무소, 공장에서 사용.",
-                    "image": "https://aptshop.kr/img/products/industrial_band.jpg",
-                    "brand": {"@type": "Brand", "name": "황소밴드"},
-                    "category": "파이프 누수 보수용품",
-                    "material": "SUS304 스테인리스",
-                    "aggregateRating": {
-                        "@type": "AggregateRating",
-                        "ratingValue": "4.9",
-                        "bestRating": "5",
-                        "worstRating": "1",
-                        "ratingCount": "31",
-                        "reviewCount": "31"
-                    },
-                    "review": {
-                        "@type": "Review",
-                        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-                        "author": {"@type": "Person", "name": "kore******"},
-                        "datePublished": "2025-07-10",
-                        "reviewBody": "아파트 시설 관리하면서 스프레이랑 알루미늄 테이프 써봤지만 솔직히 시간 낭비였어요. 호스밴드는 그야말로 제대로 된 물건입니다. 조임력 쎄고. 파이프 사이즈 따라 10mm부터 100mm까지 골라 쓸 수 있어서 현장마다 딱 맞아요. 부식 안 되니까 재작업 걱정 없습니다."
-                    },
-                    "offers": {
-                        "@type": "AggregateOffer",
-                        "priceCurrency": "KRW",
-                        "lowPrice": "2300",
-                        "highPrice": "8800",
-                        "offerCount": "14",
-                        "availability": "https://schema.org/InStock",
-                        "url": "https://smartstore.naver.com/aptshop7/"
-                    }
-                }
+                "name": "황소밴드 공업용밴드",
+                "url": "https://aptshop.kr/menu/products.html#industrial"
             }
         ]
     }
+}
     </script>
 
-    <!-- Product Schema with REAL customer reviews (네이버 스마트스토어 실구매 후기 기반) -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "황소밴드 (호스밴드 누수밴드)",
-        "alternateName": ["호스밴드", "누수밴드", "파이프 누수보수 밴드"],
-        "description": "특허받은 SUS304 스테인리스 파이프 누수보수 밴드. 싱글·더블·공업용 전 규격. 강력한 조임력으로 1인 누수보수 가능.",
-        "image": "https://aptshop.kr/img/products/single_band.jpg",
-        "brand": {"@type": "Brand", "name": "황소밴드"},
-        "category": "파이프 누수 보수용품",
-        "material": "SUS304 스테인리스",
-        "offers": {
-            "@type": "AggregateOffer",
-            "priceCurrency": "KRW",
-            "lowPrice": "2300",
-            "offerCount": "42",
-            "availability": "https://schema.org/InStock",
-            "url": "https://smartstore.naver.com/aptshop7/"
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "bestRating": "5",
-            "worstRating": "1",
-            "ratingCount": "31",
-            "reviewCount": "31"
-        },
-        "review": [
-            {
-                "@type": "Review",
-                "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-                "author": {"@type": "Person", "name": "kgc0***"},
-                "datePublished": "2025-07-09",
-                "reviewBody": "남편이 배관 관련 일을 하다 보니 누수 문제로 알루미늄 테이프나 방수 스프레이를 자주 썼는데. 둘 다 터무니없었어요. 테이프는 물기만 닿으면 떨어지고. 스프레이는 며칠 지나면 갈라져서 다시 새더라고요. 호스밴드를 써보고 남편이 완전 감탄했어요. 조임력이 확실해서 파이프를 꽉 잡아주고. 설치도 드라이버 하나로 끝나고. 부식 안 되는 재질이라 오래 써도 문제없어요."
-            },
-            {
-                "@type": "Review",
-                "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-                "author": {"@type": "Person", "name": "kore******"},
-                "datePublished": "2025-07-10",
-                "reviewBody": "아파트 시설 관리하면서 스프레이랑 알루미늄 테이프 써봤지만 솔직히 시간 낭비였어요. 호스밴드는 그야말로 제대로 된 물건입니다. 조임력 쎄고. 파이프 사이즈 따라 10mm부터 100mm까지 골라 쓸 수 있어서 현장마다 딱 맞아요. 부식 안 되니까 재작업 걱정 없습니다."
-            },
-            {
-                "@type": "Review",
-                "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-                "author": {"@type": "Person", "name": "kwj9***"},
-                "datePublished": "2025-07-11",
-                "reviewBody": "알루미늄 밴드는 물닿으면 바로 떨어지는데 황소밴드는 단단히 조이고 설치하기도 쉽고 오래 가서 좋아요. 오피스텔 시설 관리하면서 배관 문제로 골치 아팠는데 황소밴드가 해결사 역할을 했네요. 녹슬지 않는 재질이라 재작업할 일 없어요."
-            },
-            {
-                "@type": "Review",
-                "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-                "author": {"@type": "Person", "name": "coco*****"},
-                "datePublished": "2025-07-03",
-                "reviewBody": "집 배관에 문제가 생겨 알루미늄 테이프로 마감했는데 자꾸 떨어지고 바람이 새더라고요. 그러다 이 특허받은 호스밴드를 사용해봤는데 확실히 조임력이 뛰어나고 설치도 쉬워서 금방 고정할 수 있었어요. 다양한 규격이 있어서 상황에 맞게 쓸 수 있다는 것도 큰 장점입니다. 강력 추천!"
-            },
-            {
-                "@type": "Review",
-                "reviewRating": {"@type": "Rating", "ratingValue": "4", "bestRating": "5"},
-                "author": {"@type": "Person", "name": "peli********"},
-                "datePublished": "2026-03-18",
-                "reviewBody": "사용하기 편리하죠."
-            },
-            {
-                "@type": "Review",
-                "reviewRating": {"@type": "Rating", "ratingValue": "4", "bestRating": "5"},
-                "author": {"@type": "Person", "name": "msun********"},
-                "datePublished": "2025-10-27",
-                "reviewBody": "괜찮아요 만족합니다"
-            }
-        ]
-    }
-    </script>
+
 
     <link rel="stylesheet" href="../css/tailwind-output.css">
     <link rel="stylesheet" href="../css/main.css">
@@ -304,9 +146,174 @@
         .tab-content { display: none; }
         .tab-content.active { display: block; }
     </style>
+    <noscript><style>.tab-content { display: block; } .tab-button { display: none; }</style></noscript>
 </head>
 <body class="pt-20">
-    <div id="header-container"></div>
+    <div id="header-container" data-prerendered="true"><!-- component:start -->
+<!-- Header Component -->
+<header class="bg-white shadow-md fixed w-full top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+                <a href="/" class="flex items-center">
+                    <img src="/img/logo_aptshop.png" alt="아파트샵 로고" class="h-8 w-auto" width="120" height="32" fetchpriority="high">
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex space-x-1" aria-label="주요 메뉴">
+                <div class="relative group" data-desktop-dropdown>
+                    <button type="button" aria-expanded="false" aria-controls="desktop-company-menu" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                        회사소개
+                        <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="desktop-company-menu" class="absolute left-0 top-full pt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible transition-opacity duration-200">
+                        <a href="/menu/brand.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">브랜드</a>
+                        <a href="/menu/company.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">기업정보</a>
+                        <a href="/menu/video.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">사용방법 영상</a>
+                        <a href="/menu/history.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">기업연혁</a>
+                        <a href="/menu/mission.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">미션</a>
+                    </div>
+                </div>
+
+                <div class="relative group" data-desktop-dropdown>
+                    <button type="button" aria-expanded="false" aria-controls="desktop-products-menu" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                        제품소개
+                        <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="desktop-products-menu" class="absolute left-0 top-full pt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible transition-opacity duration-200">
+                        <a href="/menu/products.html#hwangso" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">황소밴드</a>
+                        <a href="/menu/products.html#industrial" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">공업용밴드</a>
+                    </div>
+                </div>
+
+                <div class="relative group" data-desktop-dropdown>
+                    <button type="button" aria-expanded="false" aria-controls="desktop-purchase-menu" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                        제품구매
+                        <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="desktop-purchase-menu" class="absolute left-0 top-full pt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible transition-opacity duration-200">
+                        <a href="/menu/social.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">소셜마켓</a>
+                    </div>
+                </div>
+
+                <div class="relative group" data-desktop-dropdown>
+                    <button type="button" aria-expanded="false" aria-controls="desktop-news-menu" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                        뉴스
+                        <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="desktop-news-menu" class="absolute left-0 top-full pt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible transition-opacity duration-200">
+                        <a href="/menu/news.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">기사 및 보도자료</a>
+                    </div>
+                </div>
+
+                <div class="relative group" data-desktop-dropdown>
+                    <button type="button" aria-expanded="false" aria-controls="desktop-partners-menu" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                        파트너스
+                        <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="desktop-partners-menu" class="absolute left-0 top-full pt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible transition-opacity duration-200">
+                        <a href="/menu/partners.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">파트너스</a>
+                        <a href="/menu/contact.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">문의 및 상담</a>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Mobile menu button -->
+            <div class="lg:hidden">
+                <button id="mobile-menu-button" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-menu" class="text-gray-700 hover:text-blue-600">
+                    <svg class="h-6 w-6" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t" aria-hidden="true">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+            <div class="mobile-dropdown">
+                <button type="button" aria-expanded="false" aria-controls="mobile-company-menu" class="mobile-dropdown-btn w-full text-left px-3 py-2 text-gray-700 hover:bg-blue-50 font-medium flex justify-between items-center" data-menu-key="company">
+                    회사소개
+                    <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div id="mobile-company-menu" class="mobile-dropdown-content hidden pl-4">
+                    <a href="/menu/brand.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-blue-50">브랜드</a>
+                    <a href="/menu/company.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-blue-50">기업정보</a>
+                    <a href="/menu/video.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-blue-50">사용방법 영상</a>
+                    <a href="/menu/history.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-blue-50">기업연혁</a>
+                    <a href="/menu/mission.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-blue-50">미션</a>
+                </div>
+            </div>
+
+            <div class="mobile-dropdown">
+                <button type="button" aria-expanded="false" aria-controls="mobile-products-menu" class="mobile-dropdown-btn w-full text-left px-3 py-2 text-gray-700 hover:bg-blue-50 font-medium flex justify-between items-center" data-menu-key="products">
+                    제품소개
+                    <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div id="mobile-products-menu" class="mobile-dropdown-content hidden pl-4">
+                    <a href="/menu/products.html#hwangso" class="block px-3 py-2 text-sm text-gray-600 hover:bg-blue-50">황소밴드</a>
+                    <a href="/menu/products.html#industrial" class="block px-3 py-2 text-sm text-gray-600 hover:bg-blue-50">공업용밴드</a>
+                </div>
+            </div>
+
+            <div class="mobile-dropdown">
+                <button type="button" aria-expanded="false" aria-controls="mobile-purchase-menu" class="mobile-dropdown-btn w-full text-left px-3 py-2 text-gray-700 hover:bg-blue-50 font-medium flex justify-between items-center" data-menu-key="purchase">
+                    제품구매
+                    <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div id="mobile-purchase-menu" class="mobile-dropdown-content hidden pl-4">
+                    <a href="/menu/social.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-blue-50">소셜마켓</a>
+                </div>
+            </div>
+
+            <div class="mobile-dropdown">
+                <button type="button" aria-expanded="false" aria-controls="mobile-news-menu" class="mobile-dropdown-btn w-full text-left px-3 py-2 text-gray-700 hover:bg-blue-50 font-medium flex justify-between items-center" data-menu-key="news">
+                    뉴스
+                    <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div id="mobile-news-menu" class="mobile-dropdown-content hidden pl-4">
+                    <a href="/menu/news.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-blue-50">기사 및 보도자료</a>
+                </div>
+            </div>
+
+            <div class="mobile-dropdown">
+                <button type="button" aria-expanded="false" aria-controls="mobile-partners-menu" class="mobile-dropdown-btn w-full text-left px-3 py-2 text-gray-700 hover:bg-blue-50 font-medium flex justify-between items-center" data-menu-key="partners">
+                    파트너스
+                    <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div id="mobile-partners-menu" class="mobile-dropdown-content hidden pl-4">
+                    <a href="/menu/partners.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-blue-50">파트너스</a>
+                    <a href="/menu/contact.html" class="block px-3 py-2 text-sm text-gray-600 hover:bg-blue-50">문의 및 상담</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- component:end --></div>
     <main>
         <section class="text-white py-8 md:py-12 relative overflow-hidden">
             <div class="absolute inset-0">
@@ -333,7 +340,7 @@
                         <strong>방수 스프레이</strong>는 며칠 지나면 갈라져 다시 샙니다.
                         황소밴드는 기계적 조임력으로 파이프를 직접 압착하므로 이 두 방법과 근본적으로 다릅니다.
                     </p>
-                    <p class="text-sm text-gray-600 mb-4">실제 구매 고객들의 사용 경험은 <a href="../index.html#reviews" class="text-blue-600 hover:underline font-medium">황소밴드 고객 후기(4.9점 · 31건)</a>에서 확인하실 수 있습니다. 규격 선택이 어려우시면 <a href="contact.html" class="text-blue-600 hover:underline font-medium">누수밴드 규격 문의</a>를 이용해 주세요.</p>
+                    <p class="text-sm text-gray-600 mb-4">실제 구매 고객들의 사용 경험은 <a href="/#reviews" class="text-blue-600 hover:underline font-medium">황소밴드 고객 후기(4.9점 · 31건)</a>에서 확인하실 수 있습니다. 규격 선택이 어려우시면 <a href="contact.html" class="text-blue-600 hover:underline font-medium">누수밴드 규격 문의</a>를 이용해 주세요.</p>
                     <div class="overflow-x-auto">
                         <table class="w-full text-sm border-collapse">
                             <thead>
@@ -393,7 +400,7 @@
                             <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
                                 <img src="/img/products/single_band.jpg" alt="황소밴드 싱글밴드 10-32A — 파이프 누수 보수용 스테인리스 호스밴드" class="w-full rounded-t-xl" width="300" height="300" loading="lazy" decoding="async">
                                 <div class="p-4">
-                                    <h3 class="text-xl font-bold group-hover:text-blue-600">싱글밴드</h3>
+                                    <h3 id="single" class="text-xl font-bold group-hover:text-blue-600">싱글밴드</h3>
                                     <p class="text-gray-600">규격: 10-32A</p>
                                 </div>
                             </div>
@@ -525,7 +532,7 @@
                             <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
                                 <img src="/img/products/double_band.jpg" alt="황소밴드 더블밴드 10-32A — 고압 배관 누수 밴드 스테인리스 호스밴드" class="w-full rounded-t-xl" width="300" height="300" loading="lazy" decoding="async">
                                 <div class="p-4">
-                                    <h3 class="text-xl font-bold group-hover:text-purple-600">더블밴드</h3>
+                                    <h3 id="double" class="text-xl font-bold group-hover:text-purple-600">더블밴드</h3>
                                     <p class="text-gray-600">규격: 10-32A</p>
                                 </div>
                             </div>
@@ -652,6 +659,7 @@
                     </div>
                 </div>
                 <div id="content-industrial" class="tab-content">
+                    <span id="industrial"></span>
                     <h2 class="text-3xl font-bold text-center mb-3">황소밴드 공업용밴드 — 대구경 배관 누수 밴드</h2>
                     <p class="text-center text-gray-600 mb-8">황소밴드 공업용밴드 — 산업현장 및 대구경 배관용. SUS304 스테인리스. 40A부터 300A 대형 파이프 누수 보수.</p>
                     <h3 class="text-xl font-bold mb-4">기본 사이즈</h3>
@@ -866,7 +874,75 @@
     </main>
 
     <!-- Footer Container -->
-    <div id="footer-container"></div>
+    <div id="footer-container" data-prerendered="true"><!-- component:start -->
+<!-- Footer Component -->
+<footer class="bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 footer-links">
+            <!-- Company Info -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">아파트샵</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    황소밴드 공식 온라인 판매점<br>
+                    파이프 누수보수 전문 솔루션 제공
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">바로가기</h3>
+                <ul class="space-y-2">
+                    <li><a href="/menu/brand.html" class="text-gray-400 hover:text-white text-sm transition-colors">브랜드</a></li>
+                    <li><a href="/menu/company.html" class="text-gray-400 hover:text-white text-sm transition-colors">기업정보</a></li>
+                    <li><a href="/menu/video.html" class="text-gray-400 hover:text-white text-sm transition-colors">사용방법 영상</a></li>
+                    <li><a href="/menu/history.html" class="text-gray-400 hover:text-white text-sm transition-colors">기업연혁</a></li>
+                    <li><a href="/#reviews" class="text-gray-400 hover:text-white text-sm transition-colors">고객 후기</a></li>
+                    <li><a href="/sitemap.html" class="text-gray-400 hover:text-white text-sm transition-colors">사이트맵</a></li>
+                </ul>
+            </div>
+
+            <!-- Products -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">제품</h3>
+                <ul class="space-y-2">
+                    <li><a href="/menu/products.html#hwangso" class="text-gray-400 hover:text-white text-sm transition-colors">황소밴드</a></li>
+                    <li><a href="/menu/products.html#industrial" class="text-gray-400 hover:text-white text-sm transition-colors">공업용밴드</a></li>
+                    <li><a href="https://smartstore.naver.com/aptshop7/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white text-sm transition-colors">온라인 구매</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">고객지원</h3>
+                <ul class="space-y-2">
+                    <li><a href="/menu/contact.html" class="text-gray-400 hover:text-white text-sm transition-colors">문의 및 상담</a></li>
+                    <li><a href="/menu/partners.html" class="text-gray-400 hover:text-white text-sm transition-colors">파트너스</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Company Information -->
+        <div class="border-t border-gray-800 mt-4 pt-4 text-center">
+                <div class="text-gray-400 text-xs space-y-1">
+                    <p>대표: 지상진 | 개인정보관리책임자: 지상진</p>
+                    <p>전화: 010-7357-8613 | FAX: 0504-149-8613</p>
+                    <p>주소: 경기도 안양시 동안구 경수대로 546, 5층 5029</p>
+                    <p>사업자등록번호: 288-03-03777 </p>
+                    <p>통신판매업 신고번호: 2025-안양동안-0492</p>
+                    <p>이메일: aptshop7@gmail.com</p>
+                </div>
+                <div class="mt-3 space-x-4">
+                    <button onclick="openTermsModal()" class="text-gray-400 hover:text-white text-xs transition-colors underline">이용약관</button>
+                    <button onclick="openPrivacyModal()" class="text-gray-400 hover:text-white text-xs transition-colors underline">개인정보처리방침</button>
+                </div>
+                <p class="text-gray-400 text-xs mt-2">
+                    &copy; 2025 아파트샵. All rights reserved.
+                </p>
+        </div>
+    </div>
+</footer>
+<noscript><style>.footer-links { display: grid !important; }</style></noscript>
+<!-- component:end --></div>
     
     <!-- Terms Modal -->
     <div id="terms-modal" role="dialog" aria-modal="true" aria-labelledby="terms-title" class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">
@@ -929,7 +1005,7 @@
         // Handle URL hash
         function handleHash() {
             const hash = window.location.hash.substring(1);
-            if (hash === 'hwangso') {
+            if (['hwangso', 'single', 'double'].includes(hash)) {
                 switchTab('leak');
             } else if (hash === 'industrial') {
                 switchTab('industrial');

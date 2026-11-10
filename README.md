@@ -85,3 +85,19 @@ npx http-server -p 8000
 ## 라이선스
 
 © 2025 아파트샵. All rights reserved.
+
+## 배포 빌드 및 SEO 검사
+
+공유 헤더·푸터는 `components/*.html`에서 수정한 뒤 `npm run build`를 실행합니다.
+빌드는 홈페이지와 `menu/*.html`에 메뉴·사업자 정보를 정적으로 포함하고 CSS를 생성합니다.
+생성된 HTML도 GitHub Pages 배포 대상이므로 함께 커밋합니다.
+
+```bash
+npm ci
+npm run build
+npm run validate:seo
+python3 scripts/validate-site-metadata.py
+```
+
+홈페이지와 제품 목록은 카탈로그이므로 단일 상품의 가격·평점 리치 결과 마크업을 사용하지 않습니다.
+개별 상품 마크업을 추가하려면 해당 상세 페이지에 실제 규격, 최신 가격, 재고와 자체 수집 리뷰를 검증한 뒤 적용해야 합니다.

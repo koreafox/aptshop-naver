@@ -5,7 +5,7 @@
     <!-- 메인 페이지 -->
     <url>
         <loc>https://aptshop.kr/</loc>
-        <lastmod>2026-10-27</lastmod>
+        <lastmod>2026-11-10</lastmod>
         <image:image>
             <image:loc>https://aptshop.kr/img/products_all_patent.jpg</image:loc>
         </image:image>
@@ -75,7 +75,7 @@
     <!-- 제품 -->
     <url>
         <loc>https://aptshop.kr/menu/products.html</loc>
-        <lastmod>2026-10-27</lastmod>
+        <lastmod>2026-11-10</lastmod>
         <image:image>
             <image:loc>https://aptshop.kr/img/products/single_band.jpg</image:loc>
         </image:image>
